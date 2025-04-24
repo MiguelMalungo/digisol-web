@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroGest - Aplicação para Agricultores | DIGISOL</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/project-pages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Project-specific background */
+        .project-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/farmer.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .project-hero-content {
+            max-width: 800px;
+        }
+
+        .project-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 2rem;
+        }
+        
+        .project-tag {
+            background-color: var(--primary-color);
+            color: var(--dark-color);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .project-overview {
+            padding: 80px 0;
+        }
+
+        .project-overview-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .project-overview-content h2 {
+            text-align: left;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-overview-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .project-overview-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-features {
+            padding: 80px 0;
+            background-color: var(--light-color);
+        }
+
+        .feature-list {
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .feature-item {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .feature-item h3 {
+            margin-bottom: 15px;
+        }
+
+        .feature-item p {
+            color: var(--gray-color);
+            line-height: 1.6;
+        }
+
+        .project-innovation {
+            padding: 80px 0;
+        }
+
+        .innovation-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .innovation-content h2 {
+            text-align: left;
+            margin-bottom: 1.5rem;
+        }
+
+        .innovation-list {
+            margin-top: 30px;
+        }
+
+        .innovation-item {
+            margin-bottom: 30px;
+        }
+
+        .innovation-item h3 {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .innovation-item h3 i {
+            color: var(--primary-color);
+            margin-right: 15px;
+        }
+
+        .innovation-item p {
+            padding-left: 35px;
+            color: var(--gray-color);
+            line-height: 1.6;
+        }
+
+        .innovation-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-value {
+            padding: 80px 0;
+            background-color: var(--light-color);
+        }
+
+        .value-list {
+            margin-top: 40px;
+        }
+
+        .value-item {
+            display: flex;
+            margin-bottom: 30px;
+        }
+
+        .value-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        .value-content h3 {
+            margin-bottom: 10px;
+        }
+
+        .value-content p {
+            color: var(--gray-color);
+            line-height: 1.6;
+        }
+
+        .project-gallery {
+            padding: 80px 0;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            height: 250px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .related-projects {
+            padding: 80px 0;
+            background-color: var(--light-color);
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .related-item {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .related-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .related-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .related-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .related-item:hover .related-image img {
+            transform: scale(1.05);
+        }
+
+        .related-content {
+            padding: 20px;
+        }
+
+        .related-content h3 {
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .related-content p {
+            color: var(--gray-color);
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+
+        .view-project-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            color: var(--dark-color);
+            transition: gap 0.3s ease;
+        }
+        
+        .view-project-btn:hover {
+            gap: 15px;
+        }
+        
+        .view-project-btn i {
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 992px) {
+            .project-overview-grid,
+            .innovation-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .project-hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .feature-list {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+            
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+            
+            .related-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+            
+            .project-overview-image,
+            .innovation-image {
+                order: -1;
+                text-align: center;
+            }
+            
+            .project-overview-image img,
+            .innovation-image img {
+                max-width: 80%;
+                margin: 0 auto;
+                display: block;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .project-hero {
+                height: auto;
+                min-height: 500px;
+                padding: 100px 0;
+            }
+            
+            .project-hero-content {
+                text-align: center;
+                max-width: 100%;
+                padding: 0 20px;
+            }
+            
+            .project-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .project-hero p {
+                font-size: 1.1rem;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .project-tags {
+                justify-content: center;
+            }
+            
+            .project-overview,
+            .project-features,
+            .project-innovation,
+            .project-value,
+            .project-gallery,
+            .related-projects {
+                padding: 60px 0;
+            }
+            
+            .project-overview-content h2,
+            .innovation-content h2,
+            section h2 {
+                text-align: center;
+                font-size: 2rem;
+            }
+            
+            .project-overview-content p,
+            .innovation-content p {
+                text-align: center;
+            }
+            
+            .innovation-item h3 {
+                justify-content: center;
+            }
+            
+            .innovation-item p {
+                text-align: center;
+                padding-left: 0;
+            }
+            
+            .feature-list {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .feature-item {
+                text-align: center;
+                height: auto;
+            }
+            
+            .feature-icon {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .project-overview-image img,
+            .innovation-image img,
+            .gallery-item img {
+                width: 100%;
+                margin: 0 auto;
+                display: block;
+            }
+            
+            .related-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .related-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .related-image {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            
+            .related-content {
+                width: 100%;
+                padding-left: 0;
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .project-hero {
+                min-height: 400px;
+                padding: 80px 0;
+            }
+            
+            .project-hero h1 {
+                font-size: 1.8rem;
+                line-height: 1.3;
+            }
+            
+            .project-hero p {
+                font-size: 1rem;
+                line-height: 1.5;
+            }
+            
+            .project-tags {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+            
+            .project-overview,
+            .project-features,
+            .project-innovation,
+            .project-value,
+            .project-gallery,
+            .related-projects {
+                padding: 40px 0;
+            }
+            
+            .project-overview-content h2,
+            .innovation-content h2,
+            section h2 {
+                font-size: 1.8rem;
+            }
+            
+            .feature-item {
+                height: auto;
+                padding: 20px;
+            }
+            
+            .project-overview-image img,
+            .innovation-image img,
+            .gallery-item img {
+                width: 100%;
+                max-width: 100%;
+            }
+            
+            .project-overview-image img,
+            .innovation-image img {
+                width: 80%;
+            }
+            
+            .gallery-grid {
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../images/logo_dg.png" alt="DIGISOL Logo" class="logo-img">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="../services.html">Serviços</a></li>
+                    <li><a href="../about.html">Sobre Nós</a></li>
+                    <li><a href="../portfolio.html">Portfólio</a></li>
+                    <li><a href="../contact.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Project Hero Section -->
+    <section class="project-hero">
+        <div class="container">
+            <div class="project-hero-content">
+                <span class="hero-label">Projecto em Curso</span>
+                <h1>AgroGest – Aplicação para Agricultores</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Description Section -->
+    <section class="project-description">
+        <div class="container">
+            <div class="project-description-content">
+                <p>Aplicação mobile desenvolvida para simplificar a gestão diária dos agricultores e incentivar práticas agrícolas sustentáveis.</p>
+                <div class="project-tags">
+                    <span class="project-tag">Mobile App</span>
+                    <span class="project-tag">Agricultura Sustentável</span>
+                    <span class="project-tag">Reconhecimento de Voz</span>
+                    <span class="project-tag">Reconhecimento de Imagens</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Overview Section -->
+    <section class="project-overview">
+        <div class="container">
+            <div class="project-overview-grid">
+                <div class="project-overview-content">
+                    <h2>Descrição Geral</h2>
+                    <p>A AgroGest é uma aplicação móvel inovadora desenvolvida especificamente para agricultores, que utiliza inteligência artificial para otimizar a gestão de culturas, monitorizar condições ambientais e maximizar a produtividade agrícola.</p>
+                    <p>Através de uma interface intuitiva e adaptada às necessidades do setor agrícola, a aplicação permite aos utilizadores registar e acompanhar todas as atividades relacionadas com o cultivo, desde a plantação até à colheita, além de oferecer insights valiosos baseados em análises de dados avançadas.</p>
+                    <p>Integrando-se com sensores IoT instalados nos campos, a AgroGest recolhe informações em tempo real sobre humidade do solo, temperatura, níveis de nutrientes e outros parâmetros cruciais, permitindo decisões mais precisas e oportunas que resultam em maior rendimento e sustentabilidade.</p>
+                </div>
+                <div class="project-overview-image">
+                    <img src="../images/70301b.PNG" alt="70/30 App Interface 1" style="width: 50%; max-width: 100%;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Features Section -->
+    <section class="project-features">
+        <div class="container">
+            <h2>Funcionalidades Principais</h2>
+            <p class="text-center">A AgroGest oferece um conjunto de funcionalidades práticas e inovadoras para facilitar o dia a dia dos agricultores.</p>
+            
+            <div class="feature-list">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>Gestão Simplificada</h3>
+                    <p>Registro de tarefas, controle de estoque e planejamento das atividades agrícolas com interface intuitiva e adaptada para usuários com pouca experiência digital.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <h3>Monitorização Ambiental em Tempo Real</h3>
+                    <p>Integração com sensores IoT para recolher dados contínuos sobre humidade do solo, temperatura, precipitação e outros parâmetros ambientais, permitindo intervenções precisas e oportunas.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3>Reconhecimento de Imagens</h3>
+                    <p>Tecnologia de reconhecimento de imagens para identificar pragas, doenças e anomalias nas culturas, oferecendo diagnósticos preliminares e recomendações de tratamento.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Relatórios de Sustentabilidade</h3>
+                    <p>Geração de indicadores ambientais (como consumo de água e uso de fertilizantes) para otimizar as práticas sustentáveis e monitorar o impacto ambiental das atividades.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Innovation Section -->
+    <section class="project-innovation">
+        <div class="container">
+            <div class="innovation-grid">
+                <div class="innovation-image">
+                    <img src="../images/70302b.PNG" alt="70/30 App Interface 2" style="width: 50%; max-width: 100%; margin-bottom: 20px; display: block;">
+                    <img src="../images/70303b.PNG" alt="70/30 App Interface 3" style="width: 50%; max-width: 100%; display: block;">
+                </div>
+                <div class="innovation-content">
+                    <h2>Inovações Tecnológicas</h2>
+                    <p>A AgroGest incorpora tecnologias de ponta e abordagens inovadoras para transformar a agricultura tradicional:</p>
+                    
+                    <div class="innovation-list">
+                        <div class="innovation-item">
+                            <h3><i class="fas fa-language"></i> Reconhecimento de Dialetos Regionais</h3>
+                            <p>O sistema de reconhecimento de voz foi treinado para compreender os diversos dialetos e expressões regionais portuguesas, garantindo uma experiência inclusiva para agricultores de todas as regiões do país.</p>
+                        </div>
+                        
+                        <div class="innovation-item">
+                            <h3><i class="fas fa-cloud-sun-rain"></i> Integração com Dados Meteorológicos</h3>
+                            <p>Uma aplicação móvel inovadora para agricultores que utiliza inteligência artificial para otimizar a gestão de culturas, monitorizar condições ambientais e maximizar a produtividade agrícola. Oferece análise de solo em tempo real, previsão meteorológica personalizada e recomendações de cultivo baseadas em dados.</p>
+                        </div>
+                        
+                        <div class="innovation-item">
+                            <h3><i class="fas fa-robot"></i> Inteligência Artificial Adaptativa</h3>
+                            <p>Sistema de IA que aprende continuamente com os dados específicos de cada quinta, adaptando as suas recomendações às condições únicas de solo, clima e culturas de cada utilizador, tornando-se mais preciso e valioso com o tempo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Value Section -->
+    <section class="project-value">
+        <div class="container">
+            <h2>Valor para o Setor Agrícola</h2>
+            <p class="text-center">A AgroGest oferece benefícios significativos para agricultores e para o setor agrícola como um todo.</p>
+            
+            <div class="value-list">
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-tractor"></i>
+                    </div>
+                    <div class="value-content">
+                        <h3>Aumento da Produtividade</h3>
+                        <p>Através de recomendações baseadas em dados e monitorização constante, a AgroGest ajuda os agricultores a maximizar o rendimento das suas culturas, otimizando o uso de recursos e minimizando perdas devido a pragas, doenças ou condições ambientais adversas.</p>
+                    </div>
+                </div>
+                
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <div class="value-content">
+                        <h3>Análise Preditiva de Cultivos</h3>
+                        <p>Algoritmos de IA que analisam dados históricos e atuais para prever rendimentos, identificar potenciais problemas antes que se manifestem e recomendar ajustes nas práticas de cultivo para otimizar resultados.</p>
+                    </div>
+                </div>
+                
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="value-content">
+                        <h3>Inclusão Digital</h3>
+                        <p>Facilita a adoção de tecnologias digitais por agricultores com pouca experiência tecnológica, contribuindo para a modernização do setor agrícola português.</p>
+                    </div>
+                </div>
+                
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-euro-sign"></i>
+                    </div>
+                    <div class="value-content">
+                        <h3>Valorização da Produção Local</h3>
+                        <p>Contribui para a valorização da produção agrícola local através de melhores práticas de gestão e sustentabilidade, aumentando a competitividade dos produtos portugueses.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Related Projects Section -->
+    <section class="related-projects">
+        <div class="container">
+            <h2>Projectos Relacionados</h2>
+            <p class="text-center">Conheça outros projectos inovadores da DIGISOL que podem lhe interessar.</p>
+            
+            <div class="related-grid">
+                <div class="related-item">
+                    <div class="related-image">
+                        <img src="../images/buddies.png" alt="Buddy">
+                    </div>
+                    <div class="related-content">
+                        <h3>Buddy</h3>
+                        <p>Aplicação móvel inovadora focada no bem-estar dos animais de estimação com funcionalidades inteligentes.</p>
+                        <a href="buddy.html" class="view-project-btn">Ver Projecto <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="related-item">
+                    <div class="related-image">
+                        <img src="../images/museu4.jpg" alt="Museu Virtual Imersivo">
+                    </div>
+                    <div class="related-content">
+                        <h3>Museu Virtual Imersivo</h3>
+                        <p>Plataforma digital que permite explorar exposições artísticas em qualquer lugar através de realidade virtual.</p>
+                        <a href="museu-virtual.html" class="view-project-btn">Ver Projecto <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="related-item">
+                    <div class="related-image">
+                        <img src="../images/mobile3.png" alt="Interfaces Adaptativas para Dados">
+                    </div>
+                    <div class="related-content">
+                        <h3>Interfaces Adaptativas para Dados</h3>
+                        <p>Transformação de dados estáticos em experiências interativas com interfaces que permitem consultas em linguagem natural.</p>
+                        <a href="interfaces-adaptativas.html" class="view-project-btn">Ver Projecto <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Interessado na AgroGest?</h2>
+                <p>Entre em contacto connosco para saber mais sobre como podemos adaptar esta solução para o seu negócio agrícola</p>
+                <a href="../contact.html" class="btn primary-btn">Fale Connosco</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>DIGISOL</h3>
+                    <p>&copy; 2025 DIGISOL</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Serviços</h3>
+                    <ul>
+                        <li><a href="../services.html#ai-mobile-apps">Apps Móveis com IA</a></li>
+                        <li><a href="../services.html#ai-web-apps">Aplicações Web com IA</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Empresa</h3>
+                    <ul>
+                        <li><a href="../about.html">Sobre Nós</a></li>
+                        <li><a href="../portfolio.html">Portfólio</a></li>
+                        <li><a href="../contact.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contacto</h3>
+                    <p>Rua Serpa Pinto, 59<br>4050-585 Porto</p>
+                    <p>Email: info@digisol.pt<br>Telefone: +351 961084022</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 DIGISOL</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

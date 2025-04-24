@@ -1,0 +1,404 @@
+/* Project detail pages responsive styling */
+.project-hero {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    text-align: left;
+}
+
+.project-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    text-align: left !important;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start !important;
+    justify-content: center !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    padding-left: 20px;
+}
+
+.project-hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    max-width: 90%;
+    text-align: left !important;
+}
+
+.hero-label {
+    text-align: left !important;
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+/* Mobile responsiveness for project hero sections */
+@media (max-width: 768px) {
+    .project-hero {
+        height: 60vh;
+        padding: 0 15px;
+    }
+    
+    .project-hero-content {
+        padding-left: 10px;
+    }
+    
+    .project-hero h1 {
+        font-size: 2.8rem;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-label {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-hero {
+        height: 50vh;
+        padding: 0 10px;
+    }
+    
+    .project-hero-content {
+        padding-left: 5px;
+    }
+    
+    .project-hero h1 {
+        font-size: 2.2rem;
+        margin-bottom: 0.8rem;
+        max-width: 100%;
+    }
+}
+
+.project-description {
+    padding: 40px 0;
+    background-color: var(--light-color);
+}
+
+.project-description-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.project-description p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+    max-width: 700px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 2rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 90%;
+}
+
+.project-tag {
+    background-color: var(--primary-color);
+    color: var(--dark-color);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* Common project page section styling */
+.project-overview,
+.project-features,
+.project-innovation,
+.project-value,
+.project-gallery,
+.related-projects,
+.innovation-section,
+.features-section,
+.value-section,
+.gallery-section {
+    padding: 80px 0;
+}
+
+/* Override text-center class in project pages */
+.project-overview p,
+.project-features p,
+.project-innovation p,
+.project-value p,
+.project-gallery p,
+.related-projects p,
+.innovation-section p,
+.features-section p,
+.value-section p,
+.gallery-section p,
+section h2,
+section h3,
+.text-center,
+.container > h2,
+.container > p {
+    text-align: left !important;
+}
+
+/* Grid layouts */
+.project-overview-grid,
+.innovation-grid,
+.overview-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+/* Feature grids */
+.feature-list,
+.features-grid,
+.value-grid,
+.gallery-grid,
+.related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+/* Images in project pages */
+.project-overview-image img,
+.innovation-image img,
+.overview-image img,
+.gallery-item img {
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Responsive styles for project pages */
+@media (max-width: 992px) {
+    .project-hero h1 {
+        font-size: 3rem;
+    }
+    
+    .project-overview-grid,
+    .innovation-grid,
+    .features-grid,
+    .overview-grid,
+    .value-grid,
+    .innovation-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .project-overview-image,
+    .innovation-image,
+    .overview-image {
+        order: -1;
+        text-align: left;
+    }
+    
+    .project-overview-image img,
+    .innovation-image img,
+    .overview-image img {
+        max-width: 100%;
+        margin-left: 0;
+    }
+    
+    .feature-list,
+    .features-grid,
+    .gallery-grid,
+    .related-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .app-preview {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .video-container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-hero {
+        height: auto;
+        min-height: 50vh;
+        padding: 80px 20px;
+    }
+    
+    .project-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .project-description p {
+        font-size: 1.1rem;
+    }
+    
+    .project-overview,
+    .project-features,
+    .project-innovation,
+    .project-value,
+    .project-gallery,
+    .related-projects,
+    .innovation-section,
+    .features-section,
+    .value-section,
+    .gallery-section {
+        padding: 60px 0;
+    }
+    
+    .project-overview-content h2,
+    .innovation-content h2,
+    .features-content h2,
+    .overview-content h2,
+    section h2 {
+        font-size: 2rem;
+        text-align: left;
+    }
+    
+    .project-overview-content h3,
+    .innovation-content h3,
+    .features-content h3,
+    .overview-content h3,
+    .feature-item h3,
+    .value-item h3,
+    .innovation-item h3 {
+        font-size: 1.3rem;
+        text-align: left;
+    }
+    
+    .project-overview-content p,
+    .innovation-content p,
+    .features-content p,
+    .overview-content p,
+    .feature-item p,
+    .value-item p,
+    .innovation-item p {
+        text-align: left;
+    }
+    
+    .project-overview-image img,
+    .innovation-image img,
+    .overview-image img {
+        max-width: 80%;
+    }
+    
+    .feature-list,
+    .features-grid,
+    .gallery-grid,
+    .related-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .feature-item,
+    .value-item {
+        text-align: left;
+        padding: 30px;
+    }
+    
+    .feature-icon,
+    .value-icon {
+        margin-left: 0;
+        margin-right: auto;
+    }
+    
+    .gallery-item img {
+        width: 80%;
+        margin: 0;
+        display: block;
+    }
+    
+    .related-item {
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-hero {
+        height: auto;
+        min-height: 40vh;
+        padding: 60px 15px;
+    }
+    
+    .project-hero h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .project-description p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .project-tags {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .project-overview,
+    .project-features,
+    .project-innovation,
+    .project-value,
+    .project-gallery,
+    .related-projects,
+    .innovation-section,
+    .features-section,
+    .value-section,
+    .gallery-section {
+        padding: 40px 0;
+    }
+    
+    .project-overview-content h2,
+    .innovation-content h2,
+    .features-content h2,
+    .overview-content h2,
+    section h2 {
+        font-size: 1.8rem;
+    }
+    
+    .project-overview-content h3,
+    .innovation-content h3,
+    .features-content h3,
+    .overview-content h3,
+    .feature-item h3,
+    .value-item h3,
+    .innovation-item h3 {
+        font-size: 1.2rem;
+    }
+    
+    .project-overview-image img,
+    .innovation-image img,
+    .overview-image img,
+    .gallery-item img {
+        max-width: 100%;
+    }
+    
+    .feature-item,
+    .value-item {
+        padding: 20px;
+    }
+    
+    .app-preview-item img {
+        width: 100%;
+    }
+    
+    .video-item video {
+        width: 100%;
+    }
+}

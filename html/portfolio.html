@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - DIGISOL</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Portfolio specific styles */
+        .portfolio-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/bkg5.png');
+            background-size: cover;
+            background-position: center;
+            padding: 250px 0 150px;
+            color: white;
+        }
+        
+        .portfolio-hero .hero-content {
+            text-align: left;
+            max-width: 1000px;
+            margin-left: 0;
+        }
+        
+        .portfolio-hero .responsive-heading {
+            font-size: 6rem;
+            margin-bottom: 30px;
+            font-weight: 700;
+            text-align: left;
+        }
+        
+        @media (max-width: 992px) {
+            .portfolio-hero .responsive-heading {
+                font-size: 4.5rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .portfolio-hero .responsive-heading {
+                font-size: 3.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .portfolio-hero .responsive-heading {
+                font-size: 2.8rem;
+            }
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 100px;
+            margin: 80px 0;
+        }
+        
+        .project-item {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .project-item:nth-child(even) {
+            direction: rtl;
+        }
+        
+        .project-item:nth-child(even) .project-content {
+            direction: ltr;
+        }
+        
+        .project-image {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-image img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.5s ease;
+        }
+        
+        .project-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        .project-number {
+            font-size: 4rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            opacity: 0.5;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .project-content h3 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .project-content p {
+            font-size: 1.1rem;
+            color: var(--gray-color);
+            margin-bottom: 2rem;
+        }
+        
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 2rem;
+        }
+        
+        .project-tag {
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        .view-project-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            color: var(--dark-color);
+            transition: gap 0.3s ease;
+        }
+        
+        .view-project-btn:hover {
+            gap: 15px;
+        }
+        
+        .view-project-btn i {
+            color: var(--primary-color);
+        }
+        
+        @media (max-width: 992px) {
+            .project-item {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .project-item:nth-child(even) {
+                direction: ltr;
+            }
+            
+            .project-number {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo_dg.png" alt="DIGISOL Logo" class="logo-img">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero portfolio-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="responsive-heading">PROJECTOS E PROPOSTAS</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Showcase -->
+    <section class="projects-showcase">
+        <div class="container">
+            <div class="projects-grid">
+                <!-- Project 1: Buddy - Pet Hub App -->
+                <div class="project-item" id="buddy">
+                    <div class="project-image">
+                        <img src="images/couplepets.png" alt="Buddy - Pet Hub App">
+                    </div>
+                    <div class="project-content">
+                        <span class="project-number">01</span>
+                        <h3>Buddy – Pet Hub App</h3>
+                        <p>Uma aplicação móvel inovadora focada no bem-estar dos animais de estimação, que centraliza serviços essenciais desde diagnóstico preliminar com IA até a promoção de uma comunidade ativa e conectada, contribuindo para a otimização do cuidado animal e para a sustentabilidade ambiental.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Inteligência Artificial</span>
+                            <span class="project-tag">Mobile App</span>
+                            <span class="project-tag">IoT</span>
+                            <span class="project-tag">AI Agents</span>
+                        </div>
+                        <a href="projects/buddy.html" class="view-project-btn">Ver Detalhes <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Project 2: AgroGest -->
+                <div class="project-item" id="agrogest">
+                    <div class="project-image">
+                        <video autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover;">
+                            <source src="images/farm.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-number">02</span>
+                        <h3>AgroGest – Aplicação para Agricultores</h3>
+                        <p>Uma aplicação mobile desenvolvida para simplificar a gestão diária dos agricultores e incentivar práticas agrícolas sustentáveis. A interface intuitiva foi especialmente projetada para superar as limitações digitais comuns entre os agricultores em Portugal.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Agricultura Sustentável</span>
+                            <span class="project-tag">Reconhecimento de Voz</span>
+                            <span class="project-tag">Reconhecimento de Imagens</span>
+                        </div>
+                        <a href="projects/agrogest.html" class="view-project-btn">Ver Detalhes <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Project 3: ROD -->
+                <div class="project-item" id="rod">
+                    <div class="project-image">
+                        <img src="images/bike_rod.jpg" alt="ROD - Aplicação móvel Peer-to-Peer para Aluguer de Bicicletas">
+                    </div>
+                    <div class="project-content">
+                        <span class="project-number">03</span>
+                        <h3>ROD - Aplicação móvel Peer-to-Peer para Aluguer de Bicicletas</h3>
+                        <p>Uma plataforma móvel inovadora para conectar proprietários e utilizadores de bicicletas. Oferece informações detalhadas sobre as bicicletas (tipo, preço, disponibilidade), reservas diretas e sistema seguro de pagamento e comunicação, contribuindo para a redução das emissões de CO₂ e apoiando a mobilidade sustentável nas cidades.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Mobilidade Sustentável</span>
+                            <span class="project-tag">Economia Circular</span>
+                            <span class="project-tag">Impacto Ambiental</span>
+                        </div>
+                        <a href="projects/rod.html" class="view-project-btn">Ver Detalhes <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Project 4: 70/30 -->
+                <div class="project-item" id="7030">
+                    <div class="project-image">
+                        <img src="images/7030img.png" alt="70/30 - Aplicação Social Intergeracional">
+                    </div>
+                    <div class="project-content">
+                        <span class="project-number">04</span>
+                        <h3>70/30 – Aplicação Social Intergeracional</h3>
+                        <p>Uma plataforma digital que reativa profissionais reformados de ofícios e os conecta a jovens aprendizes, promovendo a transferência intergeracional de conhecimento e a inclusão digital. O nome "70/30" reflete o modelo de remuneração – 70% para o mentor reformado e 30% para o jovem aprendiz.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Impacto Social</span>
+                            <span class="project-tag">Inclusão Digital</span>
+                            <span class="project-tag">Transferência de Conhecimento</span>
+                        </div>
+                        <a href="projects/7030.html" class="view-project-btn">Ver Detalhes <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Project 5: Museu Virtual Imersivo -->
+                <div class="project-item" id="museu-virtual">
+                    <div class="project-image">
+                        <img src="images/museu4.jpg" alt="Museu Virtual Imersivo - Uma experiência acessível globalmente">
+                    </div>
+                    <div class="project-content">
+                        <span class="project-number">05</span>
+                        <h3>Museu Virtual Imersivo - Uma experiência acessível globalmente</h3>
+                        <p>Uma plataforma digital inovadora que permite explorar exposições artísticas em qualquer lugar através de realidade virtual. Oferece espaço para artistas locais apresentarem suas obras, componentes educativos interativos, e utiliza a tecnologia Unreal Engine 5.5 para criar experiências imersivas únicas que preservam e promovem o patrimônio cultural.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Realidade Virtual</span>
+                            <span class="project-tag">Cultura</span>
+                            <span class="project-tag">Educação</span>
+                        </div>
+                        <a href="projects/museu-virtual.html" class="view-project-btn">Ver Detalhes <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Innovative Solutions Section -->
+    <section class="projects-showcase" style="background-color: var(--light-color);">
+        <div class="container">
+            <h2 style="margin-top: 40px;">Propostas Inovadoras</h2>
+            <p style="text-align: center; margin-bottom: 60px;">Soluções integradas com IA generativa e LLMs que complementam nossos projectos em curso</p>
+            
+            <div class="projects-grid">
+                <!-- Project 5: Produção Dinâmica de Mídia -->
+                <div class="project-item" id="midia-dinamica">
+                    <div class="project-image">
+                        <video autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover;">
+                            <source src="images/drone.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-number">06</span>
+                        <h3>Produção Dinâmica de Mídia</h3>
+                        <p>Criação de conteúdos multimídia que se adaptam em tempo real com base no feedback e nas preferências dos usuários. Inclui plataformas de storytelling interativo que permitem a co-criação de narrativas visuais, ajustando a história conforme o input do usuário.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">IA Generativa</span>
+                            <span class="project-tag">Conteúdo Auto-Gerado</span>
+                            <span class="project-tag">Storytelling Interativo</span>
+                        </div>
+                        <a href="projects/midia-dinamica.html" class="view-project-btn">Ver Detalhes <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Project 7: Plataformas Educacionais Adaptativas -->
+                <div class="project-item" id="plataformas-educacionais">
+                    <div class="project-image">
+                        <img src="images/aikid.jpeg" alt="Plataformas Educacionais Adaptativas">
+                    </div>
+                    <div class="project-content">
+                        <span class="project-number">07</span>
+                        <h3>Plataformas Educacionais Adaptativas</h3>
+                        <p>Desenvolvimento de plataformas que geram quizzes adaptativos e conteúdos educativos personalizados com base no desempenho do aluno. Inclui mecanismos que fornecem feedback em tempo real, permitindo a adaptação contínua dos conteúdos para maximizar os resultados educacionais.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Educação Personalizada</span>
+                            <span class="project-tag">Quizzes Adaptativos</span>
+                            <span class="project-tag">Feedback em Tempo Real</span>
+                        </div>
+                        <a href="projects/plataformas-educacionais.html" class="view-project-btn">Ver Detalhes <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Project 8: Hybrid Creative Workflows -->
+                <div class="project-item" id="hybrid-creative">
+                    <div class="project-image">
+                        <img src="images/brainapp.png" alt="Hybrid Creative Workflows para Digital Marketing">
+                    </div>
+                    <div class="project-content">
+                        <span class="project-number">08</span>
+                        <h3>Hybrid Creative Workflows</h3>
+                        <p>Integração de ferramentas de geração de texto, imagem e vídeo para criar campanhas publicitárias e conteúdos de marketing de alta qualidade. Automatiza a criação de variações de ativos digitais com base em dados de engajamento e feedback do público.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Digital Marketing</span>
+                            <span class="project-tag">Criação de Conteúdo</span>
+                            <span class="project-tag">Automação Criativa</span>
+                        </div>
+                        <a href="projects/hybrid-creative.html" class="view-project-btn">Ver Detalhes <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Additional Projects Section -->
+    <section class="projects-showcase">
+        <div class="container">
+            
+            <div class="projects-grid">
+                <!-- Project 9: Interfaces Adaptativas para Dados -->
+                <div class="project-item" id="interfaces-adaptativas">
+                    <div class="project-image">
+                        <img src="images/mobile3.png" alt="Interfaces Adaptativas para Dados">
+                    </div>
+                    <div class="project-content">
+                        <span class="project-number">09</span>
+                        <h3>Interfaces Adaptativas para Dados</h3>
+                        <p>Transformação de dados estáticos em experiências interativas com interfaces que permitem consultas em linguagem natural e visualizações personalizadas. O projecto democratiza o acesso a insights baseados em dados, permitindo que empresas de todos os tamanhos possam tomar decisões mais informadas sem a necessidade de especialistas em análise de dados.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Inteligência Artificial</span>
+                            <span class="project-tag">Visualização de Dados</span>
+                            <span class="project-tag">Interfaces Conversacionais</span>
+                            <span class="project-tag">Processamento de Linguagem Natural</span>
+                        </div>
+                        <a href="projects/interfaces-adaptativas.html" class="view-project-btn">Ver Detalhes <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Pronto para Transformar o seu Negócio?</h2>
+                <p>Vamos discutir como nossas soluções digitais inovadoras e agentes de IA podem ajudar a alcançar seus objetivos</p>
+                <a href="contact.html" class="btn primary-btn">Entre em Contato</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>DIGISOL</h3>
+                    <p>&copy; 2025 DIGISOL</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Serviços</h3>
+                    <ul>
+                        <li><a href="services.html#ai-mobile-apps">Apps Móveis com IA</a></li>
+                        <li><a href="services.html#ai-web-apps">Aplicações Web com IA</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Empresa</h3>
+                    <ul>
+                        <li><a href="about.html">Sobre Nós</a></li>
+                        <li><a href="portfolio.html">Portfólio</a></li>
+                        <li><a href="contact.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contacto</h3>
+                    <p>Rua Serpa Pinto, 59<br>4050-585 Porto</p>
+                    <p>Email: info@digisol.pt<br>Telefone: +351 961084022</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 DIGISOL</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

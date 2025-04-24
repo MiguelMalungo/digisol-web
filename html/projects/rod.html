@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROD - Aplicação Peer-to-Peer para Aluguer de Bicicletas | DIGISOL</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/project-pages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Project-specific background */
+        .project-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/bike_rod.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .project-hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            text-align: center;
+        }
+
+        .project-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 2rem;
+        }
+        
+        .project-tag {
+            background-color: var(--primary-color);
+            color: var(--dark-color);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .project-overview {
+            padding: 80px 0;
+        }
+
+        .project-overview-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .project-overview-content h2 {
+            text-align: left;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-overview-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .project-overview-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-features {
+            padding: 80px 0;
+            background-color: var(--light-color);
+        }
+
+        .feature-list {
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .feature-item {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .feature-item h3 {
+            margin-bottom: 15px;
+        }
+
+        .feature-item p {
+            color: var(--gray-color);
+            line-height: 1.6;
+        }
+
+        .project-innovation {
+            padding: 80px 0;
+        }
+
+        .innovation-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .innovation-content h2 {
+            text-align: left;
+            margin-bottom: 1.5rem;
+        }
+
+        .innovation-list {
+            margin-top: 30px;
+        }
+
+        .innovation-item {
+            margin-bottom: 30px;
+        }
+
+        .innovation-item h3 {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .innovation-item h3 i {
+            color: var(--primary-color);
+            margin-right: 15px;
+        }
+
+        .innovation-item p {
+            padding-left: 35px;
+            color: var(--gray-color);
+            line-height: 1.6;
+        }
+
+        .innovation-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-value {
+            padding: 80px 0;
+            background-color: var(--light-color);
+        }
+
+        .value-list {
+            margin-top: 40px;
+        }
+
+        .value-item {
+            display: flex;
+            margin-bottom: 30px;
+        }
+
+        .value-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        .value-content h3 {
+            margin-bottom: 10px;
+        }
+
+        .value-content p {
+            color: var(--gray-color);
+            line-height: 1.6;
+        }
+
+        .project-gallery {
+            padding: 80px 0;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            height: 250px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            transition: transform 0.5s ease;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-section {
+            padding: 80px 0;
+            background-color: #f9f9f9;
+        }
+        
+        .gallery-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: black;
+        }
+
+        .related-projects {
+            padding: 80px 0;
+            background-color: var(--light-color);
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .related-item {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .related-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .related-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .related-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .related-item:hover .related-image img {
+            transform: scale(1.05);
+        }
+
+        .related-content {
+            padding: 20px;
+        }
+
+        .related-content h3 {
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .related-content p {
+            color: var(--gray-color);
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+
+        .view-project-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            color: var(--dark-color);
+            transition: gap 0.3s ease;
+        }
+        
+        .view-project-btn:hover {
+            gap: 15px;
+        }
+        
+        .view-project-btn i {
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 992px) {
+            .project-overview-grid,
+            .innovation-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .project-hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .feature-list {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+            
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 30px;
+            }
+            
+            .related-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .project-hero {
+                height: auto;
+                min-height: 500px;
+                padding: 100px 0;
+            }
+            
+            .project-hero-content {
+                text-align: center;
+            }
+            
+            .project-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .project-tags {
+                justify-content: center;
+            }
+            
+            .project-overview-image img,
+            .innovation-image img,
+            .gallery-item img {
+                width: 70%;
+                margin: 0 auto;
+                display: block;
+            }
+            
+            .related-item {
+                flex-direction: column;
+            }
+            
+            .related-image {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            
+            .related-content {
+                width: 100%;
+                padding-left: 0;
+            }
+            
+            .gallery-grid {
+                gap: 40px;
+            }
+            
+            .gallery-section h2 {
+                font-size: 2.2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .project-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .project-hero p {
+                font-size: 1rem;
+            }
+            
+            .feature-item {
+                height: 250px;
+            }
+            
+            .project-overview-image img,
+            .innovation-image img,
+            .gallery-item img {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../images/logo_dg.png" alt="DIGISOL Logo" class="logo-img">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../services.html">Serviços</a></li>
+                    <li><a href="../about.html">Sobre Nós</a></li>
+                    <li><a href="../portfolio.html">Portfólio</a></li>
+                    <li><a href="../contact.html">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Project Hero Section -->
+    <section class="project-hero">
+        <div class="container">
+            <div class="project-hero-content">
+                <span class="hero-label">Projecto em Curso</span>
+                <h1>ROD – Aplicação P2P para Aluguer de Bicicletas</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Description Section -->
+    <section class="project-description">
+        <div class="container">
+            <div class="project-description-content">
+                <p>Uma plataforma móvel inovadora para conectar proprietários e utilizadores de bicicletas, promovendo a mobilidade sustentável nas cidades.</p>
+                <div class="project-tags">
+                    <span class="project-tag">Mobile App</span>
+                    <span class="project-tag">Mobilidade Sustentável</span>
+                    <span class="project-tag">Economia Circular</span>
+                    <span class="project-tag">Impacto Ambiental</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Overview Section -->
+    <section class="project-overview">
+        <div class="container">
+            <div class="project-overview-grid">
+                <div class="project-overview-content">
+                    <h2>Descrição Geral</h2>
+                    <p>ROD é uma aplicação móvel peer-to-peer que revoluciona a mobilidade urbana ao permitir que proprietários de bicicletas aluguem seus veículos diretamente a utilizadores interessados, criando uma rede de mobilidade sustentável e acessível.</p>
+                    <p>A plataforma oferece uma solução completa que inclui informações detalhadas sobre as bicicletas disponíveis, sistema de reservas, pagamentos seguros e comunicação direta entre as partes, tudo através de uma interface intuitiva e amigável.</p>
+                    <p>Além de proporcionar uma alternativa de transporte ecológica, a ROD contribui para a economia circular ao permitir que proprietários monetizem bicicletas subutilizadas, reduzindo a necessidade de novas produções e promovendo o uso compartilhado de recursos.</p>
+                </div>
+                <div class="project-overview-image">
+                    <img src="../images/rod1.png" alt="ROD App Overview">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Features Section -->
+    <section class="project-features">
+        <div class="container">
+            <h2>Funcionalidades Principais</h2>
+            <p class="text-center">A ROD oferece um conjunto abrangente de funcionalidades para facilitar o aluguer de bicicletas entre particulares.</p>
+            
+            <div class="feature-list">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-bicycle"></i>
+                    </div>
+                    <h3>Catálogo Detalhado</h3>
+                    <p>Informações completas sobre cada bicicleta disponível, incluindo tipo, especificações técnicas, condição, preço e disponibilidade, com fotos de alta qualidade e localização no mapa.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Sistema de Reservas</h3>
+                    <p>Processo simplificado para reservar bicicletas por hora, dia ou períodos mais longos, com confirmação automática ou manual pelo proprietário, dependendo das preferências definidas.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Pagamentos Seguros</h3>
+                    <p>Sistema integrado de pagamento que processa transações de forma segura, com depósito de caução opcional e liberação do pagamento apenas após a confirmação da entrega da bicicleta.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Comunicação Integrada</h3>
+                    <p>Chat interno que permite a comunicação direta entre proprietários e utilizadores para esclarecer dúvidas, negociar condições ou coordenar a entrega e devolução das bicicletas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Innovation Section -->
+    <section class="project-innovation">
+        <div class="container">
+            <div class="innovation-grid">
+                <div class="innovation-image">
+                    <img src="../images/rod2.png" alt="ROD App Innovations">
+                </div>
+                <div class="innovation-content">
+                    <h2>Elementos Inovadores</h2>
+                    <p>A ROD incorpora tecnologias e abordagens inovadoras para maximizar a experiência dos utilizadores e o impacto positivo no meio ambiente.</p>
+                    
+                    <div class="innovation-list">
+                        <div class="innovation-item">
+                            <h3><i class="fas fa-map-marked-alt"></i> Geolocalização Inteligente</h3>
+                            <p>Sistema avançado que permite localizar bicicletas disponíveis nas proximidades, com filtros personalizáveis por distância, tipo de bicicleta e preço, otimizando a experiência de busca do utilizador.</p>
+                        </div>
+                        
+                        <div class="innovation-item">
+                            <h3><i class="fas fa-star"></i> Sistema de Avaliação Mútua</h3>
+                            <p>Mecanismo de avaliação bidirecional que permite que tanto proprietários quanto utilizadores construam reputação na plataforma, aumentando a confiança e segurança para todos os participantes.</p>
+                        </div>
+                        
+                        <div class="innovation-item">
+                            <h3><i class="fas fa-route"></i> Sugestão de Rotas Cicláveis</h3>
+                            <p>Integração com dados de rotas cicláveis seguras, permitindo que utilizadores menos experientes encontrem os melhores percursos para seus deslocamentos, incentivando o uso da bicicleta mesmo por iniciantes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Value Section -->
+    <section class="project-value">
+        <div class="container">
+            <h2>Contributo para a Transição Climática</h2>
+            <p class="text-center">A ROD oferece benefícios significativos para o meio ambiente e para a mobilidade urbana sustentável.</p>
+            
+            <div class="value-list">
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-smog"></i>
+                    </div>
+                    <div class="value-content">
+                        <h3>Redução das Emissões de CO₂</h3>
+                        <p>Ao promover o uso de bicicletas em substituição a veículos motorizados, a ROD contribui diretamente para a redução das emissões de gases de efeito estufa nas cidades, melhorando a qualidade do ar urbano.</p>
+                    </div>
+                </div>
+                
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-city"></i>
+                    </div>
+                    <div class="value-content">
+                        <h3>Apoio à Mobilidade Sustentável</h3>
+                        <p>A plataforma incentiva a adoção de meios de transporte não poluentes, contribuindo para a redução do congestionamento urbano e para a criação de cidades mais habitáveis e centradas nas pessoas.</p>
+                    </div>
+                </div>
+                
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-recycle"></i>
+                    </div>
+                    <div class="value-content">
+                        <h3>Fomento à Economia Circular</h3>
+                        <p>Ao permitir que proprietários monetizem bicicletas subutilizadas, a ROD promove o uso eficiente de recursos já existentes, reduzindo a necessidade de novas produções e o descarte prematuro de bicicletas.</p>
+                    </div>
+                </div>
+                
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                    </div>
+                    <div class="value-content">
+                        <h3>Escalabilidade e Potencial de Crescimento</h3>
+                        <p>A aplicação é adaptável a diferentes cidades e regiões, com potencial de expansão através de parcerias com municípios e organizações focadas em mobilidade verde, ampliando seu impacto positivo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Gallery Section -->
+    <section class="project-gallery">
+        <div class="container">
+            <h2>Galeria do Projecto</h2>
+            <p class="text-center">Visualize a ROD em ação através de imagens da aplicação e seus benefícios para a mobilidade urbana.</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="../images/rod2.png" alt="ROD Bike Sharing">
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/rod4.png" alt="ROD Booking System">
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/rod5.png" alt="ROD User Profiles">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Projects Section -->
+    <section class="related-projects">
+        <div class="container">
+            <h2>Projectos Relacionados</h2>
+            <p class="text-center">Conheça outros projectos inovadores da DIGISOL que podem lhe interessar.</p>
+            
+            <div class="related-grid">
+                <div class="related-item">
+                    <div class="related-image">
+                        <img src="../images/brainapp.png" alt="Hybrid Creative Workflows">
+                    </div>
+                    <div class="related-content">
+                        <h3>Hybrid Creative Workflows</h3>
+                        <p>Integração de ferramentas de geração de texto, imagem e vídeo para criar campanhas publicitárias.</p>
+                        <a href="hybrid-creative.html" class="view-project-btn">Ver Projecto <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="related-item">
+                    <div class="related-image">
+                        <img src="../images/farmer.png" alt="AgroGest">
+                    </div>
+                    <div class="related-content">
+                        <h3>AgroGest</h3>
+                        <p>Aplicação mobile para simplificar a gestão diária dos agricultores e incentivar práticas agrícolas sustentáveis.</p>
+                        <a href="agrogest.html" class="view-project-btn">Ver Projecto <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="related-item">
+                    <div class="related-image">
+                        <img src="../images/7030img.png" alt="70/30">
+                    </div>
+                    <div class="related-content">
+                        <h3>70/30</h3>
+                        <p>Plataforma digital que conecta profissionais reformados a jovens aprendizes, promovendo a transferência intergeracional de conhecimento.</p>
+                        <a href="7030.html" class="view-project-btn">Ver Projecto <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Interessado na ROD?</h2>
+                <p>Entre em contato conosco para saber mais sobre como podemos implementar esta solução de mobilidade sustentável na sua cidade</p>
+                <a href="../contact.html" class="btn primary-btn">Fale Conosco</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>DIGISOL</h3>
+
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Serviços</h3>
+                    <ul>
+                        <li><a href="../services.html#ai-mobile-apps">Apps Móveis com IA</a></li>
+                        <li><a href="../services.html#ai-web-apps">Aplicações Web com IA</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Empresa</h3>
+                    <ul>
+                        <li><a href="../about.html">Sobre Nós</a></li>
+                        <li><a href="../portfolio.html">Portfólio</a></li>
+                        <li><a href="../contact.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contacto</h3>
+                    <p>Rua Serpa Pinto, 59<br>4050-585 Porto</p>
+                    <p>Email: info@digisol.pt<br>Telefone: +351 961084022</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 DIGISOL</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

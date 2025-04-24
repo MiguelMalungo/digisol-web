@@ -1,0 +1,10 @@
+services:
+  digisol-web:
+    image: nginx:latest
+    container_name: digisol-web
+    ports:
+      - "80:80"
+    volumes:
+      - ./html:/usr/share/nginx/html:ro
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    restart: always

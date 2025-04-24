@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços - DIGISOL</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .services-hero {
+            position: relative;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+        
+        .services-hero .responsive-heading {
+            font-size: 5rem;
+            margin-bottom: 30px;
+            font-weight: 700;
+            text-align: left;
+        }
+        
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            overflow: hidden;
+        }
+        
+        .video-background::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+        
+        .video-background video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translateX(-50%) translateY(-50%);
+            object-fit: cover;
+        }
+        
+        @media (max-width: 992px) {
+            .services-hero .responsive-heading {
+                font-size: 4rem;
+            }
+            
+            .video-background video {
+                height: 100%;
+                width: auto;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .services-hero .responsive-heading {
+                font-size: 3rem;
+            }
+            
+            .video-background video {
+                height: 100%;
+                width: auto;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .services-hero .responsive-heading {
+                font-size: 2.5rem;
+            }
+            
+            .video-background video {
+                height: 100%;
+                width: auto;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo_dg.png" alt="DIGISOL Logo" class="logo-img">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="services.html">Serviços</a></li>
+                    <li><a href="about.html">Sobre Nós</a></li>
+                    <li><a href="portfolio.html">Portfólio</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Hero -->
+    <section class="hero services-hero">
+        <div class="video-background">
+            <video autoplay loop muted playsinline>
+                <source src="images/video_services.mp4" type="video/mp4">
+                <!-- Fallback image if video doesn't load -->
+                <img src="images/bkg5.png" alt="Services Background">
+            </video>
+        </div>
+        <div class="container" style="position: relative; z-index: 2;">
+            <div class="hero-content">
+                <h1 class="responsive-heading">APLICAÇÕES<br>MÓVEIS E WEB</h1>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Update service sections to match Andersen's layout -->
+    <section class="service-detail" id="ai-mobile-apps">
+        <div class="container">
+            <div class="service-content">
+                <div class="service-text">
+                    <span class="service-number">01</span>
+                    <h2>Aplicações Móveis com IA</h2>
+                    <h3>Assistentes virtuais e chatbots inteligentes</h3>
+                    <p>Desenvolvemos assistentes virtuais e chatbots alimentados por IA que oferecem suporte ao cliente 24/7, automatizam processos e melhoram a experiência do utilizador.</p>
+                    <ul class="service-features">
+                        <li><span class="feature-icon">→</span>Interfaces Inteligentes</li>
+                        <li><span class="feature-icon">→</span>Recomendações Personalizadas</li>
+                        <li><span class="feature-icon">→</span>Integração com Visão Computacional</li>
+                        <li><span class="feature-icon">→</span>Processamento de Voz e Linguagem Natural</li>
+                    </ul>
+                    <a href="contact.html" class="btn primary-btn">Iniciar o seu Projecto</a>
+                </div>
+                <div class="service-image">
+                    <img src="images/brainapp.png" alt="Desenvolvimento de aplicações móveis com IA">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="service-detail" id="ai-web-apps">
+        <div class="container">
+            <div class="service-content reverse">
+                <div class="service-text">
+                    <span class="service-number">02</span>
+                    <h2>Aplicações Web com IA</h2>
+                    <h3>Soluções inteligentes para análise e visualização de dados</h3>
+                    <p>Transformamos dados complexos em informações acionáveis através de plataformas de análise alimentadas por IA, permitindo tomadas de decisão mais rápidas e precisas.</p>
+                    <ul class="service-features">
+                        <li><span class="feature-icon">→</span>Análise Inteligente de Dados</li>
+                        <li><span class="feature-icon">→</span>Interfaces de Utilizador Adaptativas</li>
+                        <li><span class="feature-icon">→</span>Geração Automatizada de Conteúdo</li>
+                        <li><span class="feature-icon">→</span>Comportamento Preditivo do Utilizador</li>
+                    </ul>
+                    <a href="contact.html" class="btn primary-btn">Iniciar o Seu Projecto</a>
+                </div>
+                <div class="service-image">
+                    <img src="images/laptopapp.png" alt="Desenvolvimento de aplicações web com IA">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add a CTA section before footer -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Pronto para Construir a Sua Aplicação com IA?</h2>
+                <p>Vamos discutir como as nossas soluções móveis e web inteligentes podem revolucionar a sua presença digital</p>
+                <a href="contact.html" class="btn primary-btn">Entre em Contacto</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>DIGISOL</h3>
+                    <p>&copy; 2025 DIGISOL</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Serviços</h3>
+                    <ul>
+                        <li><a href="services.html#ai-mobile-apps">Aplicações Móveis com IA</a></li>
+                        <li><a href="services.html#ai-web-apps">Aplicações Web com IA</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Empresa</h3>
+                    <ul>
+                        <li><a href="about.html">Sobre Nós</a></li>
+                        <li><a href="portfolio.html">Portfólio</a></li>
+                        <li><a href="contact.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contacto</h3>
+                    <p>Rua Serpa Pinto, 59<br>4050-585 Porto</p>
+                    <p>Email: info@digisol.pt<br>Telefone: +351 961084022</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 DIGISOL</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>

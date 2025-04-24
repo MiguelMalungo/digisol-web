@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DIGISOL - Soluções Digitais</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo_dg.png" alt="DIGISOL Logo" class="logo-img">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="services.html">Serviços</a></li>
+                    <li><a href="about.html">Sobre Nós</a></li>
+                    <li><a href="portfolio.html">Portfólio</a></li>
+                    <li><a href="contact.html">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="video-background">
+            <video autoplay loop muted playsinline>
+                <source src="images/hero_home.mp4" type="video/mp4">
+                <!-- Fallback image if video doesn't load -->
+                <img src="images/hero-bg.jpg" alt="DIGISOL Hero Background">
+            </video>
+        </div>
+        <div class="container" style="height: 100%; display: flex; align-items: center; justify-content: center; position: relative; z-index: 2;">
+            <div class="hero-content" style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%; margin-top: 100px;">
+                <h1 class="responsive-heading home-heading" style="text-align: center; margin-bottom: 40px;">SOLUÇÕES DIGITAIS INOVADORAS</h1>
+                <a href="contact.html" class="btn primary-btn" style="background-color: var(--primary-color); color: var(--dark-color); font-size: 1.2rem; padding: 15px 30px; border-radius: 5px; text-transform: uppercase; font-weight: 600; margin-top: 20px;">Criar um Projeto</a>
+            </div>
+        </div>
+    </section>
+    
+    <style>
+        .home-heading {
+            font-size: 12rem;
+            letter-spacing: 2px;
+            line-height: 1.1;
+            text-transform: uppercase;
+            font-weight: 800;
+        }
+        
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            overflow: hidden;
+        }
+        
+        .video-background::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+        
+        .video-background video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translateX(-50%) translateY(-50%);
+            object-fit: cover;
+        }
+        
+        @media (max-width: 992px) {
+            .home-heading {
+                font-size: 10rem;
+            }
+            
+            .video-background video {
+                height: 100%;
+                width: auto;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .home-heading {
+                font-size: 7rem;
+            }
+            
+            .video-background video {
+                height: 100%;
+                width: auto;
+            }
+            
+            .hero-content {
+                padding: 0 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .home-heading {
+                font-size: 5rem;
+            }
+            
+            .video-background video {
+                height: 100%;
+                width: auto;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+
+    <!-- Services Overview -->
+    <section class="services-overview">
+        <div class="container">
+            <h2>Os Nossos Serviços</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Desenvolvimento de Aplicações</h3>
+                    <p>Criamos aplicações web e móveis personalizadas para o seu negócio</p>
+                    <a href="services.html#app-development" class="learn-more">Saiba Mais</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Inteligência Artificial</h3>
+                    <p>Soluções inteligentes que transformam os processos do seu negócio</p>
+                    <a href="services.html#ai" class="learn-more">Saiba Mais</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-us">
+        <div class="container">
+            <h2>Porquê Escolher a DIGISOL</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Experiência</h3>
+                    <p>A nossa equipa é formada por especialistas do setor com anos de experiência</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Inovação</h3>
+                    <p>Mantemo-nos à frente com tecnologias de ponta</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Parceria</h3>
+                    <p>Construímos relações de longo prazo com os nossos clientes</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Resultados</h3>
+                    <p>Entregamos soluções que geram resultados de negócio mensuráveis</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Pronto para Transformar o Seu Negócio?</h2>
+            <p>Vamos discutir como as nossas soluções digitais o podem ajudar a alcançar os seus objetivos</p>
+            <a href="contact.html" class="btn primary-btn">Entre em Contacto Hoje</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>DIGISOL</h3>
+                    <p>&copy; 2025 DIGISOL</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Serviços</h3>
+                    <ul>
+                        <li><a href="services.html#app-development">Desenvolvimento de Aplicações</a></li>
+                        <li><a href="services.html#ai">Inteligência Artificial</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Empresa</h3>
+                    <ul>
+                        <li><a href="about.html">Sobre Nós</a></li>
+                        <li><a href="portfolio.html">Portfólio</a></li>
+                        <li><a href="contact.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contacto</h3>
+                    <p>Rua Serpa Pinto, 59<br>4050-585 Porto</p>
+                    <p>Email: info@digisol.pt<br>Telefone: +351 961084022</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 DIGISOL</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

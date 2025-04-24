@@ -1,0 +1,661 @@
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interfaces Adaptativas para Dados | DIGISOL</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/project-pages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Project-specific background */
+        .project-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/womanai.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .project-hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            text-align: center;
+        }
+
+        .project-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 2rem;
+        }
+        
+        .project-tag {
+            background-color: var(--primary-color);
+            color: var(--dark-color);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .project-overview {
+            padding: 80px 0;
+        }
+
+        .project-overview-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .project-overview-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: var(--dark-color);
+        }
+
+        .project-overview-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: var(--gray-color);
+        }
+
+        .project-overview-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .feature-item {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .feature-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--dark-color);
+        }
+
+        .feature-item p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--gray-color);
+        }
+
+        .innovation-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .innovation-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: var(--dark-color);
+        }
+
+        .innovation-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            color: var(--gray-color);
+        }
+
+        .innovation-list {
+            margin-top: 30px;
+        }
+
+        .innovation-item {
+            margin-bottom: 30px;
+        }
+
+        .innovation-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--dark-color);
+            display: flex;
+            align-items: center;
+        }
+
+        .innovation-item h3 i {
+            color: var(--primary-color);
+            margin-right: 10px;
+        }
+
+        .innovation-item p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        .innovation-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .value-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .value-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+
+        .value-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        .value-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--dark-color);
+        }
+
+        .value-content p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--gray-color);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .gallery-item {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .related-item {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .related-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .related-image {
+            position: relative;
+            overflow: hidden;
+            height: 200px;
+        }
+
+        .related-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .related-item:hover .related-image img {
+            transform: scale(1.05);
+        }
+
+        .related-content {
+            padding: 25px;
+        }
+
+        .related-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--dark-color);
+        }
+
+        .related-content p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--gray-color);
+            margin-bottom: 20px;
+        }
+
+        .view-project-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-weight: 600;
+            color: var(--dark-color);
+            transition: all 0.3s ease;
+        }
+
+        .view-project-btn i {
+            color: var(--primary-color);
+            transition: transform 0.3s ease;
+        }
+
+        .view-project-btn:hover i {
+            transform: translateX(5px);
+        }
+
+        @media (max-width: 992px) {
+            .project-overview-grid,
+            .innovation-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .feature-list,
+            .value-list,
+            .related-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .project-overview-grid,
+            .innovation-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .feature-list,
+            .value-list {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .project-tags {
+                gap: 8px;
+            }
+            
+            .project-overview-image img,
+            .innovation-image img,
+            .gallery-item img {
+                width: 100%;
+                max-width: 100%;
+            }
+            
+            .project-overview-image img,
+            .innovation-image img {
+                width: 80%;
+            }
+            
+            .gallery-grid {
+                gap: 15px;
+            }
+            
+            .project-overview,
+            .project-features,
+            .project-innovation,
+            .project-value,
+            .project-gallery,
+            .related-projects {
+                padding: 40px 0;
+            }
+            
+            .project-overview-content h2,
+            .innovation-content h2,
+            section h2 {
+                font-size: 1.8rem;
+            }
+            
+            .feature-item {
+                height: auto;
+                padding: 20px;
+            }
+            
+            .related-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .project-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .project-overview-content h2,
+            .innovation-content h2,
+            section h2 {
+                font-size: 1.6rem;
+            }
+            
+            .feature-item h3,
+            .value-content h3,
+            .related-content h3 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../images/logo_dg.png" alt="DIGISOL Logo" class="logo-img">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../services.html">Serviços</a></li>
+                    <li><a href="../about.html">Sobre Nós</a></li>
+                    <li><a href="../portfolio.html">Portfólio</a></li>
+                    <li><a href="../contact.html">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Project Hero Section -->
+    <section class="project-hero">
+        <div class="container">
+            <div class="project-hero-content">
+                <span class="hero-label">Projeto em Curso</span>
+                <h1>Interfaces Adaptativas para Dados</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Description Section -->
+    <section class="project-description">
+        <div class="container">
+            <div class="project-description-content">
+                <p>Transformação de dados estáticos em experiências interativas com interfaces que permitem consultas em linguagem natural e visualizações personalizadas.</p>
+                <div class="project-tags">
+                    <span class="project-tag">Inteligência Artificial</span>
+                    <span class="project-tag">Visualização de Dados</span>
+                    <span class="project-tag">Interfaces Conversacionais</span>
+                    <span class="project-tag">Processamento de Linguagem Natural</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Overview Section -->
+    <section class="project-overview">
+        <div class="container">
+            <div class="project-overview-grid">
+                <div class="project-overview-content">
+                    <h2>Descrição Geral</h2>
+                    <p>O projeto Interfaces Adaptativas para Dados transforma a maneira como as pessoas interagem com dados complexos, tornando-os acessíveis através de interfaces conversacionais e visualizações dinâmicas que se adaptam às necessidades do usuário.</p>
+                    <p>Utilizando tecnologias avançadas de processamento de linguagem natural e aprendizado de máquina, o sistema permite que usuários sem conhecimentos técnicos possam fazer perguntas sobre dados em linguagem natural e receber respostas relevantes e visualizações personalizadas.</p>
+                    <p>Esta solução democratiza o acesso a insights baseados em dados, permitindo que empresas de todos os tamanhos possam tomar decisões mais informadas sem a necessidade de especialistas em análise de dados.</p>
+                </div>
+                <div class="project-overview-image">
+                    <img src="../images/mobile3.png" alt="Interfaces Adaptativas para Dados" style="width: 50%; max-width: 100%;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Features Section -->
+    <section class="project-features">
+        <div class="container">
+            <h2>Funcionalidades Principais</h2>
+            <p class="text-center">As Interfaces Adaptativas para Dados oferecem um conjunto de funcionalidades inovadoras que transformam a experiência de análise de dados.</p>
+            
+            <div class="feature-list">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Consultas em Linguagem Natural</h3>
+                    <p>Permite que os usuários façam perguntas sobre seus dados em linguagem natural, como "Qual foi a tendência de vendas no último trimestre?" ou "Mostre-me os clientes mais ativos por região".</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Visualizações Adaptativas</h3>
+                    <p>Gera automaticamente visualizações de dados que se adaptam ao tipo de pergunta, contexto e preferências do usuário, escolhendo o formato mais adequado para representar a informação.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Aprendizado Contínuo</h3>
+                    <p>O sistema aprende com as interações dos usuários, melhorando progressivamente a precisão das respostas e a relevância das visualizações com base no feedback implícito e explícito.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Segurança e Privacidade</h3>
+                    <p>Implementa protocolos avançados de segurança e privacidade, garantindo que os dados sensíveis sejam protegidos e que o acesso às informações seja controlado de acordo com as permissões do usuário.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Innovation Section -->
+    <section class="project-innovation">
+        <div class="container">
+            <div class="innovation-grid">
+                <div class="innovation-image">
+                    <img src="../images/mobile2.png" alt="Inovação em Interfaces Adaptativas" style="width: 50%; max-width: 100%; display: block;">
+                </div>
+                <div class="innovation-content">
+                    <h2>Elementos Inovadores</h2>
+                    <p>As Interfaces Adaptativas para Dados incorporam tecnologias de ponta para criar uma experiência de análise de dados verdadeiramente revolucionária.</p>
+                    
+                    <div class="innovation-list">
+                        <div class="innovation-item">
+                            <h3><i class="fas fa-robot"></i> Compreensão Contextual Avançada</h3>
+                            <p>Utiliza modelos de linguagem de última geração para compreender não apenas as palavras, mas o contexto e a intenção por trás das consultas dos usuários, permitindo respostas mais precisas e relevantes.</p>
+                        </div>
+                        
+                        <div class="innovation-item">
+                            <h3><i class="fas fa-magic"></i> Geração Automática de Narrativas</h3>
+                            <p>Além de visualizações, o sistema gera automaticamente narrativas textuais que explicam os insights mais importantes dos dados, tornando a informação mais acessível e compreensível.</p>
+                        </div>
+                        
+                        <div class="innovation-item">
+                            <h3><i class="fas fa-project-diagram"></i> Integração Multi-fonte</h3>
+                            <p>Capacidade de integrar e analisar dados de múltiplas fontes e formatos, criando uma visão unificada e coerente que permite descobrir correlações e padrões anteriormente invisíveis.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Value Section -->
+    <section class="project-value">
+        <div class="container">
+            <h2>Valor Agregado</h2>
+            <p class="text-center">As Interfaces Adaptativas para Dados oferecem benefícios significativos para organizações e usuários finais.</p>
+            
+            <div class="value-list">
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="value-content">
+                        <h3>Eficiência Operacional</h3>
+                        <p>Reduz drasticamente o tempo necessário para obter insights a partir de dados, permitindo que equipes tomem decisões mais rápidas e baseadas em evidências.</p>
+                    </div>
+                </div>
+                
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="value-content">
+                        <h3>Democratização do Acesso</h3>
+                        <p>Torna a análise de dados acessível a todos os membros da organização, independentemente de seu conhecimento técnico, promovendo uma cultura de decisões baseadas em dados.</p>
+                    </div>
+                </div>
+                
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="value-content">
+                        <h3>Descoberta de Insights</h3>
+                        <p>Facilita a descoberta de padrões e correlações não evidentes, revelando oportunidades de negócio e áreas de melhoria que poderiam passar despercebidas em análises tradicionais.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Projects Section -->
+    <section class="related-projects">
+        <div class="container">
+            <h2>Projetos Relacionados</h2>
+            <p class="text-center">Conheça outros projetos inovadores da DIGISOL que podem lhe interessar.</p>
+            
+            <div class="related-grid">
+
+                <div class="related-item">
+                    <div class="related-image">
+                        <img src="../images/7030img.png" alt="70/30">
+                    </div>
+                    <div class="related-content">
+                        <h3>70/30</h3>
+                        <p>Plataforma digital que conecta profissionais reformados a jovens aprendizes, promovendo a transferência de conhecimento.</p>
+                        <a href="7030.html" class="view-project-btn">Ver Projeto <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="related-item">
+                    <div class="related-image">
+                        <img src="../images/museu4.jpg" alt="Museu Virtual Imersivo">
+                    </div>
+                    <div class="related-content">
+                        <h3>Museu Virtual Imersivo</h3>
+                        <p>Plataforma digital que permite explorar exposições artísticas em qualquer lugar através de realidade virtual.</p>
+                        <a href="museu-virtual.html" class="view-project-btn">Ver Projeto <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Interessado nas Interfaces Adaptativas?</h2>
+                <p>Entre em contato conosco para saber mais sobre como podemos transformar seus dados em insights acionáveis</p>
+                <a href="../contact.html" class="btn primary-btn">Fale Conosco</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>DIGISOL</h3>
+
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Serviços</h3>
+                    <ul>
+                        <li><a href="../services.html#ai-mobile-apps">Apps Móveis com IA</a></li>
+                        <li><a href="../services.html#ai-web-apps">Aplicações Web com IA</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Empresa</h3>
+                    <ul>
+                        <li><a href="../about.html">Sobre Nós</a></li>
+                        <li><a href="../portfolio.html">Portfólio</a></li>
+                        <li><a href="../contact.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contato</h3>
+                    <p>Rua Serpa Pinto, 59<br>4050-585 Porto</p>
+                    <p>Email: info@digisol.pt<br>Telefone: +351 961084022</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 DIGISOL</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

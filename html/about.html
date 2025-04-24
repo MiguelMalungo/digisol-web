@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós - DIGISOL</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo_dg.png" alt="DIGISOL Logo" class="logo-img">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="services.html">Serviços</a></li>
+                    <li><a href="about.html">Sobre Nós</a></li>
+                    <li><a href="portfolio.html">Portfólio</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Hero Section -->
+    <section class="hero about-hero" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/bkg3.png'); background-size: cover; background-position: center;">
+        <div class="container" style="height: 100%; display: flex; align-items: center; justify-content: center;">
+            <div class="hero-content">
+                <h1 class="responsive-heading">Sobre Nós</h1>
+                <p class="hero-subtitle">Inovação digital com impacto ambiental e social</p>
+            </div>
+        </div>
+    </section>
+    
+    <style>
+        .about-hero .hero-content {
+            text-align: center;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .about-hero .responsive-heading {
+            font-size: 5rem;
+            margin-bottom: 30px;
+            font-weight: 700;
+            text-align: center;
+        }
+        
+        .about-hero .hero-subtitle {
+            font-size: 1.3rem;
+            text-align: center;
+            margin: 0 auto;
+        }
+        
+        @media (max-width: 992px) {
+            .about-hero .responsive-heading {
+                font-size: 5.5rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .about-hero .responsive-heading {
+                font-size: 4.5rem;
+                text-align: center;
+            }
+            
+            .about-hero .hero-content {
+                text-align: center;
+                margin: 0 auto;
+            }
+            
+            .about-hero .hero-subtitle {
+                text-align: center;
+                margin: 0 auto;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .about-hero .responsive-heading {
+                font-size: 3.5rem;
+            }
+            
+            .about-hero .hero-subtitle {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+    
+    <!-- Quem Somos Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-card">
+                <h2 class="section-title" style="text-align: left !important;">Quem Somos</h2>
+                <div style="text-align: left;">
+                    <p class="about-text" style="text-align: left !important;">A DIGISOL é uma startup dedicada ao desenvolvimento de produtos e serviços digitais que combinam inteligência artificial generativa, sustentabilidade ambiental e impacto social.</p>
+                    <p class="about-text" style="text-align: left !important;">O nosso objetivo é criar ferramentas e plataformas adaptáveis que facilitem a gestão, a comunicação e a tomada de decisões.</p>
+                    <p class="about-text" style="text-align: left !important;">Acreditamos no poder transformador da tecnologia quando aplicada de forma responsável e inclusiva, buscando sempre soluções que gerem valor para nossos clientes e para a sociedade.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <style>
+        .about-section {
+            padding: 100px 0;
+        }
+        
+        .about-card {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+            padding: 60px;
+            margin-top: -100px;
+        }
+        
+        .section-title {
+            margin-bottom: 50px;
+            font-size: 3rem;
+            color: #333;
+            text-align: left;
+        }
+        
+        .about-text {
+            font-size: 1.4rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            color: #444;
+            text-align: left;
+        }
+        
+        @media (max-width: 768px) {
+            .about-card {
+                padding: 30px;
+                margin-top: -50px;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            
+            .about-text {
+                font-size: 1.1rem;
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .about-section {
+                padding: 80px 0;
+            }
+            
+            .about-card {
+                padding: 20px;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .about-text {
+                font-size: 1rem;
+            }
+        }
+        
+        .objectives-section {
+            background-color: #f9f9f9;
+            padding: 100px 0;
+            position: relative;
+        }
+        
+        .objectives-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .objective-card {
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+        
+        .objective-icon {
+            font-size: 3rem;
+            color: #000000;
+            margin-bottom: 25px;
+        }
+        
+        .objective-title {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        
+        .objective-text {
+            font-size: 1.2rem;
+            line-height: 1.7;
+            text-align: left;
+        }
+        
+        @media (max-width: 992px) {
+            .objectives-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .objectives-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .objective-title {
+                text-align: center;
+                font-size: 1.6rem;
+            }
+            
+            .objective-text {
+                text-align: center;
+                font-size: 1.1rem;
+            }
+            
+            .objective-icon {
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .objectives-section {
+                padding: 60px 0;
+            }
+            
+            .objective-card {
+                padding: 25px;
+            }
+            
+            .objective-title {
+                font-size: 1.4rem;
+            }
+            
+            .objective-text {
+                font-size: 1rem;
+            }
+        }
+    </style>
+
+    <!-- Objetivos Estratégicos e Tecnologias -->
+    <section class="objectives-section">
+        <div class="container">
+            <h2 class="section-title">Objetivos Estratégicos</h2>
+            <div class="objectives-grid">
+                <!-- Objetivos Cards -->
+                <div class="objective-card">
+                    <div class="objective-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="objective-title">Inovação Digital</h3>
+                    <p class="objective-text">Desenvolver aplicações inteligentes que automatizam processos, geram conteúdos personalizados e oferecem interfaces adaptativas.</p>
+                </div>
+                
+                <div class="objective-card">
+                    <div class="objective-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 class="objective-title">Sustentabilidade</h3>
+                    <p class="objective-text">Promover práticas ecológicas e incentivar ações que reduzam a pegada de carbono e preservem os recursos naturais.</p>
+                </div>
+                
+                <div class="objective-card">
+                    <div class="objective-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="objective-title">Inclusão Digital</h3>
+                    <p class="objective-text">Tornar a tecnologia acessível a públicos diversos, contribuindo para a inclusão digital e a transferência intergeracional de conhecimento.</p>
+                </div>
+            </div>
+            
+            <!-- Technologies Section -->
+            <h3 class="tech-title">Tecnologias que Utilizamos</h3>
+            <div class="tech-grid">
+            
+            <style>
+                .tech-title {
+                    font-size: 2.2rem;
+                    margin: 60px 0 40px;
+                    text-align: left;
+                    color: #333;
+                }
+                
+                .tech-grid {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: 30px;
+                }
+                
+                @media (max-width: 992px) {
+                    .tech-grid {
+                        grid-template-columns: repeat(2, 1fr);
+                        gap: 20px;
+                    }
+                }
+                
+                @media (max-width: 768px) {
+                    .tech-grid {
+                        grid-template-columns: 1fr;
+                    }
+                    
+                    .tech-title {
+                        font-size: 1.8rem;
+                        text-align: center;
+                    }
+                }
+                
+                @media (max-width: 480px) {
+                    .tech-title {
+                        font-size: 1.6rem;
+                        margin: 40px 0 30px;
+                    }
+                }
+            </style>
+                <!-- IA & Machine Learning -->
+                <div class="tech-card">
+                    <h4 class="tech-card-title">IA & Machine Learning</h4>
+                    <p class="tech-card-text">Utilizamos modelos avançados de inteligência artificial para criar soluções personalizadas e adaptativas.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">LLMs</span>
+                        <span class="tech-tag">TensorFlow</span>
+                        <span class="tech-tag">PyTorch</span>
+                        <span class="tech-tag">Real-time APIs</span>
+                        <span class="tech-tag">Agent Swarm SDK</span>
+                        <span class="tech-tag">Síntese Multimodal</span>
+                    </div>
+                </div>
+                
+                <style>
+                    .tech-card {
+                        background-color: #1a1a1a;
+                        padding: 40px;
+                        border-radius: 15px;
+                        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+                    }
+                    
+                    .tech-card-title {
+                        font-size: 1.6rem;
+                        margin-bottom: 20px;
+                        text-align: left;
+                        color: white;
+                    }
+                    
+                    .tech-card-text {
+                        font-size: 1.1rem;
+                        line-height: 1.7;
+                        margin-bottom: 20px;
+                        text-align: left;
+                        color: #e0e0e0;
+                    }
+                    
+                    .tech-tags {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 10px;
+                    }
+                    
+                    .tech-tag {
+                        display: inline-block;
+                        padding: 8px 15px;
+                        background-color: #f5f5f5;
+                        border-radius: 20px;
+                        font-size: 1rem;
+                    }
+                    
+                    @media (max-width: 768px) {
+                        .tech-card {
+                            padding: 30px;
+                        }
+                        
+                        .tech-card-title {
+                            text-align: center;
+                            font-size: 1.4rem;
+                        }
+                        
+                        .tech-card-text {
+                            text-align: center;
+                            font-size: 1rem;
+                        }
+                        
+                        .tech-tags {
+                            justify-content: center;
+                        }
+                    }
+                    
+                    @media (max-width: 480px) {
+                        .tech-card {
+                            padding: 20px;
+                        }
+                        
+                        .tech-tag {
+                            padding: 6px 12px;
+                            font-size: 0.9rem;
+                        }
+                    }
+                </style>
+                
+                <!-- Desenvolvimento Web -->
+                <div class="tech-card">
+                    <h4 class="tech-card-title">Desenvolvimento Web</h4>
+                    <p class="tech-card-text">Criamos interfaces intuitivas e responsivas que proporcionam experiências de utilizador excepcionais.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Django</span>
+                        <span class="tech-tag">HTML5/CSS3</span>
+                    </div>
+                </div>
+                
+                <!-- Aplicações Móveis -->
+                <div class="tech-card">
+                    <h4 class="tech-card-title">Aplicações Móveis</h4>
+                    <p class="tech-card-text">Desenvolvemos apps móveis de alta performance que conectam pessoas e serviços.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">React Native</span>
+                        <span class="tech-tag">Flutter</span>
+                        <span class="tech-tag">Swift</span>
+                        <span class="tech-tag">Kotlin</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impacto -->
+    <section class="impact-section">
+        <div class="container">
+            <h2 class="impact-title">Impacto Ambiental, Social e Digital</h2>
+            <p class="impact-subtitle">As soluções da DIGISOL foram projetadas para:</p>
+            <div class="impact-grid">
+            
+            <style>
+                .impact-section {
+                    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/bkg3.png');
+                    background-size: cover;
+                    background-position: center;
+                    padding: 150px 0;
+                    color: white;
+                    position: relative;
+                }
+                
+                .impact-title {
+                    font-size: 3rem;
+                    margin-bottom: 30px;
+                    text-align: left;
+                }
+                
+                .impact-subtitle {
+                    font-size: 1.5rem;
+                    margin-bottom: 50px;
+                    text-align: left;
+                }
+                
+                .impact-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                    gap: 40px;
+                }
+                
+                @media (max-width: 992px) {
+                    .impact-grid {
+                        grid-template-columns: repeat(2, 1fr);
+                    }
+                    
+                    .impact-title {
+                        font-size: 2.5rem;
+                    }
+                    
+                    .impact-subtitle {
+                        font-size: 1.3rem;
+                    }
+                }
+                
+                @media (max-width: 768px) {
+                    .impact-section {
+                        padding: 100px 0;
+                    }
+                    
+                    .impact-grid {
+                        grid-template-columns: 1fr;
+                        gap: 30px;
+                    }
+                    
+                    .impact-title {
+                        font-size: 2.2rem;
+                        text-align: center;
+                    }
+                    
+                    .impact-subtitle {
+                        font-size: 1.2rem;
+                        text-align: center;
+                        margin-bottom: 40px;
+                    }
+                }
+                
+                @media (max-width: 480px) {
+                    .impact-section {
+                        padding: 80px 0;
+                    }
+                    
+                    .impact-title {
+                        font-size: 1.8rem;
+                    }
+                    
+                    .impact-subtitle {
+                        font-size: 1.1rem;
+                        margin-bottom: 30px;
+                    }
+                }
+            </style>
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3 class="impact-card-title">Promover a Sustentabilidade Ambiental</h3>
+                    <p class="impact-card-text">Reduzir o consumo de recursos e incentivar práticas eco-friendly, monitorando indicadores ambientais relevantes.</p>
+                </div>
+                
+                <style>
+                    .impact-card {
+                        background-color: rgba(255, 255, 255, 0.1);
+                        backdrop-filter: blur(10px);
+                        padding: 40px;
+                        border-radius: 15px;
+                        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+                    }
+                    
+                    .impact-icon {
+                        font-size: 3rem;
+                        color: #ffffff;
+                        margin-bottom: 25px;
+                    }
+                    
+                    .impact-card-title {
+                        font-size: 1.8rem;
+                        margin-bottom: 20px;
+                        text-align: left;
+                    }
+                    
+                    .impact-card-text {
+                        font-size: 1.2rem;
+                        line-height: 1.7;
+                        text-align: left;
+                    }
+                    
+                    @media (max-width: 768px) {
+                        .impact-card {
+                            padding: 30px;
+                        }
+                        
+                        .impact-card-title {
+                            font-size: 1.6rem;
+                            text-align: center;
+                        }
+                        
+                        .impact-card-text {
+                            font-size: 1.1rem;
+                            text-align: center;
+                        }
+                        
+                        .impact-icon {
+                            text-align: center;
+                            margin-bottom: 20px;
+                        }
+                    }
+                    
+                    @media (max-width: 480px) {
+                        .impact-card {
+                            padding: 25px;
+                        }
+                        
+                        .impact-card-title {
+                            font-size: 1.4rem;
+                        }
+                        
+                        .impact-card-text {
+                            font-size: 1rem;
+                        }
+                    }
+                </style>
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3 class="impact-card-title">Fomentar a Inclusão Digital e Social</h3>
+                    <p class="impact-card-text">Garantir o acesso à tecnologia para públicos diversos, capacitando agricultores, profissionais reformados e outros grupos historicamente menos conectados.</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 class="impact-card-title">Impulsionar a Inovação e a Produtividade</h3>
+                    <p class="impact-card-text">Automatizar processos e oferecer experiências personalizadas que otimizam a gestão e a tomada de decisões.</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <h3 class="impact-card-title">Estimular Ações Positivas para o Clima</h3>
+                    <p class="impact-card-text">Transformar dados ambientais em ações concretas que contribuam para a mitigação dos impactos climáticos.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>DIGISOL</h3>
+                    <p>&copy; 2025 DIGISOL</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Serviços</h3>
+                    <ul>
+                        <li><a href="services.html#ai-mobile-apps">Apps Móveis com IA</a></li>
+                        <li><a href="services.html#ai-web-apps">Aplicações Web com IA</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Empresa</h3>
+                    <ul>
+                        <li><a href="about.html">Sobre Nós</a></li>
+                        <li><a href="portfolio.html">Portfólio</a></li>
+                        <li><a href="contact.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contacto</h3>
+                    <p>Rua Serpa Pinto, 59<br>4050-585 Porto</p>
+                    <p>Email: info@digisol.pt<br>Telefone: +351 961084022</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 DIGISOL</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

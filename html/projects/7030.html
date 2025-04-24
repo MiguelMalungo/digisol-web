@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>70/30 - Aplicação Social Intergeracional | DIGISOL</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/project-pages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Project-specific background */
+        .project-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/7030img.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .project-hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            text-align: center;
+        }
+
+        .project-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 2rem;
+        }
+        
+        .project-tag {
+            background-color: var(--primary-color);
+            color: var(--dark-color);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .project-overview {
+            padding: 80px 0;
+        }
+
+        .project-overview-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .project-overview-content h2 {
+            text-align: left;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-overview-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .project-overview-image img {
+            width: 50%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            display: block;
+            margin: 0 auto;
+        }
+
+        .project-features {
+            padding: 80px 0;
+            background-color: var(--light-color);
+        }
+
+        .feature-list {
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .feature-item {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .feature-item h3 {
+            margin-bottom: 15px;
+        }
+
+        .feature-item p {
+            color: var(--gray-color);
+            line-height: 1.6;
+        }
+
+        .project-innovation {
+            padding: 80px 0;
+        }
+
+        .innovation-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .innovation-content h2 {
+            text-align: left;
+            margin-bottom: 1.5rem;
+        }
+
+        .innovation-list {
+            margin-top: 30px;
+        }
+
+        .innovation-item {
+            margin-bottom: 30px;
+        }
+
+        .innovation-item h3 {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .innovation-item h3 i {
+            color: var(--primary-color);
+            margin-right: 15px;
+        }
+
+        .innovation-item p {
+            padding-left: 35px;
+            color: var(--gray-color);
+            line-height: 1.6;
+        }
+
+        .innovation-image img {
+            width: 50%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            display: block;
+            margin: 0 auto;
+        }
+
+        .project-value {
+            padding: 80px 0;
+            background-color: var(--light-color);
+        }
+
+        .value-list {
+            margin-top: 40px;
+        }
+
+        .value-item {
+            display: flex;
+            margin-bottom: 30px;
+        }
+
+        .value-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        .value-content h3 {
+            margin-bottom: 10px;
+        }
+
+        .value-content p {
+            color: var(--gray-color);
+            line-height: 1.6;
+        }
+
+        .project-gallery {
+            padding: 80px 0;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            height: 250px;
+        }
+
+        .gallery-item img {
+            width: 50%;
+            height: auto;
+            object-fit: contain;
+            transition: transform 0.5s ease;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .related-projects {
+            padding: 80px 0;
+            background-color: var(--light-color);
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .related-item {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .related-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .related-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .related-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .related-item:hover .related-image img {
+            transform: scale(1.05);
+        }
+
+        .related-content {
+            padding: 20px;
+        }
+
+        .related-content h3 {
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .related-content p {
+            color: var(--gray-color);
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+
+        .view-project-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            color: var(--dark-color);
+            transition: gap 0.3s ease;
+        }
+        
+        .view-project-btn:hover {
+            gap: 15px;
+        }
+        
+        .view-project-btn i {
+            color: var(--primary-color);
+        }
+
+        .gallery-section {
+            padding: 80px 0;
+            background-color: #f9f9f9;
+        }
+        
+        .gallery-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: black;
+        }
+
+        @media (max-width: 992px) {
+            .project-overview-grid,
+            .innovation-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .project-hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .feature-list {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+            
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+            
+            .related-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .project-hero {
+                height: auto;
+                min-height: 500px;
+                padding: 100px 0;
+            }
+            
+            .project-hero-content {
+                text-align: center;
+            }
+            
+            .project-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .project-tags {
+                justify-content: center;
+            }
+            
+            .project-overview-image img,
+            .innovation-image img,
+            .gallery-item img {
+                width: 70%;
+                margin: 0 auto;
+                display: block;
+            }
+            
+            .related-item {
+                flex-direction: column;
+            }
+            
+            .related-image {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            
+            .related-content {
+                width: 100%;
+                padding-left: 0;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .project-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .project-hero p {
+                font-size: 1rem;
+            }
+            
+            .feature-item {
+                height: 250px;
+            }
+            
+            .project-overview-image img,
+            .innovation-image img,
+            .gallery-item img {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../images/logo_dg.png" alt="DIGISOL Logo" class="logo-img">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="../services.html">Serviços</a></li>
+                    <li><a href="../about.html">Sobre Nós</a></li>
+                    <li><a href="../portfolio.html">Portfólio</a></li>
+                    <li><a href="../contact.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Project Hero Section -->
+    <section class="project-hero">
+        <div class="container">
+            <div class="project-hero-content">
+                <span class="hero-label">Projecto em Curso</span>
+                <h1>70/30 – Aplicação Social Intergeracional</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Description Section -->
+    <section class="project-description">
+        <div class="container">
+            <div class="project-description-content">
+                <p>Uma plataforma digital que reativa profissionais reformados de ofícios e os conecta a jovens aprendizes, promovendo a transferência intergeracional de conhecimento e a inclusão digital.</p>
+                <div class="project-tags">
+                    <span class="project-tag">Impacto Social</span>
+                    <span class="project-tag">Inclusão Digital</span>
+                    <span class="project-tag">Transferência de Conhecimento</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Overview Section -->
+    <section class="project-overview">
+        <div class="container">
+            <div class="project-overview-grid">
+                <div class="project-overview-content">
+                    <h2>Descrição Geral</h2>
+                    <p>O projecto 70/30 é uma plataforma digital que reativa profissionais reformados de ofícios e os conecta a jovens aprendizes, promovendo a transferência intergeracional de conhecimento e a inclusão digital.</p>
+                    <p>O nome "70/30" reflete o modelo de remuneração – 70% para o mentor reformado e 30% para o jovem aprendiz – evidenciando o equilíbrio entre experiência e inovação. Este modelo não apenas valoriza a experiência dos profissionais mais velhos, mas também incentiva o aprendizado e o desenvolvimento dos jovens.</p>
+                    <p>A plataforma aborda desafios sociais importantes como o isolamento de idosos, a escassez de mão de obra especializada e a preservação de técnicas e conhecimentos tradicionais, criando um impacto social positivo em múltiplas dimensões.</p>
+                </div>
+                <div class="project-overview-image">
+                    <img src="../images/70301.png" alt="70/30 App Overview">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Features Section -->
+    <section class="project-features">
+        <div class="container">
+            <h2>Funcionalidades Principais</h2>
+            <p class="text-center">O 70/30 oferece um conjunto de funcionalidades projetadas para facilitar a conexão entre gerações e promover a transferência de conhecimento.</p>
+            
+            <div class="feature-list">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <h3>Cadastro Simplificado</h3>
+                    <p>Interface intuitiva para registro de reformados, jovens e clientes, com processo adaptado para usuários com diferentes níveis de familiaridade com tecnologia.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Publicação e Pesquisa de Serviços</h3>
+                    <p>Sistema que permite a postagem e busca de pedidos detalhados, facilitando a formação das duplas 70/30 com base em habilidades, localização e disponibilidade.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Agendamento e Gestão de Pedidos</h3>
+                    <p>Sistema integrado para organizar horários e logística dos atendimentos, com notificações e lembretes para todas as partes envolvidas.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <h3>Pagamentos Seguros</h3>
+                    <p>Integração com gateways de pagamento, possibilitando transações seguras e, se necessário, a aplicação de subsídios municipais para serviços específicos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Innovation Section -->
+    <section class="project-innovation">
+        <div class="container">
+            <div class="innovation-grid">
+                <div class="innovation-image">
+                    <img src="../images/70302.png" alt="70/30 App Innovations">
+                </div>
+                <div class="innovation-content">
+                    <h2>Elementos Inovadores</h2>
+                    <p>O 70/30 incorpora abordagens inovadoras para superar desafios sociais e tecnológicos, criando uma plataforma verdadeiramente inclusiva e impactante.</p>
+                    
+                    <div class="innovation-list">
+                        <div class="innovation-item">
+                            <h3><i class="fas fa-graduation-cap"></i> Módulos de Formação Digital</h3>
+                            <p>Conteúdos digitais e presenciais para capacitar os reformados no uso da tecnologia, com tutoriais adaptados para diferentes níveis de familiaridade digital e suporte personalizado.</p>
+                        </div>
+                        
+                        <div class="innovation-item">
+                            <h3><i class="fas fa-handshake"></i> Sistema de Mentoria Bidirecional</h3>
+                            <p>Enquanto os reformados compartilham seu conhecimento técnico, os jovens podem ajudar os mais velhos com habilidades digitais, criando uma troca de conhecimento em ambas as direções.</p>
+                        </div>
+                        
+                        <div class="innovation-item">
+                            <h3><i class="fas fa-star"></i> Avaliação e Feedback</h3>
+                            <p>Mecanismo de classificações e comentários para a melhoria contínua dos serviços, com reconhecimento especial para duplas que demonstram excelência na transferência de conhecimento.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Value Section -->
+    <section class="project-value">
+        <div class="container">
+            <h2>Valor Agregado</h2>
+            <p class="text-center">O 70/30 gera impacto positivo em múltiplas dimensões sociais e econômicas.</p>
+            
+            <div class="value-list">
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="value-content">
+                        <h3>Coesão Comunitária</h3>
+                        <p>Fortalece a coesão comunitária ao criar pontes entre gerações e promover a colaboração e o respeito mútuo entre diferentes faixas etárias.</p>
+                    </div>
+                </div>
+                
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <div class="value-content">
+                        <h3>Inclusão Social e Digital</h3>
+                        <p>Promove a inclusão social e digital de idosos, combatendo o isolamento e proporcionando uma nova oportunidade de reintegração e propósito na sociedade.</p>
+                    </div>
+                </div>
+                
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="value-content">
+                        <h3>Preservação de Conhecimento</h3>
+                        <p>Valoriza e preserva o conhecimento tradicional, garantindo que técnicas e saberes importantes não se percam com o tempo e sejam transmitidos às novas gerações.</p>
+                    </div>
+                </div>
+                
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <div class="value-content">
+                        <h3>Serviços de Qualidade Acessíveis</h3>
+                        <p>Oferece serviços de qualidade a preços acessíveis, beneficiando a comunidade com a experiência dos profissionais reformados e o entusiasmo dos jovens aprendizes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Gallery Section -->
+    <section class="project-gallery">
+        <div class="container">
+            <h2>Galeria do Projecto</h2>
+            <p class="text-center">Visualize o 70/30 em ação através de imagens da plataforma e seus impactos.</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="../images/70303.png" alt="70/30 Interface">
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/70304.png" alt="70/30 Mentorship">
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/70305.png" alt="70/30 Community">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Projects Section -->
+    <section class="related-projects">
+        <div class="container">
+            <h2>Projectos Relacionados</h2>
+            <p class="text-center">Conheça outros projectos inovadores da DIGISOL que podem lhe interessar.</p>
+            
+            <div class="related-grid">
+                <div class="related-item">
+                    <div class="related-image">
+                        <img src="../images/buddies.png" alt="Buddy">
+                    </div>
+                    <div class="related-content">
+                        <h3>Buddy</h3>
+                        <p>Aplicação móvel inovadora focada no bem-estar dos animais de estimação com funcionalidades inteligentes.</p>
+                        <a href="buddy.html" class="view-project-btn">Ver Projecto <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="related-item">
+                    <div class="related-image">
+                        <img src="../images/farmer.png" alt="AgroGest">
+                    </div>
+                    <div class="related-content">
+                        <h3>AgroGest</h3>
+                        <p>Aplicação móvel para simplificar a gestão diária dos agricultores e incentivar práticas agrícolas sustentáveis.</p>
+                        <a href="agrogest.html" class="view-project-btn">Ver Projecto <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="related-item">
+                    <div class="related-image">
+                        <img src="../images/aikid.jpeg" alt="Plataformas Educacionais Adaptativas">
+                    </div>
+                    <div class="related-content">
+                        <h3>Plataformas Educacionais Adaptativas</h3>
+                        <p>Desenvolvimento de plataformas que geram questionários adaptativos e conteúdos educativos personalizados.</p>
+                        <a href="plataformas-educacionais.html" class="view-project-btn">Ver Projecto <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Interessado no 70/30?</h2>
+                <p>Entre em contacto connosco para saber mais sobre como podemos implementar esta solução na sua comunidade</p>
+                <a href="../contact.html" class="btn primary-btn">Fale Connosco</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>DIGISOL</h3>
+                    <p>&copy; 2025 DIGISOL</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Serviços</h3>
+                    <ul>
+                        <li><a href="../services.html#ai-mobile-apps">Apps Móveis com IA</a></li>
+                        <li><a href="../services.html#ai-web-apps">Aplicações Web com IA</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Empresa</h3>
+                    <ul>
+                        <li><a href="../about.html">Sobre Nós</a></li>
+                        <li><a href="../portfolio.html">Portfólio</a></li>
+                        <li><a href="../contact.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contacto</h3>
+                    <p>Rua Serpa Pinto, 59<br>4050-585 Porto</p>
+                    <p>Email: info@digisol.pt<br>Telefone: +351 961084022</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 DIGISOL</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

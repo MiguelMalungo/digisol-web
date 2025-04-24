@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - DIGISOL</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            color: #fff;
+        }
+        
+        .contact-section {
+            background: linear-gradient(rgba(26, 26, 26, 0.85), rgba(26, 26, 26, 0.85)), url('images/bkg7.png');
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 180px;
+            padding-bottom: 80px;
+        }
+        
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .contact-info h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-align: left;
+        }
+        
+        @media (max-width: 992px) {
+            .contact-info h1 {
+                font-size: 3.5rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-info h1 {
+                font-size: 3rem;
+                text-align: center;
+                margin-top: 0;
+            }
+            
+            .contact-info h2 {
+                text-align: center;
+            }
+            
+            .contact-info .hero-subtitle {
+                text-align: left !important;
+            }
+            
+            .contact-section {
+                padding-top: 160px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .contact-info h1 {
+                font-size: 2.5rem;
+                margin-top: 0;
+            }
+            
+            .contact-info h2 {
+                font-size: 1.5rem;
+            }
+            
+            .contact-info .hero-subtitle {
+                text-align: left !important;
+                font-size: 1.5rem;
+            }
+            
+            .contact-section {
+                padding-top: 140px;
+                min-height: auto;
+            }
+        }
+        
+        .contact-info h2 {
+            font-size: 2rem;
+            font-weight: 400;
+            margin-bottom: 40px;
+            color: #e0e0e0;
+            text-align: left;
+        }
+        
+        .contact-info .hero-subtitle {
+            font-size: 1.8rem;
+            font-weight: 500;
+            margin-bottom: 30px;
+            text-align: left !important;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 50px;
+            padding: 0;
+        }
+        
+        .contact-form {
+            background-color: #222;
+            padding: 55px;
+            border-radius: 10px;
+            margin-right: 10px;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 500;
+            color: #e0e0e0;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 15px;
+            background-color: #333;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 1rem;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px var(--primary-color);
+        }
+        
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .form-group select {
+            appearance: none;
+            background-image: url('data:image/svg+xml;utf8,<svg fill="white" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+            background-repeat: no-repeat;
+            background-position: right 15px center;
+        }
+        
+        .submit-btn {
+            background-color: var(--primary-color);
+            color: var(--dark-color);
+            font-size: 1.1rem;
+            font-weight: 700;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+            margin-top: 20px;
+            width: 100%;
+        }
+        
+        .submit-btn:hover {
+            background-color: var(--secondary-color);
+        }
+        
+        .contact-info {
+            color: #e0e0e0;
+        }
+        
+        .contact-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            color: #fff;
+        }
+        
+        .info-item {
+            margin-bottom: 40px;
+        }
+        
+        .info-item h4 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+        }
+        
+        .info-item h4 i {
+            margin-right: 10px;
+        }
+        
+        .info-item p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: #333;
+            border-radius: 50%;
+            color: #fff;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--primary-color);
+            color: var(--dark-color);
+        }
+        
+        .roadmap {
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .roadmap-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .roadmap-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            background-color: var(--primary-color);
+            color: var(--dark-color);
+            border-radius: 50%;
+            font-weight: bold;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .roadmap-item p {
+            margin: 0;
+            padding-top: 3px;
+        }
+        
+        .file-input-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        
+        .file-input {
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            width: 0.1px;
+            height: 0.1px;
+        }
+        
+        .file-label {
+            display: inline-block;
+            background-color: #444;
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .file-label:hover {
+            background-color: #555;
+        }
+        
+        .file-name {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 992px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .contact-info h1 {
+                font-size: 3rem;
+            }
+            
+            .contact-info h2 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo_dg.png" alt="DIGISOL Logo" class="logo-img">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="services.html">Serviços</a></li>
+                    <li><a href="about.html">Sobre Nós</a></li>
+                    <li><a href="portfolio.html">Portfólio</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars" style="color: #000;"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="contact-container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h1 class="responsive-heading" style="margin-top: 0; padding-top: 20px; text-align: left;">CONTACTO</h1>
+                    <p class="hero-subtitle" style="text-align: left !important;">Vamos discutir o seu projeto!</p>
+                    
+                    <div class="info-item">
+                        <h4><i class="fas fa-map-marker-alt"></i> Morada</h4>
+                        <p>Rua Serpa Pinto, 59<br>4050-585 Porto</p>
+                    </div>
+                    
+                    <div class="info-item">
+                        <h4><i class="fas fa-envelope"></i> Correio Eletrónico</h4>
+                        <p>info@digisol.pt</p>
+                    </div>
+                    
+                    <div class="info-item">
+                        <h4><i class="fas fa-phone-alt"></i> Telefone</h4>
+                        <p>+351 961084022</p>
+                    </div>
+                    
+                    <div class="info-item">
+                        <h4><i class="fas fa-clock"></i> Horário de Funcionamento</h4>
+                        <p>Segunda a Sexta: 9:00 - 18:00<br>Fins de semana: Fechado</p>
+                    </div>
+                    
+                    <div class="roadmap">
+                        <h4><i class="fas fa-map"></i> O que acontece a seguir?</h4>
+                        <div class="roadmap-item">
+                            <div class="roadmap-number">1</div>
+                            <p>Um especialista entra em contacto após analisar os seus requisitos</p>
+                        </div>
+                        <div class="roadmap-item">
+                            <div class="roadmap-number">2</div>
+                            <p>Se necessário, assinamos um NDA para garantir o mais elevado nível de privacidade</p>
+                        </div>
+                        <div class="roadmap-item">
+                            <div class="roadmap-number">3</div>
+                            <p>Enviamos uma proposta de projeto completa com estimativas, cronogramas, CVs, etc.</p>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nome</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correio Eletrónico</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Telefone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Empresa</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Serviço de Interesse</label>
+                            <select id="service" name="service">
+                                <option value="">Selecione um serviço</option>
+                                <option value="web">Desenvolvimento Web</option>
+                                <option value="mobile">Aplicações Móveis</option>
+                                <option value="ai">Inteligência Artificial</option>
+                                <option value="consulting">Consultoria</option>
+                                <option value="other">Outro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="attachment">Anexar Ficheiro</label>
+                            <div class="file-input-container">
+                                <input type="file" id="attachment" name="attachment" class="file-input">
+                                <label for="attachment" class="file-label"><i class="fas fa-paperclip"></i> Escolher Ficheiro</label>
+                                <span class="file-name">Nenhum ficheiro selecionado</span>
+                            </div>
+                        </div>
+                        <button type="submit" class="submit-btn">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

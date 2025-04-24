@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produção Dinâmica de Média | DIGISOL</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/project-pages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Project-specific background */
+        .project-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/brainapp.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 2rem;
+        }
+        
+        .project-tag {
+            background-color: var(--primary-color);
+            color: var(--dark-color);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .project-overview {
+            padding: 80px 0;
+        }
+
+        .project-overview-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .project-overview-content h2 {
+            text-align: left;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-overview-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .project-overview-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-features {
+            padding: 80px 0;
+            background-color: var(--light-color);
+        }
+
+        .feature-list {
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .feature-item {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .feature-item h3 {
+            margin-bottom: 15px;
+        }
+
+        .feature-item p {
+            color: var(--gray-color);
+            line-height: 1.6;
+        }
+
+        .project-innovation {
+            padding: 80px 0;
+        }
+
+        .innovation-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .innovation-content h2 {
+            text-align: left;
+            margin-bottom: 1.5rem;
+        }
+
+        .innovation-list {
+            margin-top: 30px;
+        }
+
+        .innovation-item {
+            margin-bottom: 30px;
+        }
+
+        .innovation-item h3 {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .innovation-item h3 i {
+            color: var(--primary-color);
+            margin-right: 15px;
+        }
+
+        .innovation-item p {
+            padding-left: 35px;
+            color: var(--gray-color);
+            line-height: 1.6;
+        }
+
+        .innovation-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-value {
+            padding: 80px 0;
+            background-color: var(--light-color);
+        }
+
+        .value-list {
+            margin-top: 40px;
+        }
+
+        .value-item {
+            display: flex;
+            margin-bottom: 30px;
+        }
+
+        .value-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        .value-content h3 {
+            margin-bottom: 10px;
+        }
+
+        .value-content p {
+            color: var(--gray-color);
+            line-height: 1.6;
+        }
+
+        .project-gallery {
+            padding: 80px 0;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            height: 250px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .related-projects {
+            padding: 80px 0;
+            background-color: var(--light-color);
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .related-item {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .related-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .related-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .related-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .related-item:hover .related-image img {
+            transform: scale(1.05);
+        }
+
+        .related-content {
+            padding: 20px;
+        }
+
+        .related-content h3 {
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .related-content p {
+            color: var(--gray-color);
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+
+        .view-project-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            color: var(--dark-color);
+            transition: gap 0.3s ease;
+        }
+        
+        .view-project-btn:hover {
+            gap: 15px;
+        }
+        
+        .view-project-btn i {
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 992px) {
+            .project-overview-grid,
+            .innovation-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .project-hero h1 {
+                font-size: 2.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../images/logo_dg.png" alt="DIGISOL Logo" class="logo-img">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="../services.html">Serviços</a></li>
+                    <li><a href="../about.html">Sobre Nós</a></li>
+                    <li><a href="../portfolio.html">Portfólio</a></li>
+                    <li><a href="../contact.html">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Project Hero Section -->
+    <section class="project-hero">
+        <div class="container">
+            <div class="project-hero-content">
+                <span class="hero-label">Proposta Inovadora</span>
+                <h1>Produção Dinâmica de Média</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Description Section -->
+    <section class="project-description">
+        <div class="container">
+            <div class="project-description-content">
+                <p>A nossa solução de Produção Dinâmica de Média utiliza inteligência artificial generativa para criar conteúdos personalizados e adaptáveis em tempo real, revolucionando a forma como as empresas comunicam com o seu público.</p>
+                <div class="project-tags">
+                    <span class="project-tag">Inteligência Artificial</span>
+                    <span class="project-tag">Geração de Conteúdo</span>
+                    <span class="project-tag">Personalização</span>
+                    <span class="project-tag">Narrativa Interativa</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Overview Section -->
+    <section class="project-overview">
+        <div class="container">
+            <div class="project-overview-grid">
+                <div class="project-overview-content">
+                    <h2>Descrição Geral</h2>
+                    <p>A Produção Dinâmica de Média é uma solução inovadora que utiliza algoritmos avançados de IA para gerar e adaptar conteúdos multimédia em tempo real. A plataforma analisa dados do utilizador, contexto e preferências para criar experiências de comunicação altamente personalizadas.</p>
+                    <p>Esta tecnologia permite que as empresas produzam conteúdos relevantes e envolventes sem a necessidade de grandes equipas de produção, reduzindo custos e aumentando a eficácia das suas estratégias de comunicação.</p>
+                </div>
+                <div class="project-overview-image">
+                    <video autoplay loop muted playsinline style="width: 100%; border-radius: 10px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);">
+                        <source src="../images/video_services.mp4" type="video/mp4">
+                        <img src="../images/1.jpg" alt="Produção Dinâmica de Média Overview">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Features Section -->
+    <section class="project-features">
+        <div class="container">
+            <h2>Funcionalidades Principais</h2>
+            <p class="text-center">A nossa solução de Produção Dinâmica de Média oferece um conjunto de funcionalidades avançadas para transformar a criação e o consumo de conteúdo.</p>
+            
+            <div class="feature-list">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <h3>Geração de Conteúdo Personalizado</h3>
+                    <p>Criação automática de textos, imagens e vídeos adaptados ao perfil de cada utilizador, aumentando o envolvimento e a relevância.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-images"></i>
+                    </div>
+                    <h3>Adaptação Contextual</h3>
+                    <p>Ajuste dinâmico do conteúdo com base no contexto de visualização, dispositivo, localização e hora do dia.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3>Narrativas Interativas</h3>
+                    <p>Criação de histórias e apresentações que evoluem com base nas interações e feedback do utilizador em tempo real.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h3>Análise de Desempenho</h3>
+                    <p>Ferramentas avançadas para medir o impacto e a eficácia do conteúdo gerado, permitindo otimizações contínuas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Innovation Section -->
+    <section class="project-innovation">
+        <div class="container">
+            <div class="innovation-grid">
+                <div class="innovation-image">
+                    <img src="../images/childrencartoon.png" alt="Produção Dinâmica de Média Innovations">
+                </div>
+                <div class="innovation-content">
+                    <h2>Inovações Tecnológicas</h2>
+                    <p>A nossa plataforma de Produção Dinâmica de Média incorpora tecnologias de ponta que a distinguem no mercado e oferecem vantagens competitivas significativas aos nossos clientes.</p>
+                    
+                    <div class="innovation-list">
+                        <div class="innovation-item">
+                            <h3><i class="fas fa-brain"></i> Modelos Generativos Avançados</h3>
+                            <p>Utilizamos os mais recentes modelos de IA generativa para criar conteúdos de alta qualidade que são indistinguíveis dos produzidos por humanos.</p>
+                        </div>
+                        
+                        <div class="innovation-item">
+                            <h3><i class="fas fa-chart-line"></i> Aprendizagem Contínua</h3>
+                            <p>Os nossos algoritmos melhoram constantemente com base nos dados de interação, adaptando-se às preferências em evolução do público.</p>
+                        </div>
+                        
+                        <div class="innovation-item">
+                            <h3><i class="fas fa-cogs"></i> Integração Multicanal</h3>
+                            <p>Distribuição perfeita do conteúdo gerado em diversos canais, desde redes sociais a websites e aplicações móveis.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Value Section -->
+    <section class="project-value">
+        <div class="container">
+            <h2>Valor para o Negócio</h2>
+            <p>A implementação da nossa solução de Produção Dinâmica de Média oferece benefícios tangíveis e mensuráveis para as organizações:</p>
+            
+            <div class="value-list">
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-euro-sign"></i>
+                    </div>
+                    <div class="value-content">
+                        <h3>Redução de Custos</h3>
+                        <p>Diminuição significativa nos custos de produção de conteúdo através da automação e otimização de processos criativos.</p>
+                    </div>
+                </div>
+                
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <div class="value-content">
+                        <h3>Aumento do Envolvimento</h3>
+                        <p>Conteúdo personalizado e relevante que gera maior envolvimento do público e taxas de conversão mais elevadas.</p>
+                    </div>
+                </div>
+                
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="value-content">
+                        <h3>Escalabilidade</h3>
+                        <p>Capacidade de produzir grandes volumes de conteúdo personalizado sem comprometer a qualidade ou aumentar proporcionalmente os recursos.</p>
+                    </div>
+                </div>
+                
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="value-content">
+                        <h3>Agilidade de Mercado</h3>
+                        <p>Resposta rápida às tendências e mudanças no mercado, permitindo ajustes em tempo real nas estratégias de comunicação.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Gallery Section -->
+    <section class="project-gallery">
+        <div class="container">
+            <h2>Galeria do Projecto</h2>
+            <p class="text-center">Visualize exemplos da nossa solução de Produção Dinâmica de Média em ação.</p>
+            
+            <div class="gallery-grid">
+                <!-- Gallery content intentionally left empty -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Projects Section -->
+    <section class="related-projects">
+        <div class="container">
+            <h2>Projectos Relacionados</h2>
+            <p class="text-center">Conheça outros projectos inovadores da DIGISOL que podem lhe interessar.</p>
+            
+            <div class="related-grid">
+                <div class="related-item">
+                    <div class="related-image">
+                        <img src="../images/bikevideo.mp4" alt="Hybrid Creative Studio" style="display: none;">
+                        <video autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover;">
+                            <source src="../images/bikevideo.mp4" type="video/mp4">
+                            <img src="../images/brainapp.png" alt="Hybrid Creative Studio">
+                        </video>
+                    </div>
+                    <div class="related-content">
+                        <h3>Hybrid Creative Studio</h3>
+                        <p>Integração de ferramentas de geração de texto, imagem e vídeo para criar campanhas publicitárias e conteúdos de marketing.</p>
+                        <a href="hybrid-creative.html" class="view-project-btn">Ver Projecto <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="related-item">
+                    <div class="related-image">
+                        <img src="../images/womanai.png" alt="Interfaces Adaptativas para Dados">
+                    </div>
+                    <div class="related-content">
+                        <h3>Interfaces Adaptativas para Dados</h3>
+                        <p>Transformação de dados estáticos em experiências interativas com interfaces que permitem consultas em linguagem natural.</p>
+                        <a href="interfaces-adaptativas.html" class="view-project-btn">Ver Projecto <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="related-item">
+                    <div class="related-image">
+                        <img src="../images/aikid.jpeg" alt="Plataformas Educacionais Adaptativas">
+                    </div>
+                    <div class="related-content">
+                        <h3>Plataformas Educacionais Adaptativas</h3>
+                        <p>Desenvolvimento de plataformas que geram questionários adaptativos e conteúdos educativos personalizados.</p>
+                        <a href="plataformas-educacionais.html" class="view-project-btn">Ver Projecto <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Interessado na Produção Dinâmica de Média?</h2>
+                <p>Entre em contacto connosco para saber mais sobre como podemos revolucionar a sua estratégia de conteúdo</p>
+                <a href="../contact.html" class="btn primary-btn">Fale Connosco</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>DIGISOL</h3>
+                    <p>&copy; 2025 DIGISOL</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Serviços</h3>
+                    <ul>
+                        <li><a href="../services.html#ai-mobile-apps">Apps Móveis com IA</a></li>
+                        <li><a href="../services.html#ai-web-apps">Aplicações Web com IA</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Empresa</h3>
+                    <ul>
+                        <li><a href="../about.html">Sobre Nós</a></li>
+                        <li><a href="../portfolio.html">Portfólio</a></li>
+                        <li><a href="../contact.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contacto</h3>
+                    <p>Rua Serpa Pinto, 59<br>4050-585 Porto</p>
+                    <p>Email: info@digisol.pt<br>Telefone: +351 961084022</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 DIGISOL</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

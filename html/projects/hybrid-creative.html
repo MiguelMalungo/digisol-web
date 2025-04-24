@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hybrid Creative Workflows | DIGISOL</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/project-pages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Project-specific background */
+        .project-hero {
+            position: relative;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+        
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            overflow: hidden;
+        }
+        
+        .video-background::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+        
+        .video-background video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .project-hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 80px 0;
+        }
+
+        .project-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+
+
+        .project-description {
+            padding: 60px 0;
+            background-color: var(--light-color);
+        }
+
+        .project-description-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .project-description-content p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 2rem;
+            justify-content: center;
+        }
+        
+        .project-tag {
+            background-color: var(--primary-color);
+            color: var(--dark-color);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .project-overview {
+            padding: 80px 0;
+        }
+
+        .project-overview-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .project-overview-content h2 {
+            text-align: left;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-overview-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .project-overview-image {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .project-overview-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-features {
+            padding: 80px 0;
+            background-color: var(--light-color);
+        }
+
+        .feature-list {
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .feature-item {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .feature-item h3 {
+            margin-bottom: 15px;
+        }
+
+        .feature-item p {
+            color: var(--gray-color);
+            line-height: 1.6;
+        }
+
+        .project-innovation {
+            padding: 80px 0;
+        }
+
+        .innovation-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .innovation-content h2 {
+            text-align: left;
+            margin-bottom: 1.5rem;
+        }
+
+        .innovation-list {
+            margin-top: 30px;
+        }
+
+        .innovation-item {
+            margin-bottom: 30px;
+        }
+
+        .innovation-item h3 {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .innovation-item h3 i {
+            color: var(--primary-color);
+            margin-right: 15px;
+        }
+
+        .innovation-item p {
+            padding-left: 35px;
+            color: var(--gray-color);
+            line-height: 1.6;
+        }
+
+        .innovation-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-value {
+            padding: 80px 0;
+            background-color: var(--light-color);
+        }
+
+        .value-list {
+            margin-top: 40px;
+        }
+
+        .value-item {
+            display: flex;
+            margin-bottom: 30px;
+        }
+
+        .value-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        .value-content h3 {
+            margin-bottom: 10px;
+        }
+
+        .value-content p {
+            color: var(--gray-color);
+            line-height: 1.6;
+        }
+
+        .project-gallery {
+            padding: 80px 0;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        @media (min-width: 1200px) {
+            .gallery-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            height: 250px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .related-projects {
+            padding: 80px 0;
+            background-color: var(--light-color);
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .related-item {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .related-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .related-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .related-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .related-item:hover .related-image img {
+            transform: scale(1.05);
+        }
+
+        .related-content {
+            padding: 20px;
+        }
+
+        .related-content h3 {
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .related-content p {
+            color: var(--gray-color);
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+
+        .view-project-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            color: var(--dark-color);
+            transition: gap 0.3s ease;
+        }
+        
+        .view-project-btn:hover {
+            gap: 15px;
+        }
+        
+        .view-project-btn i {
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 992px) {
+            .project-overview-grid,
+            .innovation-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .project-hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .project-hero {
+                min-height: 70vh;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .project-hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .project-hero p {
+                font-size: 1rem;
+            }
+            
+            .feature-list,
+            .value-list,
+            .related-grid,
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .project-hero {
+                min-height: 60vh;
+            }
+            
+            .video-background video {
+                height: 100%;
+                width: auto;
+                min-width: 100%;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .project-hero h1 {
+                font-size: 1.8rem;
+                margin-bottom: 1rem;
+            }
+            
+            .project-hero p {
+                font-size: 0.9rem;
+                margin-bottom: 1.5rem;
+            }
+            
+            .project-tag {
+                font-size: 0.8rem;
+                padding: 4px 12px;
+            }
+            
+            .project-hero {
+                min-height: 50vh;
+            }
+            
+            .video-background video {
+                height: 100%;
+                min-height: 100%;
+                width: auto;
+                min-width: 100%;
+            }
+            
+            section {
+                padding: 40px 0;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../images/logo_dg.png" alt="DIGISOL Logo" class="logo-img">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../services.html">Serviços</a></li>
+                    <li><a href="../about.html">Sobre Nós</a></li>
+                    <li><a href="../portfolio.html">Portfólio</a></li>
+                    <li><a href="../contact.html">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Project Hero Section -->
+    <section class="project-hero">
+        <div class="video-background">
+            <video autoplay loop muted playsinline>
+                <source src="../images/bikevideo.mp4" type="video/mp4">
+                <!-- Fallback image if video doesn't load -->
+                <img src="../images/brainapp.png" alt="Hybrid Creative Workflows">
+            </video>
+        </div>
+        <div class="container">
+            <div class="project-hero-content">
+                <span class="hero-label">Proposta Inovadora</span>
+                <h1>Hybrid Creative Workflows</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Description Section -->
+    <section class="project-description">
+        <div class="container">
+            <div class="project-description-content">
+                <p>Integração de ferramentas de geração de texto, imagem e vídeo para criar campanhas publicitárias e conteúdos de marketing de alta qualidade com eficiência sem precedentes.</p>
+                <div class="project-tags">
+                    <span class="project-tag">Marketing Digital</span>
+                    <span class="project-tag">IA Generativa</span>
+                    <span class="project-tag">Automação Criativa</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Overview Section -->
+    <section class="project-overview">
+        <div class="container">
+            <div class="project-overview-grid">
+                <div class="project-overview-content">
+                    <h2>Descrição Geral</h2>
+                    <p>O Hybrid Creative Workflows é uma solução inovadora que integra ferramentas de geração de texto, imagem e vídeo baseadas em IA para criar campanhas publicitárias e conteúdos de marketing de alta qualidade com eficiência sem precedentes.</p>
+                    <p>Esta solução combina a criatividade humana com a potência da inteligência artificial, permitindo que equipes de marketing e agências de publicidade desenvolvam conteúdos consistentes e personalizados em múltiplos formatos e canais, reduzindo drasticamente o tempo e os recursos necessários.</p>
+                    <p>Ao orquestrar o fluxo de trabalho entre diferentes ferramentas de IA e profissionais criativos, o sistema maximiza as forças de cada um, resultando em conteúdos de marketing mais eficazes, personalizados e com maior retorno sobre o investimento.</p>
+                </div>
+                <div class="project-overview-image">
+                    <img src="../images/bike1.png" alt="Hybrid Creative Workflows - Bike 1">
+                    <img src="../images/bike2.png" alt="Hybrid Creative Workflows - Bike 2">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Features Section -->
+    <section class="project-features">
+        <div class="container">
+            <h2>Funcionalidades Principais</h2>
+            <p class="text-center">Nossa solução Hybrid Creative Workflows oferece um conjunto abrangente de funcionalidades para transformar o processo criativo de marketing.</p>
+            
+            <div class="feature-list">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-pen-fancy"></i>
+                    </div>
+                    <h3>Geração Integrada de Conteúdo</h3>
+                    <p>Criação coordenada de textos, imagens e vídeos a partir de um briefing único, garantindo consistência visual e de mensagem em todos os formatos e canais de comunicação.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>Orquestração de Fluxos de Trabalho</h3>
+                    <p>Sistema inteligente que coordena as tarefas entre IA e profissionais criativos, definindo automaticamente quais etapas devem ser automatizadas e quais requerem intervenção humana.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Adaptação de Estilo e Tom</h3>
+                    <p>Ferramentas que permitem ajustar o estilo visual e o tom de comunicação dos conteúdos gerados para alinhar-se perfeitamente à identidade da marca e ao público-alvo específico.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Análise de Desempenho Integrada</h3>
+                    <p>Monitoramento do desempenho dos conteúdos gerados, com feedback automático para os sistemas de IA, permitindo aprimoramento contínuo e otimização dos resultados.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Innovation Section -->
+    <section class="project-innovation">
+        <div class="container">
+            <div class="innovation-grid">
+                <div class="innovation-image">
+                    <img src="../images/bike4.png" alt="Hybrid Creative Workflows Innovations">
+                </div>
+                <div class="innovation-content">
+                    <h2>Elementos Inovadores</h2>
+                    <p>Nossa solução Hybrid Creative Workflows incorpora tecnologias de ponta e abordagens revolucionárias para a criação de conteúdo de marketing.</p>
+                    
+                    <div class="innovation-list">
+                        <div class="innovation-item">
+                            <h3><i class="fas fa-brain"></i> Inteligência Colaborativa</h3>
+                            <p>Sistema que combina múltiplos modelos de IA especialistas em diferentes aspectos da criação (texto, imagem, vídeo, áudio), coordenando-os para trabalhar em conjunto com profissionais humanos de forma sinérgica.</p>
+                        </div>
+                        
+                        <div class="innovation-item">
+                            <h3><i class="fas fa-fingerprint"></i> Preservação da Identidade da Marca</h3>
+                            <p>Algoritmos que aprendem e preservam a identidade visual e o tom de voz específicos de cada marca, garantindo que todo conteúdo gerado mantenha consistência com o DNA da empresa.</p>
+                        </div>
+                        
+                        <div class="innovation-item">
+                            <h3><i class="fas fa-sync-alt"></i> Adaptação Contínua de Campanhas</h3>
+                            <p>Sistema que permite ajustes em tempo real nas campanhas com base em dados de desempenho, adaptando mensagens, visuais e estratégias para maximizar o engajamento e as conversões.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Value Section -->
+    <section class="project-value">
+        <div class="container">
+            <h2>Valor Agregado</h2>
+            <p class="text-center">Nossa solução Hybrid Creative Workflows oferece benefícios significativos para equipes de marketing e agências.</p>
+            
+            <div class="value-list">
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <div class="value-content">
+                        <h3>Aceleração do Time-to-Market</h3>
+                        <p>Reduz em até 70% o tempo necessário para criar campanhas completas em múltiplos formatos e canais, permitindo resposta rápida a oportunidades de mercado e tendências emergentes.</p>
+                    </div>
+                </div>
+                
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-euro-sign"></i>
+                    </div>
+                    <div class="value-content">
+                        <h3>Otimização de Recursos</h3>
+                        <p>Diminui significativamente os custos de produção de conteúdo ao automatizar tarefas repetitivas e técnicas, permitindo que equipes criativas foquem em estratégia e direção criativa de alto nível.</p>
+                    </div>
+                </div>
+                
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <div class="value-content">
+                        <h3>Maior Relevância e Personalização</h3>
+                        <p>Possibilita a criação de conteúdos altamente personalizados para diferentes segmentos de público, aumentando a relevância das mensagens e, consequentemente, as taxas de engajamento e conversão.</p>
+                    </div>
+                </div>
+                
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="value-content">
+                        <h3>Escalabilidade sem Precedentes</h3>
+                        <p>Permite escalar a produção de conteúdo sem comprometer a qualidade ou a consistência, viabilizando estratégias de marketing mais ambiciosas e abrangentes com os mesmos recursos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Gallery Section -->
+    <section class="project-gallery">
+        <div class="container">
+            <h2>Galeria do Projeto</h2>
+            <p class="text-center">Visualize exemplos de nossa solução Hybrid Creative Workflows em ação.</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="../images/bike3.png" alt="Hybrid Creative Workflows Example 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/bike5.png" alt="Hybrid Creative Workflows Example 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/bike6.png" alt="Hybrid Creative Workflows Example 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/bike7.png" alt="Hybrid Creative Workflows Example 4">
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/bike8.png" alt="Hybrid Creative Workflows Example 5">
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/bike9.png" alt="Hybrid Creative Workflows Example 6">
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/bike10.png" alt="Hybrid Creative Workflows Example 7">
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/bike11.png" alt="Hybrid Creative Workflows Example 8">
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/bike12.png" alt="Hybrid Creative Workflows Example 9">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Projects Section -->
+    <section class="related-projects">
+        <div class="container">
+            <h2>Projetos Relacionados</h2>
+            <p class="text-center">Conheça outros projetos inovadores da DIGISOL que podem lhe interessar.</p>
+            
+            <div class="related-grid">
+                <div class="related-item">
+                    <div class="related-image">
+                        <img src="../images/brainapp.png" alt="Produção Dinâmica de Média">
+                    </div>
+                    <div class="related-content">
+                        <h3>Produção Dinâmica de Mídia</h3>
+                        <p>Criação de conteúdos multimídia que se adaptam em tempo real com base no feedback e nas preferências dos usuários.</p>
+                        <a href="midia-dinamica.html" class="view-project-btn">Ver Projeto <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Interessado no Hybrid Creative Workflows?</h2>
+                <p>Entre em contato conosco para saber mais sobre como podemos revolucionar seus processos de criação de conteúdo</p>
+                <a href="../contact.html" class="btn primary-btn">Fale Conosco</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>DIGISOL</h3>
+                    <p>&copy; 2025 DIGISOL</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Serviços</h3>
+                    <ul>
+                        <li><a href="../services.html#ai-mobile-apps">Apps Móveis com IA</a></li>
+                        <li><a href="../services.html#ai-web-apps">Aplicações Web com IA</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Empresa</h3>
+                    <ul>
+                        <li><a href="../about.html">Sobre Nós</a></li>
+                        <li><a href="../portfolio.html">Portfólio</a></li>
+                        <li><a href="../contact.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contacto</h3>
+                    <p>Rua Serpa Pinto, 59<br>4050-585 Porto</p>
+                    <p>Email: info@digisol.pt<br>Telefone: +351 961084022</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 DIGISOL</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
