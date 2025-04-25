@@ -10,9 +10,41 @@
     <style>
         /* Project-specific background */
         .project-hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/brainapp.png');
-            background-size: cover;
-            background-position: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            overflow: hidden;
+        }
+        
+        .video-background::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+        
+        .video-background video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translateX(-50%) translateY(-50%);
+            object-fit: cover;
         }
 
         .project-tags {
@@ -314,8 +346,15 @@
 
     <!-- Project Hero Section -->
     <section class="project-hero">
+        <div class="video-background">
+            <video autoplay loop muted playsinline>
+                <source src="../images/drone.mp4" type="video/mp4">
+                <!-- Fallback image if video doesn't load -->
+                <img src="../images/brainapp.png" alt="DIGISOL Hero Background">
+            </video>
+        </div>
         <div class="container">
-            <div class="project-hero-content">
+            <div class="project-hero-content" style="position: relative; z-index: 2;">
                 <span class="hero-label">Proposta Inovadora</span>
                 <h1>Produção Dinâmica de Média</h1>
             </div>
@@ -347,10 +386,7 @@
                     <p>Esta tecnologia permite que as empresas produzam conteúdos relevantes e envolventes sem a necessidade de grandes equipas de produção, reduzindo custos e aumentando a eficácia das suas estratégias de comunicação.</p>
                 </div>
                 <div class="project-overview-image">
-                    <video autoplay loop muted playsinline style="width: 100%; border-radius: 10px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);">
-                        <source src="../images/video_services.mp4" type="video/mp4">
-                        <img src="../images/1.jpg" alt="Produção Dinâmica de Média Overview">
-                    </video>
+                    <img src="../images/childrencartoon.png" alt="Produção Dinâmica de Média Innovations" style="width: 100%; border-radius: 10px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);">
                 </div>
             </div>
         </div>
@@ -403,7 +439,10 @@
         <div class="container">
             <div class="innovation-grid">
                 <div class="innovation-image">
-                    <img src="../images/childrencartoon.png" alt="Produção Dinâmica de Média Innovations">
+                    <video autoplay loop muted playsinline style="width: 70%; border-radius: 10px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); display: block; margin: 0 auto;">
+                        <source src="../images/mirror_porto.mp4" type="video/mp4">
+                        <img src="../images/1.jpg" alt="Produção Dinâmica de Média Overview">
+                    </video>
                 </div>
                 <div class="innovation-content">
                     <h2>Inovações Tecnológicas</h2>
