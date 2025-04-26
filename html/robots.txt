@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+Sitemap: https://digisol.pt/sitemap.xml
+
+# Allow all bots to access all content
+User-agent: *
+Disallow:
+
+# Specify crawl delay for heavy bots
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
