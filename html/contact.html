@@ -330,6 +330,52 @@
                 font-size: 1.6rem;
             }
         }
+        
+        /* Form message styles */
+        .form-message {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 15px 20px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            max-width: 350px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            z-index: 1000;
+            animation: slideIn 0.3s ease-out forwards;
+        }
+        
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        
+        .success-message {
+            background-color: #4CAF50;
+            color: white;
+        }
+        
+        .error-message {
+            background-color: #f44336;
+            color: white;
+        }
+        
+        .form-message i {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+        
+        .form-message p {
+            margin: 0;
+            font-size: 14px;
+        }
     </style>
 </head>
 <body>
@@ -409,7 +455,7 @@
                 </div>
                 
                 <div class="contact-form">
-                    <form id="contactForm">
+                    <form id="contactForm" onsubmit="return sendEmail(event);">
                         <div class="form-group">
                             <label for="name">Nome</label>
                             <input type="text" id="name" name="name" required>
@@ -456,6 +502,25 @@
         </div>
     </section>
 
+    <!-- EmailJS Scripts -->    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // Initialize EmailJS with your public key
+            emailjs.init("YOUR_PUBLIC_KEY");
+        })();
+    </script>
     <script src="js/main.js"></script>
+    
+    <!-- Success/Error Messages -->    
+    <div id="successMessage" class="form-message success-message" style="display: none;">
+        <i class="fas fa-check-circle"></i>
+        <p>Mensagem enviada com sucesso! Entraremos em contacto brevemente.</p>
+    </div>
+    
+    <div id="errorMessage" class="form-message error-message" style="display: none;">
+        <i class="fas fa-exclamation-circle"></i>
+        <p>Ocorreu um erro ao enviar a mensagem. Por favor, tente novamente.</p>
+    </div>
 </body>
 </html>
