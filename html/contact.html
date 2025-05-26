@@ -455,7 +455,12 @@
                 </div>
                 
                 <div class="contact-form">
-                    <form id="contactForm" onsubmit="return sendEmail(event);">
+                    <form id="contactForm" action="https://formsubmit.co/m.f.g.digisol@gmail.com" method="POST" enctype="multipart/form-data">
+                        <!-- FormSubmit configuration -->
+                        <input type="hidden" name="_next" value="https://digisol.pt/thank-you.html">
+                        <input type="hidden" name="_subject" value="Novo contacto do website DIGISOL">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_captcha" value="false">
                         <div class="form-group">
                             <label for="name">Nome</label>
                             <input type="text" id="name" name="name" required>
@@ -502,25 +507,6 @@
         </div>
     </section>
 
-    <!-- EmailJS Scripts -->    
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function() {
-            // Initialize EmailJS with your public key
-            emailjs.init("YOUR_PUBLIC_KEY");
-        })();
-    </script>
     <script src="js/main.js"></script>
-    
-    <!-- Success/Error Messages -->    
-    <div id="successMessage" class="form-message success-message" style="display: none;">
-        <i class="fas fa-check-circle"></i>
-        <p>Mensagem enviada com sucesso! Entraremos em contacto brevemente.</p>
-    </div>
-    
-    <div id="errorMessage" class="form-message error-message" style="display: none;">
-        <i class="fas fa-exclamation-circle"></i>
-        <p>Ocorreu um erro ao enviar a mensagem. Por favor, tente novamente.</p>
-    </div>
 </body>
 </html>
