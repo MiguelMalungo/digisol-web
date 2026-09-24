@@ -375,6 +375,13 @@ body.menu-open .menu-toggle span:nth-child(2) { top: 24px; transform: rotate(-45
 
 .link-arrow:hover { background-size: 0% 1.5px; background-position: 100% 100%; gap: 16px; }
 
+/* Inline SVG arrows — sized to the surrounding text, drawn in its colour */
+.ico { display: inline-block; width: 0.95em; height: 0.95em; vertical-align: -0.12em; flex-shrink: 0; overflow: visible; }
+.arr { display: inline-flex; }
+.index-arrow .ico { width: 1.1em; height: 1.1em; }
+.stack-go b .ico { width: 1.05rem; height: 1.05rem; }
+.work-name .ext .ico, .cs-meta .ico { width: 0.8em; height: 0.8em; vertical-align: 0; }
+
 /* ---------- Word reveal ---------- */
 /* The mask is padded well beyond the glyph box (and pulled back with negative
    margins so layout is unchanged) so accents, descenders and italic overhangs

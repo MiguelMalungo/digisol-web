@@ -211,7 +211,7 @@ img[src$="brainapp.png"], img[src$="womanai.png"], img[src$="aikid.jpeg"], img[s
 .innovation-item { padding: 22px 0; border-bottom: 1px solid var(--line); }
 .innovation-item h3 { display: flex; align-items: center; gap: 14px; font-size: 1.3rem; margin-bottom: 8px; }
 .innovation-item h3 i { color: var(--ink); font-size: 0.9rem; width: 34px; height: 34px; border-radius: 50%; background: var(--sun); display: inline-grid; place-items: center; flex-shrink: 0; }
-.innovation-item p { padding-left: 48px; color: var(--muted); font-size: 0.98rem; }
+.innovation-item p { color: var(--muted); font-size: 0.98rem; }
 
 /* ---------- Value ---------- */
 .value-list, .value-grid {
@@ -311,5 +311,4 @@ img[src$="brainapp.png"], img[src$="womanai.png"], img[src$="aikid.jpeg"], img[s
 @media (max-width: 900px) {
     .project-description-content, .project-overview-grid, .overview-grid, .innovation-grid { grid-template-columns: 1fr; }
     .innovation-image { order: 2; }
-    .innovation-item p { padding-left: 0; }
 }
