@@ -3,233 +3,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Nós | DIGISOL Portugal</title>
+    <title>Estúdio — DIGISOL | Inovação digital com impacto, no Porto</title>
     <meta name="description" content="A DIGISOL é uma startup do Porto dedicada a produtos digitais que combinam IA generativa, sustentabilidade ambiental e impacto social.">
     <meta name="author" content="DIGISOL">
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Sobre Nós | DIGISOL Portugal">
-    <meta property="og:description" content="Inovação digital com impacto ambiental e social, desde o Porto.">
-    <meta property="og:image" content="images/logo_dg.png">
+    <meta name="theme-color" content="#F2EDE3">
+    <meta property="og:title" content="Estúdio — DIGISOL | Inovação digital com impacto, no Porto">
+    <meta property="og:description" content="A DIGISOL é uma startup do Porto dedicada a produtos digitais que combinam IA generativa, sustentabilidade ambiental e impacto social.">
+    <meta property="og:image" content="https://digisol.pt/images/logo_dg.png">
     <meta property="og:url" content="https://digisol.pt/about.html">
     <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="canonical" href="https://digisol.pt/about.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script>try{if(sessionStorage.getItem('dg-t'))document.documentElement.classList.add('entering')}catch(e){}</script>
 </head>
 <body>
-    <!-- Header -->
-    <header>
+    <a class="skip-link" href="#main">Saltar para o conteúdo</a>
+    <div class="curtain" aria-hidden="true"></div>
+
+    <header class="site-header" id="top">
         <div class="container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="images/logo_dg_t.png" alt="DIGISOL Logo" class="logo-img">
-                </a>
-            </div>
-            <nav>
+            <a class="logo" href="index.html" aria-label="DIGISOL — Início">
+                <img src="images/logo_dg_t.png" alt="DIGISOL — Soluções Digitais" class="logo-img" width="152" height="53">
+            </a>
+            <nav class="site-nav" aria-label="Principal">
                 <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="services.html">Serviços</a></li>
-                    <li><a href="about.html">Sobre Nós</a></li>
-                    <li><a href="portfolio.html">Portfólio</a></li>
-                    <li><a href="contact.html">Contacto</a></li>
+                    <li><a href="index.html">Início<sup>01</sup></a></li>
+                    <li><a href="portfolio.html">Trabalho<sup>02</sup></a></li>
+                    <li><a href="services.html">Serviços<sup>03</sup></a></li>
+                    <li><a href="about.html" aria-current="page">Estúdio<sup>04</sup></a></li>
+                    <li><a href="contact.html">Contacto<sup>05</sup></a></li>
                 </ul>
             </nav>
-            <div class="mobile-menu-toggle" role="button" aria-label="Abrir menu" tabindex="0">
-                <i class="fas fa-bars"></i>
+            <div class="header-meta">
+                <span class="clock" data-clock>Porto</span>
+                <a class="header-cta" href="contact.html">Iniciar projeto</a>
             </div>
+            <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span></button>
         </div>
     </header>
 
-    <!-- Hero -->
-    <section class="page-hero">
-        <div class="hero-media">
-            <video autoplay loop muted playsinline>
-                <source src="images/porto_animated.mp4" type="video/mp4">
-            </video>
-        </div>
-        <div class="container">
-            <span class="kicker">Sobre Nós</span>
-            <h1>Inovação digital com <em>impacto</em></h1>
-            <p class="hero-sub">Ambiental, social e humano — tecnologia responsável, feita no Porto.</p>
-        </div>
-    </section>
+    <main id="main">
+        <section class="page-head">
+            <div class="page-sun" data-sun data-rays="96" aria-hidden="true"></div>
+            <div class="container">
+                <span class="label label--dot" data-fade>Estúdio</span>
+                <h1 data-split>Inovação digital <em>com impacto</em></h1>
+                <div class="page-head-foot">
+                    <p class="lede" data-fade style="--d:200ms">Ambiental, social e humano — tecnologia responsável, feita no Porto.</p>
+                </div>
+            </div>
+        </section>
 
-    <!-- Quem Somos -->
-    <section class="sec">
-        <div class="container">
-            <div class="about-lede">
-                <div data-reveal>
-                    <span class="kicker">Quem Somos</span>
-                </div>
-                <div class="about-lede-text" data-reveal>
-                    <p>A DIGISOL é uma startup dedicada ao desenvolvimento de produtos e serviços digitais que combinam inteligência artificial generativa, sustentabilidade ambiental e impacto social.</p>
-                    <p>O nosso objetivo é criar ferramentas e plataformas adaptáveis que facilitem a gestão, a comunicação e a tomada de decisões.</p>
-                    <p>Acreditamos no poder transformador da tecnologia quando aplicada de forma responsável e inclusiva, buscando sempre soluções que gerem valor para os nossos clientes e para a sociedade.</p>
-                </div>
+        <section class="sec" style="padding-top:0">
+            <div class="container">
+                <div class="mosaic" data-fade><img src="images/work/alice-hero-sm.webp" alt="" width="960" height="600" loading="lazy" decoding="async"><img src="images/work/starot-tarot-sm.webp" alt="" width="960" height="600" loading="lazy" decoding="async"><img src="images/work/sotkis-hero-sm.webp" alt="" width="960" height="600" loading="lazy" decoding="async"><img src="images/work/miks-playing-sm.webp" alt="" width="960" height="600" loading="lazy" decoding="async"><img src="images/work/fontes-hero-sm.webp" alt="" width="960" height="600" loading="lazy" decoding="async"><img src="images/work/7030-hero-sm.webp" alt="" width="960" height="600" loading="lazy" decoding="async"><img src="images/work/blocks-hero-sm.webp" alt="" width="960" height="600" loading="lazy" decoding="async"></div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Objetivos Estratégicos -->
-    <section class="sec on-paper2 tight">
-        <div class="container">
-            <div class="sec-head" data-reveal>
-                <span class="kicker">Objetivos Estratégicos</span>
-                <h2>Três eixos, <em>uma direção</em></h2>
+        <section class="container cs-block" style="padding-top:0">
+            <span class="label label--dot">Quem somos</span>
+            <div class="rich" data-fade>
+                <p>A DIGISOL é uma startup dedicada ao desenvolvimento de produtos e serviços digitais que combinam inteligência artificial generativa, sustentabilidade ambiental e impacto social.</p>
+                <p>O nosso objetivo é criar ferramentas e plataformas adaptáveis que facilitem a gestão, a comunicação e a tomada de decisões.</p>
+                <p class="small">Acreditamos no poder transformador da tecnologia quando aplicada de forma responsável e inclusiva, procurando sempre soluções que gerem valor para os nossos clientes e para a sociedade.</p>
             </div>
-            <div class="objective-grid">
-                <div class="tile">
-                    <div class="tile-icon"><i class="fas fa-robot"></i></div>
-                    <h3>Inovação Digital</h3>
-                    <p>Desenvolver aplicações inteligentes que automatizam processos, geram conteúdos personalizados e oferecem interfaces adaptativas.</p>
-                </div>
-                <div class="tile">
-                    <div class="tile-icon"><i class="fas fa-leaf"></i></div>
-                    <h3>Sustentabilidade</h3>
-                    <p>Promover práticas ecológicas e incentivar ações que reduzam a pegada de carbono e preservem os recursos naturais.</p>
-                </div>
-                <div class="tile">
-                    <div class="tile-icon"><i class="fas fa-users"></i></div>
-                    <h3>Inclusão Digital</h3>
-                    <p>Tornar a tecnologia acessível a públicos diversos, contribuindo para a inclusão digital e a transferência intergeracional de conhecimento.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Tecnologias -->
-    <section class="sec on-ink">
-        <div class="container">
-            <div class="sec-head" data-reveal>
-                <span class="kicker">Tecnologias</span>
-                <h2>As ferramentas <em>que dominamos</em></h2>
-            </div>
-            <div class="tech-grid-n">
-                <div class="tile">
-                    <h3>IA &amp; Machine Learning</h3>
-                    <p>Utilizamos modelos avançados de inteligência artificial para criar soluções personalizadas e adaptativas.</p>
-                    <div class="tech-tags-n">
-                        <span>LLMs</span>
-                        <span>TensorFlow</span>
-                        <span>PyTorch</span>
-                        <span>Real-time APIs</span>
-                        <span>Agent Swarm SDK</span>
-                        <span>Síntese Multimodal</span>
-                        <span>Geração de Imagem e Vídeo</span>
-                    </div>
-                </div>
-                <div class="tile">
-                    <h3>Desenvolvimento Web</h3>
-                    <p>Criamos interfaces intuitivas e responsivas que proporcionam experiências de utilizador excepcionais.</p>
-                    <div class="tech-tags-n">
-                        <span>React</span>
-                        <span>Node.js</span>
-                        <span>Python</span>
-                        <span>Django</span>
-                        <span>HTML5/CSS3</span>
-                    </div>
-                </div>
-                <div class="tile">
-                    <h3>Aplicações Móveis</h3>
-                    <p>Desenvolvemos apps móveis de alta performance que conectam pessoas e serviços.</p>
-                    <div class="tech-tags-n">
-                        <span>React Native</span>
-                        <span>Flutter</span>
-                        <span>Swift</span>
-                        <span>Kotlin</span>
+        <section class="sec founder" aria-labelledby="founder-title">
+            <div class="container">
+                <div class="sec-head" style="margin-bottom:0">
+                    <span class="label label--dot">Fundador</span>
+                    <div>
+                        <h2 id="founder-title" data-split>Miguel <em>Ferraz Guedes</em></h2>
+                        <p class="founder-role">Fundador · Web developer &amp; designer — Porto / Estocolmo</p>
+                        <p class="lede">Designer, programador e artista. Duas décadas de design gráfico, fotografia e vídeo entre Estocolmo e o Porto — e, desde 2024, os sites, apps e plataformas da DIGISOL.</p>
+                        <div class="founder-links">
+                            <a class="btn" href="https://miguelfguedes.pt/cv" target="_blank" rel="noopener">Ver CV <span class="arr">↗</span></a>
+                            <a class="btn btn--ghost" href="https://miguelfguedes.pt" target="_blank" rel="noopener">miguelfguedes.pt ↗</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Impacto -->
-    <section class="sec">
-        <div class="container">
-            <div class="sec-head" data-reveal>
-                <span class="kicker">Impacto</span>
-                <h2>Ambiental, social <em>e digital</em></h2>
-                <p class="lede">As soluções da DIGISOL foram projetadas para:</p>
-            </div>
-            <div class="impact-grid-n">
-                <div class="tile">
-                    <div class="tile-icon"><i class="fas fa-seedling"></i></div>
-                    <h3>Promover a Sustentabilidade Ambiental</h3>
-                    <p>Reduzir o consumo de recursos e incentivar práticas eco-friendly, monitorando indicadores ambientais relevantes.</p>
+        <section class="sec" aria-labelledby="obj-title">
+            <div class="container">
+                <div class="sec-head">
+                    <span class="label label--dot">Objetivos estratégicos</span>
+                    <h2 id="obj-title" data-split>Três eixos, <em>uma direção</em>.</h2>
                 </div>
-                <div class="tile">
-                    <div class="tile-icon"><i class="fas fa-hands-helping"></i></div>
-                    <h3>Fomentar a Inclusão Digital e Social</h3>
-                    <p>Garantir o acesso à tecnologia para públicos diversos, capacitando agricultores, profissionais reformados e outros grupos historicamente menos conectados.</p>
-                </div>
-                <div class="tile">
-                    <div class="tile-icon"><i class="fas fa-rocket"></i></div>
-                    <h3>Impulsionar a Inovação e a Produtividade</h3>
-                    <p>Automatizar processos e oferecer experiências personalizadas que otimizam a gestão e a tomada de decisões.</p>
-                </div>
-                <div class="tile">
-                    <div class="tile-icon"><i class="fas fa-globe-americas"></i></div>
-                    <h3>Estimular Ações Positivas para o Clima</h3>
-                    <p>Transformar dados ambientais em ações concretas que contribuam para a mitigação dos impactos climáticos.</p>
+                <div class="values">
+                    <div class="value" data-fade><span class="index-num">01</span><h3>Inovação <em>digital</em></h3><p>Desenvolver aplicações inteligentes que automatizam processos, geram conteúdos personalizados e oferecem interfaces adaptativas.</p></div>
+                    <div class="value" data-fade style="--d:100ms"><span class="index-num">02</span><h3>Sustenta<em>bilidade</em></h3><p>Promover práticas ecológicas e incentivar ações que reduzam a pegada de carbono e preservem os recursos naturais.</p></div>
+                    <div class="value" data-fade style="--d:200ms"><span class="index-num">03</span><h3>Inclusão <em>digital</em></h3><p>Tornar a tecnologia acessível a públicos diversos, contribuindo para a inclusão digital e a transferência intergeracional de conhecimento.</p></div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- CTA -->
-    <section class="cta-band">
-        <div class="container">
-            <h2 data-reveal>Vamos construir algo <em>com significado?</em></h2>
-            <p data-reveal>Conheça os nossos projectos ou fale connosco sobre a sua ideia.</p>
-            <a href="contact.html" class="btn" data-reveal>Entre em Contacto <i class="fas fa-arrow-right"></i></a>
-        </div>
-    </section>
+        <section class="sec on-ink" aria-labelledby="tech-title">
+            <div class="container">
+                <div class="sec-head">
+                    <span class="label label--dot">Tecnologia</span>
+                    <h2 id="tech-title" data-split>As ferramentas <em>que dominamos</em>.</h2>
+                </div>
+                <div class="tech">
+                    <div class="tech-col" data-fade><h3>IA &amp; Machine Learning</h3><ul><li>LLMs e agentes</li><li>TensorFlow · PyTorch</li><li>Real-time APIs</li><li>Síntese multimodal</li><li>Geração de imagem e vídeo</li></ul></div>
+                    <div class="tech-col" data-fade style="--d:100ms"><h3>Web &amp; 3D</h3><ul><li>React · TypeScript · Vite</li><li>Node.js · Python · Django</li><li>three.js · WebGL</li><li>GSAP · Lenis</li><li>Web Audio API</li></ul></div>
+                    <div class="tech-col" data-fade style="--d:200ms"><h3>Aplicações móveis</h3><ul><li>React Native</li><li>Flutter</li><li>Swift</li><li>Kotlin</li><li>PWA</li></ul></div>
+                </div>
+            </div>
+        </section>
 
-    <!-- Footer -->
-    <footer>
+        <section class="sec" aria-labelledby="impact-title">
+            <div class="container">
+                <div class="sec-head">
+                    <span class="label label--dot">Impacto</span>
+                    <h2 id="impact-title" data-split>Ambiental, social <em>e digital</em>.</h2>
+                </div>
+                <div class="index-list">
+                    <div class="index-row" style="grid-template-columns:60px minmax(0,1.3fr) minmax(0,1.4fr)"><span class="index-num">01</span><span class="index-name" style="font-size:clamp(1.4rem,2.4vw,2.1rem)">Promover a sustentabilidade <em>ambiental</em></span><span style="color:var(--muted)">Reduzir o consumo de recursos e incentivar práticas eco-friendly, monitorizando indicadores ambientais relevantes.</span></div>
+                    <div class="index-row" style="grid-template-columns:60px minmax(0,1.3fr) minmax(0,1.4fr)"><span class="index-num">02</span><span class="index-name" style="font-size:clamp(1.4rem,2.4vw,2.1rem)">Fomentar a inclusão <em>digital e social</em></span><span style="color:var(--muted)">Garantir o acesso à tecnologia a públicos diversos — agricultores, profissionais reformados e outros grupos menos conectados.</span></div>
+                    <div class="index-row" style="grid-template-columns:60px minmax(0,1.3fr) minmax(0,1.4fr)"><span class="index-num">03</span><span class="index-name" style="font-size:clamp(1.4rem,2.4vw,2.1rem)">Impulsionar a inovação <em>e a produtividade</em></span><span style="color:var(--muted)">Automatizar processos e oferecer experiências personalizadas que otimizam a gestão e a tomada de decisões.</span></div>
+                    <div class="index-row" style="grid-template-columns:60px minmax(0,1.3fr) minmax(0,1.4fr)"><span class="index-num">04</span><span class="index-name" style="font-size:clamp(1.4rem,2.4vw,2.1rem)">Estimular ações positivas <em>para o clima</em></span><span style="color:var(--muted)">Transformar dados ambientais em ações concretas que contribuam para a mitigação dos impactos climáticos.</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-final" aria-labelledby="cta-title">
+            <div class="container">
+                <h2 id="cta-title" data-split>Tem um projeto?<br><em>Vamos falar.</em></h2>
+                <a class="cta-mail" href="mailto:info@digisol.pt" data-cursor="Escrever">info@digisol.pt</a>
+                <div style="display:flex;justify-content:center;margin-top:36px">
+                    <a class="btn btn--sun" href="contact.html">Iniciar um projeto <span class="arr">→</span></a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
         <div class="container">
-            <div class="footer-mark" aria-hidden="true">DIGIS<span class="sun-o"></span>L</div>
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h3>DIGISOL</h3>
-                    <p>Soluções digitais com inteligência artificial, sustentabilidade e impacto social — desde o Porto.</p>
-                    <div class="social-links">
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    </div>
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" aria-label="DIGISOL — Início"><img src="images/logo_dg_t.png" alt="DIGISOL" class="logo-img" width="152" height="53" loading="lazy"></a>
+                    <p>Estúdio digital no Porto. Sites, apps e plataformas — com design, inteligência artificial e impacto.</p>
                 </div>
                 <div class="footer-col">
-                    <h3>Serviços</h3>
+                    <h4>Navegar</h4>
                     <ul>
-                        <li><a href="services.html#ai-mobile-apps">Apps Móveis com IA</a></li>
-                        <li><a href="services.html#ai-web-apps">Aplicações Web com IA</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Empresa</h3>
-                    <ul>
-                        <li><a href="about.html">Sobre Nós</a></li>
-                        <li><a href="portfolio.html">Portfólio</a></li>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="portfolio.html">Trabalho</a></li>
+                        <li><a href="services.html">Serviços</a></li>
+                        <li><a href="about.html">Estúdio</a></li>
                         <li><a href="contact.html">Contacto</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h3>Contacto</h3>
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><a href="mailto:info@digisol.pt">info@digisol.pt</a></li>
+                        <li><a href="tel:+351961084022">+351 961 084 022</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Estúdio</h4>
                     <p>Rua Serpa Pinto, 59<br>4050-585 Porto</p>
-                    <p>info@digisol.pt<br>+351 961 084 022</p>
+                    <p style="margin-top:12px;color:var(--muted)">Seg — Sex, 9:00 — 18:00</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Fundador</h4>
+                    <ul>
+                        <li><a href="https://miguelfguedes.pt" target="_blank" rel="noopener">Miguel Ferraz Guedes ↗</a></li>
+                        <li><a href="https://miguelfguedes.pt/cv" target="_blank" rel="noopener">Curriculum vitae ↗</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="copyright">
-                <p>&copy; 2026 DIGISOL</p>
-                <p>Porto — 41.1496° N, 8.6109° W</p>
+            <div class="footer-bottom">
+                <span>&copy; 2026 DIGISOL — Soluções Digitais</span>
+                <span data-clock>Porto</span>
+                <a class="to-top" href="#top">Voltar ao topo ↑</a>
             </div>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+    <script src="js/main.js" defer></script>
+
 </body>
 </html>

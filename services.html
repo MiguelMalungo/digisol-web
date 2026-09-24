@@ -3,175 +3,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Serviços de Desenvolvimento com IA | DIGISOL Portugal</title>
-    <meta name="description" content="Aplicações móveis e web com inteligência artificial: assistentes virtuais, chatbots, análise de dados e interfaces adaptativas. DIGISOL, Porto.">
+    <title>Serviços — DIGISOL | Websites, WebGL, Apps, Plataformas e IA</title>
+    <meta name="description" content="Websites e experiências WebGL, apps móveis, plataformas e inteligência artificial aplicada. Do conceito ao lançamento, no Porto.">
     <meta name="author" content="DIGISOL">
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Serviços de Desenvolvimento com IA | DIGISOL Portugal">
-    <meta property="og:description" content="Aplicações móveis e web com inteligência artificial, do conceito ao lançamento.">
-    <meta property="og:image" content="images/logo_dg.png">
+    <meta name="theme-color" content="#F2EDE3">
+    <meta property="og:title" content="Serviços — DIGISOL | Websites, WebGL, Apps, Plataformas e IA">
+    <meta property="og:description" content="Websites e experiências WebGL, apps móveis, plataformas e inteligência artificial aplicada. Do conceito ao lançamento, no Porto.">
+    <meta property="og:image" content="https://digisol.pt/images/logo_dg.png">
     <meta property="og:url" content="https://digisol.pt/services.html">
     <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="canonical" href="https://digisol.pt/services.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script>try{if(sessionStorage.getItem('dg-t'))document.documentElement.classList.add('entering')}catch(e){}</script>
 </head>
 <body>
-    <!-- Header -->
-    <header>
+    <a class="skip-link" href="#main">Saltar para o conteúdo</a>
+    <div class="curtain" aria-hidden="true"></div>
+
+    <header class="site-header" id="top">
         <div class="container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="images/logo_dg_t.png" alt="DIGISOL Logo" class="logo-img">
-                </a>
-            </div>
-            <nav>
+            <a class="logo" href="index.html" aria-label="DIGISOL — Início">
+                <img src="images/logo_dg_t.png" alt="DIGISOL — Soluções Digitais" class="logo-img" width="152" height="53">
+            </a>
+            <nav class="site-nav" aria-label="Principal">
                 <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="services.html">Serviços</a></li>
-                    <li><a href="about.html">Sobre Nós</a></li>
-                    <li><a href="portfolio.html">Portfólio</a></li>
-                    <li><a href="contact.html">Contacto</a></li>
+                    <li><a href="index.html">Início<sup>01</sup></a></li>
+                    <li><a href="portfolio.html">Trabalho<sup>02</sup></a></li>
+                    <li><a href="services.html" aria-current="page">Serviços<sup>03</sup></a></li>
+                    <li><a href="about.html">Estúdio<sup>04</sup></a></li>
+                    <li><a href="contact.html">Contacto<sup>05</sup></a></li>
                 </ul>
             </nav>
-            <div class="mobile-menu-toggle" role="button" aria-label="Abrir menu" tabindex="0">
-                <i class="fas fa-bars"></i>
+            <div class="header-meta">
+                <span class="clock" data-clock>Porto</span>
+                <a class="header-cta" href="contact.html">Iniciar projeto</a>
             </div>
+            <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span></button>
         </div>
     </header>
 
-    <!-- Hero -->
-    <section class="page-hero">
-        <div class="hero-media">
-            <video autoplay loop muted playsinline poster="images/bkg5.png">
-                <source src="images/video_services.mp4" type="video/mp4">
-            </video>
-        </div>
-        <div class="container">
-            <span class="kicker">Serviços</span>
-            <h1>Aplicações <em>móveis e web</em> com IA</h1>
-            <p class="hero-sub">Do assistente virtual à plataforma de dados — construímos produto digital de ponta a ponta.</p>
-        </div>
-    </section>
-
-    <!-- Marquee -->
-    <div class="marquee" aria-hidden="true">
-        <div class="marquee-track">
-            <span>Chatbots Inteligentes</span>
-            <span>Visão Computacional</span>
-            <span>Análise de Dados</span>
-            <span>Interfaces Adaptativas</span>
-            <span>IA Generativa</span>
-            <span>Chatbots Inteligentes</span>
-            <span>Visão Computacional</span>
-            <span>Análise de Dados</span>
-            <span>Interfaces Adaptativas</span>
-            <span>IA Generativa</span>
-        </div>
-    </div>
-
-    <!-- Service 01 -->
-    <section class="sec" id="ai-mobile-apps">
-        <div class="container">
-            <div class="svc-row" style="border-top: none; padding-top: 0;">
-                <div class="svc-body">
-                    <span class="svc-num">SERVIÇO — 01</span>
-                    <h3>Aplicações Móveis com IA</h3>
-                    <span class="svc-sub">Assistentes virtuais e chatbots inteligentes</span>
-                    <p>Desenvolvemos assistentes virtuais e chatbots alimentados por IA que oferecem suporte ao cliente 24/7, automatizam processos e melhoram a experiência do utilizador.</p>
-                    <ul class="svc-features">
-                        <li>Interfaces Inteligentes</li>
-                        <li>Recomendações Personalizadas</li>
-                        <li>Integração com Visão Computacional</li>
-                        <li>Processamento de Voz e Linguagem Natural</li>
-                    </ul>
-                    <a href="contact.html" class="btn">Iniciar o seu Projecto <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="svc-media">
-                    <img src="images/brainapp.png" alt="Desenvolvimento de aplicações móveis com IA" loading="lazy">
+    <main id="main">
+        <section class="page-head">
+            <div class="page-sun" data-sun data-rays="96" aria-hidden="true"></div>
+            <div class="container">
+                <span class="label label--dot" data-fade>Serviços</span>
+                <h1 data-split>Do conceito <em>ao lançamento</em></h1>
+                <div class="page-head-foot">
+                    <p class="lede" data-fade style="--d:200ms">Quatro disciplinas, uma equipa. Desenhamos e construímos o produto inteiro — e ficamos por perto depois do lançamento.</p>
+                    <a class="btn" href="contact.html" data-fade style="--d:320ms">Iniciar projeto <span class="arr">→</span></a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Service 02 -->
-    <section class="sec on-ink" id="ai-web-apps">
-        <div class="container">
-            <div class="svc-row flip" style="border-top: none; padding-top: 0;">
+        <section class="sec" style="padding-top:0">
+            <div class="container">
+            <article class="svc" id="ai-web-apps">
                 <div class="svc-body">
-                    <span class="svc-num">SERVIÇO — 02</span>
-                    <h3>Aplicações Web com IA</h3>
-                    <span class="svc-sub">Soluções inteligentes para análise e visualização de dados</span>
-                    <p>Transformamos dados complexos em informações acionáveis através de plataformas de análise alimentadas por IA, permitindo tomadas de decisão mais rápidas e precisas.</p>
-                    <ul class="svc-features">
-                        <li>Análise Inteligente de Dados</li>
-                        <li>Interfaces de Utilizador Adaptativas</li>
-                        <li>Geração Automatizada de Conteúdo</li>
-                        <li>Comportamento Preditivo do Utilizador</li>
-                    </ul>
-                    <a href="contact.html" class="btn on-dark">Iniciar o Seu Projecto <i class="fas fa-arrow-right"></i></a>
+                    <span class="index-num">Serviço — 01</span>
+                    <h2 data-split>Websites &amp; <em>WebGL</em></h2>
+                    <p>Sites que contam uma história — da página institucional sóbria à experiência imersiva em 3D, com animação, som e interação à medida da marca.</p>
+                    <ul class="svc-list"><li>Direção criativa e conceito<span>Estratégia</span></li><li>Websites institucionais<span>Web</span></li><li>Experiências WebGL e 3D<span>three.js</span></li><li>Motion e interação<span>GSAP</span></li><li>Performance, SEO e acessibilidade<span>Qualidade</span></li></ul>
                 </div>
-                <div class="svc-media">
-                    <img src="images/laptopapp.png" alt="Desenvolvimento de aplicações web com IA" loading="lazy">
+                <div class="svc-proof"><figure><a href="projects/alice.html" data-cursor="Ver caso"><div class="frame frame--light"><div class="frame-bar"><i></i><i></i><i></i><span>miguelmalungo.github.io/alice</span></div><img src="images/work/alice-hero.webp" srcset="images/work/alice-hero-sm.webp 960w, images/work/alice-hero.webp 2000w" sizes="(max-width: 900px) 100vw, 55vw" alt="Alice in Brewland" width="2000" height="1250" loading="lazy" decoding="async"></div><figcaption><span>Alice in Brewland</span><span>Website · WebGL</span></figcaption></a></figure><figure><a href="projects/miks.html" data-cursor="Ver caso"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i><span>miguelmalungo.github.io/miks</span></div><img src="images/work/miks-playing.webp" srcset="images/work/miks-playing-sm.webp 960w, images/work/miks-playing.webp 2000w" sizes="(max-width: 900px) 100vw, 55vw" alt="MiKS" width="2000" height="1250" loading="lazy" decoding="async"></div><figcaption><span>MiKS</span><span>Website · Áudio · 3D</span></figcaption></a></figure></div>
+            </article>
+            <article class="svc" id="ai-mobile-apps">
+                <div class="svc-body">
+                    <span class="index-num">Serviço — 02</span>
+                    <h2 data-split>Apps <em>móveis</em></h2>
+                    <p>Aplicações para iOS e Android pensadas para quem as usa todos os dias, com assistentes inteligentes, recomendações e processamento de voz e imagem quando fazem sentido.</p>
+                    <ul class="svc-list"><li>UX research e prototipagem<span>Produto</span></li><li>Design de interface<span>UI</span></li><li>Assistentes virtuais e chatbots<span>IA</span></li><li>Visão computacional e voz<span>IA</span></li><li>iOS, Android e PWA<span>Mobile</span></li></ul>
+                </div>
+                <div class="svc-proof"><figure><a href="projects/7030.html" data-cursor="Ver caso"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i><span>miguelmalungo.github.io/site_7030</span></div><img src="images/work/7030-hero.webp" srcset="images/work/7030-hero-sm.webp 960w, images/work/7030-hero.webp 2000w" sizes="(max-width: 900px) 100vw, 55vw" alt="70/30" width="2000" height="1250" loading="lazy" decoding="async"></div><figcaption><span>70/30</span><span>Plataforma · App</span></figcaption></a></figure><figure><a href="projects/sotkis.html" data-cursor="Ver caso"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i><span>website.sotkis.com</span></div><img src="images/work/sotkis-hero.webp" srcset="images/work/sotkis-hero-sm.webp 960w, images/work/sotkis-hero.webp 2000w" sizes="(max-width: 900px) 100vw, 55vw" alt="Sotkis" width="2000" height="1250" loading="lazy" decoding="async"></div><figcaption><span>Sotkis</span><span>Website · App · Plataforma</span></figcaption></a></figure></div>
+            </article>
+            <article class="svc" id="plataformas">
+                <div class="svc-body">
+                    <span class="index-num">Serviço — 03</span>
+                    <h2 data-split>Plataformas &amp; <em>produto</em></h2>
+                    <p>Plataformas web que ligam pessoas, dados e operações: marketplaces, backoffices e sistemas de gestão — transformamos dados complexos em informação acionável.</p>
+                    <ul class="svc-list"><li>Arquitetura de produto<span>Estratégia</span></li><li>Design systems<span>UI</span></li><li>Dashboards e visualização de dados<span>Dados</span></li><li>Interfaces adaptativas<span>UX</span></li><li>Integrações e APIs<span>Engenharia</span></li></ul>
+                </div>
+                <div class="svc-proof"><figure><a href="projects/sotkis.html" data-cursor="Ver caso"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i><span>website.sotkis.com</span></div><img src="images/work/sotkis-hero.webp" srcset="images/work/sotkis-hero-sm.webp 960w, images/work/sotkis-hero.webp 2000w" sizes="(max-width: 900px) 100vw, 55vw" alt="Sotkis" width="2000" height="1250" loading="lazy" decoding="async"></div><figcaption><span>Sotkis</span><span>Website · App · Plataforma</span></figcaption></a></figure><figure><a href="projects/fontes-hora.html" data-cursor="Ver caso"><div class="frame frame--light"><div class="frame-bar"><i></i><i></i><i></i><span>miguelmalungo.github.io/bruno</span></div><img src="images/work/fontes-hero.webp" srcset="images/work/fontes-hero-sm.webp 960w, images/work/fontes-hero.webp 2000w" sizes="(max-width: 900px) 100vw, 55vw" alt="Fontes &amp; Hora" width="2000" height="1250" loading="lazy" decoding="async"></div><figcaption><span>Fontes &amp; Hora</span><span>Website institucional</span></figcaption></a></figure></div>
+            </article>
+            <article class="svc" id="ia">
+                <div class="svc-body">
+                    <span class="index-num">Serviço — 04</span>
+                    <h2 data-split>IA <em>aplicada</em></h2>
+                    <p>Inteligência artificial ao serviço de um problema real: triagem, geração de conteúdo, análise preditiva e interfaces que respondem em linguagem natural.</p>
+                    <ul class="svc-list"><li>LLMs e agentes<span>IA</span></li><li>Geração de conteúdo multimodal<span>IA generativa</span></li><li>Análise preditiva<span>Dados</span></li><li>Processamento de linguagem natural<span>NLP</span></li><li>Prototipagem rápida de conceitos<span>Laboratório</span></li></ul>
+                </div>
+                <div class="svc-proof"><figure><a href="projects/starot.html" data-cursor="Ver caso"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i><span>miguelmalungo.github.io/starot</span></div><img src="images/work/starot-tarot.webp" srcset="images/work/starot-tarot-sm.webp 960w, images/work/starot-tarot.webp 2000w" sizes="(max-width: 900px) 100vw, 55vw" alt="STAROT" width="2000" height="1250" loading="lazy" decoding="async"></div><figcaption><span>STAROT</span><span>Experiência WebGL</span></figcaption></a></figure><figure><a href="projects/7030.html" data-cursor="Ver caso"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i><span>miguelmalungo.github.io/site_7030</span></div><img src="images/work/7030-hero.webp" srcset="images/work/7030-hero-sm.webp 960w, images/work/7030-hero.webp 2000w" sizes="(max-width: 900px) 100vw, 55vw" alt="70/30" width="2000" height="1250" loading="lazy" decoding="async"></div><figcaption><span>70/30</span><span>Plataforma · App</span></figcaption></a></figure></div>
+            </article>
+            </div>
+        </section>
+
+        <section class="sec on-ink" aria-labelledby="process-title">
+            <div class="container">
+                <div class="sec-head">
+                    <span class="label label--dot">Processo</span>
+                    <h2 id="process-title" data-split>Como <em>trabalhamos</em></h2>
+                </div>
+                <div class="steps">
+                    <div class="step" data-fade><h3>Descoberta</h3><p>Ouvimos, analisamos os requisitos e, se necessário, assinamos um NDA. Um especialista acompanha-o desde o primeiro contacto.</p></div>
+                    <div class="step" data-fade style="--d:100ms"><h3>Proposta</h3><p>Enviamos uma proposta completa — âmbito, estimativas, cronograma e equipa.</p></div>
+                    <div class="step" data-fade style="--d:200ms"><h3>Design &amp; build</h3><p>Conceito, protótipos e desenvolvimento em ciclos curtos, sempre com algo real para ver e testar.</p></div>
+                    <div class="step" data-fade style="--d:300ms"><h3>Lançamento</h3><p>Publicação, medição e evolução contínua. O lançamento é o começo, não o fim.</p></div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- CTA -->
-    <section class="cta-band">
-        <div class="container">
-            <h2 data-reveal>Pronto para construir a sua <em>aplicação com IA?</em></h2>
-            <p data-reveal>Vamos discutir como as nossas soluções móveis e web inteligentes podem revolucionar a sua presença digital.</p>
-            <a href="contact.html" class="btn" data-reveal>Entre em Contacto <i class="fas fa-arrow-right"></i></a>
-        </div>
-    </section>
+        <section class="cta-final" aria-labelledby="cta-title">
+            <div class="container">
+                <h2 id="cta-title" data-split>Tem um projeto?<br><em>Vamos falar.</em></h2>
+                <a class="cta-mail" href="mailto:info@digisol.pt" data-cursor="Escrever">info@digisol.pt</a>
+                <div style="display:flex;justify-content:center;margin-top:36px">
+                    <a class="btn btn--sun" href="contact.html">Iniciar um projeto <span class="arr">→</span></a>
+                </div>
+            </div>
+        </section>
 
-    <!-- Footer -->
-    <footer>
+    </main>
+
+    <footer class="site-footer">
         <div class="container">
-            <div class="footer-mark" aria-hidden="true">DIGIS<span class="sun-o"></span>L</div>
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h3>DIGISOL</h3>
-                    <p>Soluções digitais com inteligência artificial, sustentabilidade e impacto social — desde o Porto.</p>
-                    <div class="social-links">
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    </div>
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" aria-label="DIGISOL — Início"><img src="images/logo_dg_t.png" alt="DIGISOL" class="logo-img" width="152" height="53" loading="lazy"></a>
+                    <p>Estúdio digital no Porto. Sites, apps e plataformas — com design, inteligência artificial e impacto.</p>
                 </div>
                 <div class="footer-col">
-                    <h3>Serviços</h3>
+                    <h4>Navegar</h4>
                     <ul>
-                        <li><a href="services.html#ai-mobile-apps">Apps Móveis com IA</a></li>
-                        <li><a href="services.html#ai-web-apps">Aplicações Web com IA</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Empresa</h3>
-                    <ul>
-                        <li><a href="about.html">Sobre Nós</a></li>
-                        <li><a href="portfolio.html">Portfólio</a></li>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="portfolio.html">Trabalho</a></li>
+                        <li><a href="services.html">Serviços</a></li>
+                        <li><a href="about.html">Estúdio</a></li>
                         <li><a href="contact.html">Contacto</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h3>Contacto</h3>
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><a href="mailto:info@digisol.pt">info@digisol.pt</a></li>
+                        <li><a href="tel:+351961084022">+351 961 084 022</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Estúdio</h4>
                     <p>Rua Serpa Pinto, 59<br>4050-585 Porto</p>
-                    <p>info@digisol.pt<br>+351 961 084 022</p>
+                    <p style="margin-top:12px;color:var(--muted)">Seg — Sex, 9:00 — 18:00</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Fundador</h4>
+                    <ul>
+                        <li><a href="https://miguelfguedes.pt" target="_blank" rel="noopener">Miguel Ferraz Guedes ↗</a></li>
+                        <li><a href="https://miguelfguedes.pt/cv" target="_blank" rel="noopener">Curriculum vitae ↗</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="copyright">
-                <p>&copy; 2026 DIGISOL</p>
-                <p>Porto — 41.1496° N, 8.6109° W</p>
+            <div class="footer-bottom">
+                <span>&copy; 2026 DIGISOL — Soluções Digitais</span>
+                <span data-clock>Porto</span>
+                <a class="to-top" href="#top">Voltar ao topo ↑</a>
             </div>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+    <script src="js/main.js" defer></script>
+
 </body>
 </html>

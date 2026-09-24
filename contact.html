@@ -3,192 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto | DIGISOL Portugal</title>
-    <meta name="description" content="Fale com a DIGISOL sobre o seu projeto digital. Aplicações móveis, web e inteligência artificial — Porto, Portugal.">
+    <title>Contacto — DIGISOL | Vamos falar sobre o seu projeto</title>
+    <meta name="description" content="Fale com a DIGISOL sobre o seu projeto digital. Websites, apps, plataformas e inteligência artificial — Porto, Portugal.">
     <meta name="author" content="DIGISOL">
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Contacto | DIGISOL Portugal">
-    <meta property="og:description" content="Vamos discutir o seu projeto digital.">
-    <meta property="og:image" content="images/logo_dg.png">
+    <meta name="theme-color" content="#F2EDE3">
+    <meta property="og:title" content="Contacto — DIGISOL | Vamos falar sobre o seu projeto">
+    <meta property="og:description" content="Fale com a DIGISOL sobre o seu projeto digital. Websites, apps, plataformas e inteligência artificial — Porto, Portugal.">
+    <meta property="og:image" content="https://digisol.pt/images/logo_dg.png">
     <meta property="og:url" content="https://digisol.pt/contact.html">
     <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="canonical" href="https://digisol.pt/contact.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script>try{if(sessionStorage.getItem('dg-t'))document.documentElement.classList.add('entering')}catch(e){}</script>
 </head>
 <body>
-    <!-- Header -->
-    <header>
+    <a class="skip-link" href="#main">Saltar para o conteúdo</a>
+    <div class="curtain" aria-hidden="true"></div>
+
+    <header class="site-header" id="top">
         <div class="container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="images/logo_dg_t.png" alt="DIGISOL Logo" class="logo-img">
-                </a>
-            </div>
-            <nav>
+            <a class="logo" href="index.html" aria-label="DIGISOL — Início">
+                <img src="images/logo_dg_t.png" alt="DIGISOL — Soluções Digitais" class="logo-img" width="152" height="53">
+            </a>
+            <nav class="site-nav" aria-label="Principal">
                 <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="services.html">Serviços</a></li>
-                    <li><a href="about.html">Sobre Nós</a></li>
-                    <li><a href="portfolio.html">Portfólio</a></li>
-                    <li><a href="contact.html">Contacto</a></li>
+                    <li><a href="index.html">Início<sup>01</sup></a></li>
+                    <li><a href="portfolio.html">Trabalho<sup>02</sup></a></li>
+                    <li><a href="services.html">Serviços<sup>03</sup></a></li>
+                    <li><a href="about.html">Estúdio<sup>04</sup></a></li>
+                    <li><a href="contact.html" aria-current="page">Contacto<sup>05</sup></a></li>
                 </ul>
             </nav>
-            <div class="mobile-menu-toggle" role="button" aria-label="Abrir menu" tabindex="0">
-                <i class="fas fa-bars"></i>
+            <div class="header-meta">
+                <span class="clock" data-clock>Porto</span>
+                <a class="header-cta" href="contact.html">Iniciar projeto</a>
             </div>
+            <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span></button>
         </div>
     </header>
 
-    <!-- Contact -->
-    <section class="contact-wrap">
-        <div class="container">
-            <div class="contact-grid-n">
-                <div class="contact-side">
-                    <span class="kicker">Contacto</span>
-                    <h1>Vamos <em>conversar</em></h1>
-                    <p class="contact-lede">Vamos discutir o seu projeto!</p>
+    <main id="main">
+        <section class="page-head" style="padding-bottom:clamp(40px,5vw,72px)">
+            <div class="container">
+                <span class="label label--dot" data-fade>Contacto</span>
+                <h1 data-split>Vamos <em>conversar</em></h1>
+            </div>
+        </section>
 
-                    <dl class="info-list">
-                        <div class="info-row">
-                            <dt>Morada</dt>
-                            <dd>Rua Serpa Pinto, 59<br>4050-585 Porto</dd>
-                        </div>
-                        <div class="info-row">
-                            <dt>Email</dt>
-                            <dd>info@digisol.pt</dd>
-                        </div>
-                        <div class="info-row">
-                            <dt>Telefone</dt>
-                            <dd>+351 961 084 022</dd>
-                        </div>
-                        <div class="info-row">
-                            <dt>Horário</dt>
-                            <dd>Segunda a Sexta: 9:00 – 18:00<br>Fins de semana: Fechado</dd>
-                        </div>
+        <section class="sec" style="padding-top:0">
+            <div class="container contact-grid">
+                <div>
+                    <p class="lede" data-fade style="color:var(--ink);margin-bottom:40px">Conte-nos o que tem em mente — uma ideia, um problema, um prazo. Respondemos a todas as mensagens.</p>
+                    <dl class="contact-lines" data-fade style="--d:100ms">
+                        <div><dt>Email</dt><dd><a href="mailto:info@digisol.pt">info@digisol.pt</a></dd></div>
+                        <div><dt>Telefone</dt><dd><a href="tel:+351961084022">+351 961 084 022</a></dd></div>
+                        <div><dt>Morada</dt><dd>Rua Serpa Pinto, 59<br>4050-585 Porto</dd></div>
+                        <div><dt>Horário</dt><dd>Segunda a Sexta, 9:00 — 18:00</dd></div>
                     </dl>
-
-                    <p class="roadmap-title">O que acontece a seguir?</p>
-                    <div class="roadmap-n">
-                        <div class="step">
-                            <p>Um especialista entra em contacto após analisar os seus requisitos.</p>
-                        </div>
-                        <div class="step">
-                            <p>Se necessário, assinamos um NDA para garantir o mais elevado nível de privacidade.</p>
-                        </div>
-                        <div class="step">
-                            <p>Enviamos uma proposta de projeto completa com estimativas, cronogramas, CVs, etc.</p>
-                        </div>
-                    </div>
-
-                    <div class="social-links">
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    </div>
+                    <p class="label" style="margin-top:48px;color:var(--muted)">O que acontece a seguir?</p>
+                    <ol class="next-steps">
+                        <li>Um especialista entra em contacto após analisar os seus requisitos.</li>
+                        <li>Se necessário, assinamos um NDA para garantir o mais elevado nível de privacidade.</li>
+                        <li>Enviamos uma proposta de projeto completa com estimativas, cronogramas, CVs, etc.</li>
+                    </ol>
                 </div>
 
-                <div class="form-card">
+                <div class="form-card" data-fade style="--d:150ms">
                     <form id="contactForm" action="https://formsubmit.co/m.f.g.digisol@gmail.com" method="POST" enctype="multipart/form-data">
-                        <!-- FormSubmit configuration -->
                         <input type="hidden" name="_next" value="https://digisol.pt/thank-you.html">
                         <input type="hidden" name="_subject" value="Novo contacto do website DIGISOL">
                         <input type="hidden" name="_template" value="table">
                         <input type="hidden" name="_captcha" value="false">
 
-                        <p class="form-title">Conte-nos sobre o seu projeto</p>
+                        <p class="form-title">Conte-nos sobre o seu <em>projeto</em></p>
 
-                        <div class="form-group">
-                            <label for="name">Nome</label>
-                            <input type="text" id="name" name="name" required>
+                        <div class="form-row">
+                            <div class="form-group"><label for="name">Nome</label><input type="text" id="name" name="name" autocomplete="name" required></div>
+                            <div class="form-group"><label for="email">Email</label><input type="email" id="email" name="email" autocomplete="email" required></div>
                         </div>
-                        <div class="form-group">
-                            <label for="email">Correio Eletrónico</label>
-                            <input type="email" id="email" name="email" required>
+                        <div class="form-row">
+                            <div class="form-group"><label for="phone">Telefone</label><input type="tel" id="phone" name="phone" autocomplete="tel"></div>
+                            <div class="form-group"><label for="company">Empresa</label><input type="text" id="company" name="company" autocomplete="organization"></div>
                         </div>
+                        <fieldset class="form-group" style="border:0">
+                            <legend class="label" style="color:var(--muted-on-ink);margin-bottom:12px">Serviço de interesse</legend>
+                            <div class="chips">
+                                <input type="radio" id="s-web" name="service" value="web"><label for="s-web">Website / WebGL</label>
+                                <input type="radio" id="s-mobile" name="service" value="mobile"><label for="s-mobile">App móvel</label>
+                                <input type="radio" id="s-ai" name="service" value="ai"><label for="s-ai">Inteligência artificial</label>
+                                <input type="radio" id="s-consulting" name="service" value="consulting"><label for="s-consulting">Consultoria</label>
+                                <input type="radio" id="s-other" name="service" value="other"><label for="s-other">Outro</label>
+                            </div>
+                        </fieldset>
+                        <div class="form-group"><label for="message">Mensagem</label><textarea id="message" name="message" rows="5" required></textarea></div>
                         <div class="form-group">
-                            <label for="phone">Telefone</label>
-                            <input type="tel" id="phone" name="phone">
-                        </div>
-                        <div class="form-group">
-                            <label for="company">Empresa</label>
-                            <input type="text" id="company" name="company">
-                        </div>
-                        <div class="form-group">
-                            <label for="service">Serviço de Interesse</label>
-                            <select id="service" name="service">
-                                <option value="">Selecione um serviço</option>
-                                <option value="web">Desenvolvimento Web</option>
-                                <option value="mobile">Aplicações Móveis</option>
-                                <option value="ai">Inteligência Artificial</option>
-                                <option value="consulting">Consultoria</option>
-                                <option value="other">Outro</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Mensagem</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label for="attachment">Anexar Ficheiro</label>
-                            <div class="file-input-container">
+                            <span class="label" style="color:var(--muted-on-ink);display:block;margin-bottom:10px">Anexo (opcional)</span>
+                            <div class="file-row">
                                 <input type="file" id="attachment" name="attachment" class="file-input">
-                                <label for="attachment" class="file-label"><i class="fas fa-paperclip"></i> Escolher Ficheiro</label>
+                                <label for="attachment" class="file-label">+ Escolher ficheiro</label>
                                 <span class="file-name">Nenhum ficheiro selecionado</span>
                             </div>
                         </div>
-                        <button type="submit" class="submit-btn">Enviar Mensagem <i class="fas fa-arrow-right"></i></button>
+                        <button type="submit" class="btn submit-btn">Enviar mensagem <span class="arr">→</span></button>
                     </form>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Footer -->
-    <footer>
+    <footer class="site-footer">
         <div class="container">
-            <div class="footer-mark" aria-hidden="true">DIGIS<span class="sun-o"></span>L</div>
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h3>DIGISOL</h3>
-                    <p>Soluções digitais com inteligência artificial, sustentabilidade e impacto social — desde o Porto.</p>
-                    <div class="social-links">
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    </div>
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" aria-label="DIGISOL — Início"><img src="images/logo_dg_t.png" alt="DIGISOL" class="logo-img" width="152" height="53" loading="lazy"></a>
+                    <p>Estúdio digital no Porto. Sites, apps e plataformas — com design, inteligência artificial e impacto.</p>
                 </div>
                 <div class="footer-col">
-                    <h3>Serviços</h3>
+                    <h4>Navegar</h4>
                     <ul>
-                        <li><a href="services.html#ai-mobile-apps">Apps Móveis com IA</a></li>
-                        <li><a href="services.html#ai-web-apps">Aplicações Web com IA</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Empresa</h3>
-                    <ul>
-                        <li><a href="about.html">Sobre Nós</a></li>
-                        <li><a href="portfolio.html">Portfólio</a></li>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="portfolio.html">Trabalho</a></li>
+                        <li><a href="services.html">Serviços</a></li>
+                        <li><a href="about.html">Estúdio</a></li>
                         <li><a href="contact.html">Contacto</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h3>Contacto</h3>
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><a href="mailto:info@digisol.pt">info@digisol.pt</a></li>
+                        <li><a href="tel:+351961084022">+351 961 084 022</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Estúdio</h4>
                     <p>Rua Serpa Pinto, 59<br>4050-585 Porto</p>
-                    <p>info@digisol.pt<br>+351 961 084 022</p>
+                    <p style="margin-top:12px;color:var(--muted)">Seg — Sex, 9:00 — 18:00</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Fundador</h4>
+                    <ul>
+                        <li><a href="https://miguelfguedes.pt" target="_blank" rel="noopener">Miguel Ferraz Guedes ↗</a></li>
+                        <li><a href="https://miguelfguedes.pt/cv" target="_blank" rel="noopener">Curriculum vitae ↗</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="copyright">
-                <p>&copy; 2026 DIGISOL</p>
-                <p>Porto — 41.1496° N, 8.6109° W</p>
+            <div class="footer-bottom">
+                <span>&copy; 2026 DIGISOL — Soluções Digitais</span>
+                <span data-clock>Porto</span>
+                <a class="to-top" href="#top">Voltar ao topo ↑</a>
             </div>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+    <script src="js/main.js" defer></script>
+
 </body>
 </html>

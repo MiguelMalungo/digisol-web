@@ -3,49 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Obrigado | DIGISOL Portugal</title>
-    <meta name="description" content="A sua mensagem foi enviada com sucesso. A equipa DIGISOL entrará em contacto brevemente.">
+    <title>Obrigado — DIGISOL</title>
+    <meta name="description" content="A sua mensagem foi enviada. A equipa DIGISOL entrará em contacto brevemente.">
+    <meta name="author" content="DIGISOL">
     <meta name="robots" content="noindex, follow">
+    <meta name="theme-color" content="#F2EDE3">
+    <meta property="og:title" content="Obrigado — DIGISOL">
+    <meta property="og:description" content="A sua mensagem foi enviada. A equipa DIGISOL entrará em contacto brevemente.">
+    <meta property="og:image" content="https://digisol.pt/images/logo_dg.png">
+    <meta property="og:url" content="https://digisol.pt/thank-you.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://digisol.pt/thank-you.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script>try{if(sessionStorage.getItem('dg-t'))document.documentElement.classList.add('entering')}catch(e){}</script>
 </head>
 <body>
-    <!-- Header -->
-    <header>
+    <a class="skip-link" href="#main">Saltar para o conteúdo</a>
+    <div class="curtain" aria-hidden="true"></div>
+
+    <header class="site-header" id="top">
         <div class="container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="images/logo_dg_t.png" alt="DIGISOL Logo" class="logo-img">
-                </a>
-            </div>
-            <nav>
+            <a class="logo" href="index.html" aria-label="DIGISOL — Início">
+                <img src="images/logo_dg_t.png" alt="DIGISOL — Soluções Digitais" class="logo-img" width="152" height="53">
+            </a>
+            <nav class="site-nav" aria-label="Principal">
                 <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="services.html">Serviços</a></li>
-                    <li><a href="about.html">Sobre Nós</a></li>
-                    <li><a href="portfolio.html">Portfólio</a></li>
-                    <li><a href="contact.html">Contacto</a></li>
+                    <li><a href="index.html">Início<sup>01</sup></a></li>
+                    <li><a href="portfolio.html">Trabalho<sup>02</sup></a></li>
+                    <li><a href="services.html">Serviços<sup>03</sup></a></li>
+                    <li><a href="about.html">Estúdio<sup>04</sup></a></li>
+                    <li><a href="contact.html">Contacto<sup>05</sup></a></li>
                 </ul>
             </nav>
-            <div class="mobile-menu-toggle" role="button" aria-label="Abrir menu" tabindex="0">
-                <i class="fas fa-bars"></i>
+            <div class="header-meta">
+                <span class="clock" data-clock>Porto</span>
+                <a class="header-cta" href="contact.html">Iniciar projeto</a>
             </div>
+            <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span></button>
         </div>
     </header>
 
-    <!-- Thank You -->
-    <section class="thanks-wrap">
-        <div class="container">
-            <span class="kicker">Mensagem Enviada</span>
-            <h1>Obrigado pelo <em>seu contacto!</em></h1>
-            <p>A sua mensagem foi enviada com sucesso. Um membro da nossa equipa entrará em contacto consigo brevemente. Agradecemos o seu interesse nos serviços da DIGISOL.</p>
-            <a href="index.html" class="back-button">Voltar à Página Inicial <i class="fas fa-arrow-right"></i></a>
-        </div>
-    </section>
-
-    <script src="js/main.js"></script>
+    <main id="main">
+        <section class="thanks">
+            <div class="page-sun" data-sun data-rays="120" aria-hidden="true"></div>
+            <div>
+                <span class="label label--dot" data-fade>Mensagem enviada</span>
+                <h1 data-split>Obrigado pelo <em>seu contacto!</em></h1>
+                <p data-fade style="--d:200ms">A sua mensagem foi enviada com sucesso. Um membro da nossa equipa entrará em contacto consigo brevemente.</p>
+                <div data-fade style="--d:300ms;display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+                    <a class="btn" href="index.html">Voltar ao início <span class="arr">→</span></a>
+                    <a class="btn btn--ghost" href="portfolio.html">Ver trabalho</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+    <script src="js/main.js" defer></script>
 </body>
 </html>

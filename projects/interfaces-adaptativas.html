@@ -23,33 +23,34 @@
     <!-- Favicon -->
     <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
-    <style>
-        .project-hero { --hero-image: url('../images/womanai.png'); }
-    </style>
+    <script>try{if(sessionStorage.getItem('dg-t'))document.documentElement.classList.add('entering')}catch(e){}</script>
 </head>
 <body>
-    <!-- Header -->
-    <header>
+    <a class="skip-link" href="#main">Saltar para o conteúdo</a>
+    <div class="curtain" aria-hidden="true"></div>
+
+    <header class="site-header" id="top">
         <div class="container">
-            <div class="logo">
-                <a href="../index.html">
-                    <img src="../images/logo_dg_t.png" alt="DIGISOL Logo" class="logo-img">
-                </a>
-            </div>
-            <nav>
+            <a class="logo" href="../index.html" aria-label="DIGISOL — Início">
+                <img src="../images/logo_dg_t.png" alt="DIGISOL — Soluções Digitais" class="logo-img" width="152" height="53">
+            </a>
+            <nav class="site-nav" aria-label="Principal">
                 <ul>
-                    <li><a href="../index.html">Início</a></li>
-                    <li><a href="../services.html">Serviços</a></li>
-                    <li><a href="../about.html">Sobre Nós</a></li>
-                    <li><a href="../portfolio.html">Portfólio</a></li>
-                    <li><a href="../contact.html">Contacto</a></li>
+                    <li><a href="../index.html">Início<sup>01</sup></a></li>
+                    <li><a href="../portfolio.html" aria-current="page">Trabalho<sup>02</sup></a></li>
+                    <li><a href="../services.html">Serviços<sup>03</sup></a></li>
+                    <li><a href="../about.html">Estúdio<sup>04</sup></a></li>
+                    <li><a href="../contact.html">Contacto<sup>05</sup></a></li>
                 </ul>
             </nav>
-            <div class="mobile-menu-toggle">
-                <i class="fas fa-bars"></i>
+            <div class="header-meta">
+                <span class="clock" data-clock>Porto</span>
+                <a class="header-cta" href="../contact.html">Iniciar projeto</a>
             </div>
+            <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span></button>
         </div>
     </header>
+    <main id="main">
 
     <!-- Project Hero Section -->
     <section class="project-hero">
@@ -250,46 +251,57 @@
             </div>
         </div>
     </section>
-
-    <!-- Footer -->
-    <footer>
+    </main>
+    <footer class="site-footer">
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h3>DIGISOL</h3>
-
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="../index.html" aria-label="DIGISOL — Início"><img src="../images/logo_dg_t.png" alt="DIGISOL" class="logo-img" width="152" height="53" loading="lazy"></a>
+                    <p>Estúdio digital no Porto. Sites, apps e plataformas — com design, inteligência artificial e impacto.</p>
                 </div>
                 <div class="footer-col">
-                    <h3>Serviços</h3>
+                    <h4>Navegar</h4>
                     <ul>
-                        <li><a href="../services.html#ai-mobile-apps">Apps Móveis com IA</a></li>
-                        <li><a href="../services.html#ai-web-apps">Aplicações Web com IA</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Empresa</h3>
-                    <ul>
-                        <li><a href="../about.html">Sobre Nós</a></li>
-                        <li><a href="../portfolio.html">Portfólio</a></li>
+                        <li><a href="../index.html">Início</a></li>
+                        <li><a href="../portfolio.html">Trabalho</a></li>
+                        <li><a href="../services.html">Serviços</a></li>
+                        <li><a href="../about.html">Estúdio</a></li>
                         <li><a href="../contact.html">Contacto</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h3>Contacto</h3>
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><a href="mailto:info@digisol.pt">info@digisol.pt</a></li>
+                        <li><a href="tel:+351961084022">+351 961 084 022</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Estúdio</h4>
                     <p>Rua Serpa Pinto, 59<br>4050-585 Porto</p>
-                    <p>Email: info@digisol.pt<br>Telefone: +351 961084022</p>
+                    <p style="margin-top:12px;color:var(--muted)">Seg — Sex, 9:00 — 18:00</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Fundador</h4>
+                    <ul>
+                        <li><a href="https://miguelfguedes.pt" target="_blank" rel="noopener">Miguel Ferraz Guedes ↗</a></li>
+                        <li><a href="https://miguelfguedes.pt/cv" target="_blank" rel="noopener">Curriculum vitae ↗</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="copyright">
-                <p>&copy; 2026 DIGISOL</p>
+            <div class="footer-bottom">
+                <span>&copy; 2026 DIGISOL — Soluções Digitais</span>
+                <span data-clock>Porto</span>
+                <a class="to-top" href="#top">Voltar ao topo ↑</a>
             </div>
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+    <script src="../js/main.js" defer></script>
+
+
+
 
     <script src="../js/script.js"></script>
 </body>

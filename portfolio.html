@@ -3,328 +3,243 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio de Projectos Digitais | DIGISOL Portugal</title>
-    <meta name="description" content="Conheça os projectos inovadores da DIGISOL com inteligência artificial, aplicações móveis e plataformas web. Soluções digitais personalizadas em Portugal.">
-    <meta name="keywords" content="portfólio digital, projectos IA, aplicações móveis, desenvolvimento web, inteligência artificial, Portugal">
+    <title>Trabalho — DIGISOL | Websites, WebGL, Apps e Plataformas</title>
+    <meta name="description" content="Trabalho selecionado da DIGISOL: Alice in Brewland, STAROT, MiKS, Sotkis, Fontes &amp; Hora, 70/30 e mais.">
     <meta name="author" content="DIGISOL">
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Portfólio de Projectos Digitais | DIGISOL Portugal">
-    <meta property="og:description" content="Conheça os projectos inovadores da DIGISOL com inteligência artificial, aplicações móveis e plataformas web.">
-    <meta property="og:image" content="images/logo_dg.png">
+    <meta name="theme-color" content="#F2EDE3">
+    <meta property="og:title" content="Trabalho — DIGISOL | Websites, WebGL, Apps e Plataformas">
+    <meta property="og:description" content="Trabalho selecionado da DIGISOL: Alice in Brewland, STAROT, MiKS, Sotkis, Fontes &amp; Hora, 70/30 e mais.">
+    <meta property="og:image" content="https://digisol.pt/images/logo_dg.png">
     <meta property="og:url" content="https://digisol.pt/portfolio.html">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Portfólio de Projectos Digitais | DIGISOL Portugal">
-    <meta name="twitter:description" content="Conheça os projectos inovadores da DIGISOL com inteligência artificial, aplicações móveis e plataformas web.">
-    <meta name="twitter:image" content="images/logo_dg.png">
     <link rel="canonical" href="https://digisol.pt/portfolio.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script>try{if(sessionStorage.getItem('dg-t'))document.documentElement.classList.add('entering')}catch(e){}</script>
 </head>
 <body>
-    <!-- Header -->
-    <header>
+    <a class="skip-link" href="#main">Saltar para o conteúdo</a>
+    <div class="curtain" aria-hidden="true"></div>
+
+    <header class="site-header" id="top">
         <div class="container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="images/logo_dg_t.png" alt="DIGISOL Logo" class="logo-img">
-                </a>
-            </div>
-            <nav>
+            <a class="logo" href="index.html" aria-label="DIGISOL — Início">
+                <img src="images/logo_dg_t.png" alt="DIGISOL — Soluções Digitais" class="logo-img" width="152" height="53">
+            </a>
+            <nav class="site-nav" aria-label="Principal">
                 <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="services.html">Serviços</a></li>
-                    <li><a href="about.html">Sobre Nós</a></li>
-                    <li><a href="portfolio.html">Portfólio</a></li>
-                    <li><a href="contact.html">Contacto</a></li>
+                    <li><a href="index.html">Início<sup>01</sup></a></li>
+                    <li><a href="portfolio.html" aria-current="page">Trabalho<sup>02</sup></a></li>
+                    <li><a href="services.html">Serviços<sup>03</sup></a></li>
+                    <li><a href="about.html">Estúdio<sup>04</sup></a></li>
+                    <li><a href="contact.html">Contacto<sup>05</sup></a></li>
                 </ul>
             </nav>
-            <div class="mobile-menu-toggle" role="button" aria-label="Abrir menu" tabindex="0">
-                <i class="fas fa-bars"></i>
+            <div class="header-meta">
+                <span class="clock" data-clock>Porto</span>
+                <a class="header-cta" href="contact.html">Iniciar projeto</a>
             </div>
+            <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span></button>
         </div>
     </header>
 
-    <!-- Hero -->
-    <section class="page-hero">
-        <div class="hero-media">
-            <video autoplay muted loop playsinline>
-                <source src="images/beach_animated.mp4" type="video/mp4">
-            </video>
-        </div>
-        <div class="container">
-            <span class="kicker">Portfólio</span>
-            <h1>Projectos <em>e propostas</em></h1>
-            <p class="hero-sub">O que estamos a construir — e o que vem a seguir.</p>
-        </div>
-    </section>
-
-    <!-- Marquee -->
-    <div class="marquee" aria-hidden="true">
-        <div class="marquee-track">
-            <span>Impacto Social</span>
-            <span>Realidade Virtual</span>
-            <span>Mobilidade Sustentável</span>
-            <span>IA Generativa</span>
-            <span>Educação</span>
-            <span>Impacto Social</span>
-            <span>Realidade Virtual</span>
-            <span>Mobilidade Sustentável</span>
-            <span>IA Generativa</span>
-            <span>Educação</span>
-        </div>
-    </div>
-
-    <!-- Em Curso -->
-    <section class="sec">
-        <div class="container">
-            <div class="sec-head" data-reveal>
-                <span class="kicker">Projectos em Curso</span>
-                <h2>Trabalho <em>em movimento</em></h2>
+    <main id="main">
+        <section class="page-head">
+            <div class="page-sun" data-sun data-rays="96" aria-hidden="true"></div>
+            <div class="container">
+                <span class="label label--dot" data-fade>Trabalho — 14 projetos</span>
+                <h1 data-split>Trabalho <em>selecionado</em></h1>
+                <div class="page-head-foot">
+                    <p class="lede" data-fade style="--d:200ms">Websites, experiências WebGL, apps e plataformas — para marcas, artistas, cidades e ideias que ainda não existiam.</p>
+                    <div class="filters" role="group" aria-label="Filtrar projetos" data-fade style="--d:320ms">
+                    <button class="filter" type="button" data-filter="all" aria-pressed="true">Todos<span class="count">14</span></button>
+                    <button class="filter" type="button" data-filter="web" aria-pressed="false">Websites<span class="count">08</span></button>
+                    <button class="filter" type="button" data-filter="webgl" aria-pressed="false">WebGL & 3D<span class="count">06</span></button>
+                    <button class="filter" type="button" data-filter="app" aria-pressed="false">Apps<span class="count">04</span></button>
+                    <button class="filter" type="button" data-filter="platform" aria-pressed="false">Plataformas<span class="count">05</span></button>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <!-- 01 — Sotkis -->
-            <article class="work-row" id="sotkis">
-                <div class="work-media" style="background: var(--ink); display: flex; align-items: center; justify-content: center;">
-                    <span class="work-tag-corner">Online</span>
-                    <img src="images/sotkis-logo.png" alt="Sotkis — Intelligent Systems" loading="lazy" style="object-fit: contain; width: 38%; height: auto; padding: 0;">
+        <section class="sec" style="padding-top:0">
+            <div class="container">
+                <div class="work-grid">
+                <a class="work work--xl" href="projects/alice.html" data-cat="web webgl" data-cursor="Ver caso">
+                    <div class="work-media" style="--w-bg:#F3E4D8"><div class="frame frame--light"><div class="frame-bar"><i></i><i></i><i></i><span>miguelmalungo.github.io/alice</span></div><img src="images/work/alice-hero.webp" srcset="images/work/alice-hero-sm.webp 960w, images/work/alice-hero.webp 2000w" sizes="(max-width: 900px) 100vw, 58vw" alt="Alice in Brewland — website" width="2000" height="1250" loading="lazy" decoding="async"></div></div>
+                    <div class="work-info"><h3 class="work-name">Alice in <em>Brewland</em></h3><span class="work-meta">Website · WebGL — 2026</span></div>
+                    <p class="work-line">Um café de brunch no Porto, contado como uma queda pela toca do coelho.</p>
+                </a>
+                <a class="work work--lg" href="projects/starot.html" data-cat="webgl" data-cursor="Ver caso">
+                    <div class="work-media" style="--w-bg:#0B0A10"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i><span>miguelmalungo.github.io/starot</span></div><img src="images/work/starot-tarot.webp" srcset="images/work/starot-tarot-sm.webp 960w, images/work/starot-tarot.webp 2000w" sizes="(max-width: 900px) 100vw, 58vw" alt="STAROT — website" width="2000" height="1250" loading="lazy" decoding="async"></div></div>
+                    <div class="work-info"><h3 class="work-name">STA<em>ROT</em></h3><span class="work-meta">Experiência WebGL — 2026</span></div>
+                    <p class="work-line">Tarot, mapa astral e numerologia — desenhados por 52 000 estrelas.</p>
+                </a>
+                <a class="work work--md work--offset" href="projects/miks.html" data-cat="web webgl" data-cursor="Ver caso">
+                    <div class="work-media" style="--w-bg:#0E0C08"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i><span>miguelmalungo.github.io/miks</span></div><img src="images/work/miks-playing.webp" srcset="images/work/miks-playing-sm.webp 960w, images/work/miks-playing.webp 2000w" sizes="(max-width: 900px) 100vw, 58vw" alt="MiKS — website" width="2000" height="1250" loading="lazy" decoding="async"></div></div>
+                    <div class="work-info"><h3 class="work-name">Mi<em>KS</em></h3><span class="work-meta">Website · Áudio · 3D — 2026</span></div>
+                    <p class="work-line">O site de um artista de afro-house que mistura as faixas sozinho, a tempo.</p>
+                </a>
+                <a class="work work--xl" href="projects/sotkis.html" data-cat="web app platform" data-cursor="Ver caso">
+                    <div class="work-media" style="--w-bg:#0F2A18"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i><span>website.sotkis.com</span></div><img src="images/work/sotkis-hero.webp" srcset="images/work/sotkis-hero-sm.webp 960w, images/work/sotkis-hero.webp 2000w" sizes="(max-width: 900px) 100vw, 58vw" alt="Sotkis — website" width="2000" height="1250" loading="lazy" decoding="async"></div></div>
+                    <div class="work-info"><h3 class="work-name">Sot<em>kis</em></h3><span class="work-meta">Website · App · Plataforma — 2025 — 26</span></div>
+                    <p class="work-line">Gestão inteligente de resíduos: o website, a app do cidadão e a plataforma.</p>
+                </a>
+                <a class="work work--md" href="projects/fontes-hora.html" data-cat="web" data-cursor="Ver caso">
+                    <div class="work-media" style="--w-bg:#E9E3D4"><div class="frame frame--light"><div class="frame-bar"><i></i><i></i><i></i><span>miguelmalungo.github.io/bruno</span></div><img src="images/work/fontes-hero.webp" srcset="images/work/fontes-hero-sm.webp 960w, images/work/fontes-hero.webp 2000w" sizes="(max-width: 900px) 100vw, 58vw" alt="Fontes &amp; Hora — website" width="2000" height="1250" loading="lazy" decoding="async"></div></div>
+                    <div class="work-info"><h3 class="work-name">Fontes <em>&amp;</em> Hora</h3><span class="work-meta">Website institucional — 2026</span></div>
+                    <p class="work-line">Quarenta anos a trabalhar a terra — contados com o método de uma casa de família.</p>
+                </a>
+                <a class="work work--lg work--offset" href="projects/7030.html" data-cat="app platform web" data-cursor="Ver caso">
+                    <div class="work-media" style="--w-bg:#17140F"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i><span>miguelmalungo.github.io/site_7030</span></div><img src="images/work/7030-hero.webp" srcset="images/work/7030-hero-sm.webp 960w, images/work/7030-hero.webp 2000w" sizes="(max-width: 900px) 100vw, 58vw" alt="70/30 — website" width="2000" height="1250" loading="lazy" decoding="async"></div></div>
+                    <div class="work-info"><h3 class="work-name">70<em>/</em>30</h3><span class="work-meta">Plataforma · App — 2025 — 26</span></div>
+                    <p class="work-line">Reformados de ofícios e jovens aprendizes, lado a lado. 70% para o mentor, 30% para o aprendiz.</p>
+                </a>
+                <a class="work " href="https://miguelfguedes.pt/blocks" target="_blank" rel="noopener" data-cat="web" data-cursor="Visitar">
+                    <div class="work-media" style="--w-bg:#E9E6E0"><div class="frame frame--light"><div class="frame-bar"><i></i><i></i><i></i><span>miguelfguedes.pt/blocks</span></div><img src="images/work/blocksbook-hero.webp" srcset="images/work/blocksbook-hero-sm.webp 960w, images/work/blocksbook-hero.webp 2000w" sizes="(max-width: 900px) 100vw, 50vw" alt="BLOCKS" width="2000" height="1250" loading="lazy" decoding="async"></div></div>
+                    <div class="work-info"><h3 class="work-name">BL<em>O</em>CKS <span class="ext" aria-hidden="true">↗</span></h3><span class="work-meta">Livro de poesia · Website — 2026</span></div>
+                    <p class="work-line">O livro de poesia de Miguel Ferraz Guedes: 66 poemas numa edição web minimalista, a preto e branco.</p>
+                </a>
+                <a class="work work--offset" href="https://miguelmalungo.github.io/BlocksExpanded/" target="_blank" rel="noopener" data-cat="webgl" data-cursor="Visitar">
+                    <div class="work-media" style="--w-bg:#E4DDCF"><div class="frame frame--light"><div class="frame-bar"><i></i><i></i><i></i><span>miguelmalungo.github.io/BlocksExpanded</span></div><img src="images/work/blocks-hero.webp" srcset="images/work/blocks-hero-sm.webp 960w, images/work/blocks-hero.webp 2000w" sizes="(max-width: 900px) 100vw, 50vw" alt="Blocks Extended" width="2000" height="1250" loading="lazy" decoding="async"></div></div>
+                    <div class="work-info"><h3 class="work-name">Blocks <em>Extended</em> <span class="ext" aria-hidden="true">↗</span></h3><span class="work-meta">Livro interativo · WebGL — 2026</span></div>
+                    <p class="work-line">A edição interativa: cada poema feito de milhares de grãos de tinta que se reúnem numa só palavra.</p>
+                </a>
+                <a class="work " href="https://miguelmalungo.github.io/divertibanco/" target="_blank" rel="noopener" data-cat="web platform" data-cursor="Visitar">
+                    <div class="work-media" style="--w-bg:#F5DB2A"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i><span>miguelmalungo.github.io/divertibanco</span></div><img src="images/work/divertibanco-hero.webp" srcset="images/work/divertibanco-hero-sm.webp 960w, images/work/divertibanco-hero.webp 2000w" sizes="(max-width: 900px) 100vw, 50vw" alt="Divertibanco" width="2000" height="1250" loading="lazy" decoding="async"></div></div>
+                    <div class="work-info"><h3 class="work-name">Diverti<em>banco</em> <span class="ext" aria-hidden="true">↗</span></h3><span class="work-meta">Plataforma · Website — 2025</span></div>
+                    <p class="work-line">Equipamento desportivo e de lazer, grátis durante 14 dias — encontra-o no teu bairro.</p>
+                </a>
+                <a class="work work--offset" href="https://miguelmalungo.github.io/kept/" target="_blank" rel="noopener" data-cat="webgl" data-cursor="Visitar">
+                    <div class="work-media" style="--w-bg:#0A171C"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i><span>miguelmalungo.github.io/kept</span></div><img src="images/work/serenity-hero.webp" srcset="images/work/serenity-hero-sm.webp 960w, images/work/serenity-hero.webp 2000w" sizes="(max-width: 900px) 100vw, 50vw" alt="Serenity" width="2000" height="1250" loading="lazy" decoding="async"></div></div>
+                    <div class="work-info"><h3 class="work-name">Seren<em>ity</em> <span class="ext" aria-hidden="true">↗</span></h3><span class="work-meta">Experiência audiovisual — 2026</span></div>
+                    <p class="work-line">Poemas, filmes, pinturas e música numa galeria em partículas — by Kaleidokonscious.</p>
+                </a>
+                <a class="work " href="projects/museu-virtual.html" data-cat="webgl" data-cursor="Ver">
+                    <div class="work-media work-media--photo"><img src="images/museu4.jpg" alt="Museu Virtual" loading="lazy" decoding="async"></div>
+                    <div class="work-info"><h3 class="work-name">Museu <em>Virtual</em></h3><span class="work-meta">Realidade virtual · UE5 — 2024</span></div>
+                    <p class="work-line">Exposições artísticas em realidade virtual, acessíveis de qualquer lugar.</p>
+                </a>
+                <a class="work work--offset" href="projects/buddy.html" data-cat="app" data-cursor="Ver">
+                    <div class="work-media work-media--phones" style="--w-bg:#F3B233"><div class="phone"><img src="images/Mobile-App1.png" alt="" loading="lazy" decoding="async"></div><div class="phone"><img src="images/Mobile-App3.png" alt="" loading="lazy" decoding="async"></div></div>
+                    <div class="work-info"><h3 class="work-name">Buddy</h3><span class="work-meta">App móvel · IA — 2026</span></div>
+                    <p class="work-line">O hub para quem cuida de animais: triagem com IA, achados e perdidos, marketplace.</p>
+                </a>
+                <a class="work " href="projects/rod.html" data-cat="app platform" data-cursor="Ver">
+                    <div class="work-media" style="--w-bg:#DCE6DD"><div class="frame frame--light"><div class="frame-bar"><i></i><i></i><i></i><span>rod — bikes &amp; surf</span></div><img src="images/rod1.png" alt="ROD" loading="lazy" decoding="async"></div></div>
+                    <div class="work-info"><h3 class="work-name">R<em>O</em>D</h3><span class="work-meta">App P2P · Mobilidade — 2025</span></div>
+                    <p class="work-line">Aluguer de bicicletas e material de surf entre particulares.</p>
+                </a>
+                <a class="work work--offset" href="https://petotel.vercel.app" target="_blank" rel="noopener" data-cat="web platform" data-cursor="Visitar">
+                    <div class="work-media" style="--w-bg:#EFE5D6"><div class="frame frame--light"><div class="frame-bar"><i></i><i></i><i></i><span>petotel.vercel.app</span></div><img src="images/work/petotel-hero.webp" srcset="images/work/petotel-hero-sm.webp 960w, images/work/petotel-hero.webp 2000w" sizes="(max-width: 900px) 100vw, 50vw" alt="PetOtel" width="2000" height="1250" loading="lazy" decoding="async"></div></div>
+                    <div class="work-info"><h3 class="work-name">Pet<em>Otel</em> <span class="ext" aria-hidden="true">↗</span></h3><span class="work-meta">Web app · Reservas — 2026</span></div>
+                    <p class="work-line">Hotéis que recebem animais de estimação, com reserva em poucos toques.</p>
+                </a>
                 </div>
-                <div class="work-body">
-                    <span class="work-num">01</span>
-                    <h3>Sotkis — Intelligent Systems</h3>
-                    <p>Design do website, da aplicação móvel e da plataforma digital da Sotkis. Um sistema completo de produto digital — da identidade visual à experiência de utilizador em todas as superfícies.</p>
-                    <div class="work-tags">
-                        <span>Web Design</span>
-                        <span>App Design</span>
-                        <span>Plataforma</span>
-                        <span>UI/UX</span>
-                    </div>
-                    <a href="https://sotkis.com/" target="_blank" rel="noopener" class="arrow-link">Visitar Website <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </article>
-
-            <!-- 02 — 70/30 -->
-            <article class="work-row flip" id="7030">
-                <div class="work-media">
-                    <span class="work-tag-corner">Em Curso</span>
-                    <img src="images/7030img.png" alt="70/30 - Aplicação Social Intergeracional" loading="lazy">
-                </div>
-                <div class="work-body">
-                    <span class="work-num">02</span>
-                    <h3>70/30 — Aplicação Social Intergeracional</h3>
-                    <p>Uma plataforma digital que reativa profissionais reformados de ofícios e os conecta a jovens aprendizes, promovendo a transferência intergeracional de conhecimento e a inclusão digital. O nome "70/30" reflete o modelo de remuneração — 70% para o mentor reformado e 30% para o jovem aprendiz.</p>
-                    <div class="work-tags">
-                        <span>Impacto Social</span>
-                        <span>Inclusão Digital</span>
-                        <span>Transferência de Conhecimento</span>
-                    </div>
-                    <a href="projects/7030.html" class="arrow-link">Ver Detalhes <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </article>
-
-            <!-- 02 — Museu Virtual -->
-            <article class="work-row" id="museu-virtual">
-                <div class="work-media">
-                    <span class="work-tag-corner">Em Curso</span>
-                    <img src="images/museu4.jpg" alt="Museu Virtual Imersivo" loading="lazy">
-                </div>
-                <div class="work-body">
-                    <span class="work-num">03</span>
-                    <h3>Museu Virtual Imersivo</h3>
-                    <p>Uma plataforma digital inovadora que permite explorar exposições artísticas em qualquer lugar através de realidade virtual. Oferece espaço para artistas locais apresentarem as suas obras, componentes educativos interativos, e utiliza a tecnologia Unreal Engine 5.5 para criar experiências imersivas únicas.</p>
-                    <div class="work-tags">
-                        <span>Realidade Virtual</span>
-                        <span>Cultura</span>
-                        <span>Educação</span>
-                    </div>
-                    <a href="projects/museu-virtual.html" class="arrow-link">Ver Detalhes <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </article>
-
-            <!-- 03 — Buddy -->
-            <article class="work-row flip" id="buddy">
-                <div class="work-media">
-                    <span class="work-tag-corner">Em Curso</span>
-                    <img src="images/couplepets.png" alt="Buddy - Pet Hub App" loading="lazy">
-                </div>
-                <div class="work-body">
-                    <span class="work-num">04</span>
-                    <h3>Buddy — Pet Hub App</h3>
-                    <p>Uma aplicação móvel inovadora focada no bem-estar dos animais de estimação, que centraliza serviços essenciais desde diagnóstico preliminar com IA até à promoção de uma comunidade ativa e conectada.</p>
-                    <div class="work-tags">
-                        <span>Inteligência Artificial</span>
-                        <span>Mobile App</span>
-                        <span>IoT</span>
-                        <span>AI Agents</span>
-                    </div>
-                    <a href="projects/buddy.html" class="arrow-link">Ver Detalhes <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </article>
-
-            <!-- 04 — ROD -->
-            <article class="work-row" id="rod">
-                <div class="work-media">
-                    <span class="work-tag-corner">Em Curso</span>
-                    <img src="images/bike_rod.jpg" alt="ROD - Aplicação móvel Peer-to-Peer para Aluguer de Bicicletas" loading="lazy">
-                </div>
-                <div class="work-body">
-                    <span class="work-num">05</span>
-                    <h3>ROD — App P2P para Aluguer de Bicicletas</h3>
-                    <p>Uma plataforma móvel inovadora para conectar proprietários e utilizadores de bicicletas. Reservas diretas, pagamento seguro e comunicação integrada — contribuindo para a redução das emissões de CO₂ e a mobilidade sustentável nas cidades.</p>
-                    <div class="work-tags">
-                        <span>Mobilidade Sustentável</span>
-                        <span>Economia Circular</span>
-                        <span>Impacto Ambiental</span>
-                    </div>
-                    <a href="projects/rod.html" class="arrow-link">Ver Detalhes <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </article>
-        </div>
-    </section>
-
-    <!-- Propostas Inovadoras -->
-    <section class="sec on-ink">
-        <div class="container">
-            <div class="sec-head" data-reveal>
-                <span class="kicker">Propostas Inovadoras</span>
-                <h2>Soluções com IA generativa <em>e LLMs</em></h2>
-                <p class="lede">Conceitos que complementam os nossos projectos em curso.</p>
             </div>
+        </section>
 
-            <!-- 05 — Produção Dinâmica -->
-            <article class="work-row" id="midia-dinamica" style="border-top-color: var(--line-on-ink);">
-                <div class="work-media">
-                    <span class="work-tag-corner">Proposta</span>
-                    <video autoplay muted loop playsinline>
-                        <source src="images/drone.mp4" type="video/mp4">
-                    </video>
+        <section class="sec on-ink" aria-labelledby="lab-title">
+            <div class="container">
+                <div class="sec-head">
+                    <span class="label label--dot">Laboratório</span>
+                    <div>
+                        <h2 id="lab-title" data-split>Propostas <em>&amp; ideias</em> com IA generativa.</h2>
+                        <p class="lede" style="margin-top:22px">Conceitos em que estamos a trabalhar — prontos para encontrar o parceiro certo.</p>
+                    </div>
                 </div>
-                <div class="work-body">
-                    <span class="work-num" style="-webkit-text-stroke-color: var(--sun);">06</span>
+                <div>
+                <a class="lab-row" href="projects/midia-dinamica.html">
+                    <span class="index-num">L01</span>
                     <h3>Produção Dinâmica de Mídia</h3>
-                    <p style="color: var(--muted-on-ink);">Criação de conteúdos multimídia que se adaptam em tempo real com base no feedback e nas preferências dos utilizadores, incluindo plataformas de storytelling interativo.</p>
-                    <div class="work-tags">
-                        <span style="border-color: var(--line-on-ink); color: var(--muted-on-ink);">IA Generativa</span>
-                        <span style="border-color: var(--line-on-ink); color: var(--muted-on-ink);">Conteúdo Auto-Gerado</span>
-                        <span style="border-color: var(--line-on-ink); color: var(--muted-on-ink);">Storytelling Interativo</span>
-                    </div>
-                    <a href="projects/midia-dinamica.html" class="arrow-link">Ver Detalhes <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </article>
-
-            <!-- 06 — Plataformas Educacionais -->
-            <article class="work-row flip" id="plataformas-educacionais" style="border-top-color: var(--line-on-ink);">
-                <div class="work-media">
-                    <span class="work-tag-corner">Proposta</span>
-                    <img src="images/aikid.jpeg" alt="Plataformas Educacionais Adaptativas" loading="lazy">
-                </div>
-                <div class="work-body">
-                    <span class="work-num" style="-webkit-text-stroke-color: var(--sun);">07</span>
+                    <p>Conteúdos multimédia que se adaptam em tempo real ao feedback de quem os vê.</p>
+                    <span class="index-arrow" aria-hidden="true">→</span>
+                </a>
+                <a class="lab-row" href="projects/plataformas-educacionais.html">
+                    <span class="index-num">L02</span>
                     <h3>Plataformas Educacionais Adaptativas</h3>
-                    <p style="color: var(--muted-on-ink);">Plataformas que geram quizzes adaptativos e conteúdos educativos personalizados com base no desempenho do aluno, com feedback em tempo real.</p>
-                    <div class="work-tags">
-                        <span style="border-color: var(--line-on-ink); color: var(--muted-on-ink);">Educação Personalizada</span>
-                        <span style="border-color: var(--line-on-ink); color: var(--muted-on-ink);">Quizzes Adaptativos</span>
-                        <span style="border-color: var(--line-on-ink); color: var(--muted-on-ink);">Feedback em Tempo Real</span>
-                    </div>
-                    <a href="projects/plataformas-educacionais.html" class="arrow-link">Ver Detalhes <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </article>
-
-            <!-- 07 — Hybrid Creative -->
-            <article class="work-row" id="hybrid-creative" style="border-top-color: var(--line-on-ink);">
-                <div class="work-media">
-                    <span class="work-tag-corner">Proposta</span>
-                    <img src="images/brainapp.png" alt="Hybrid Creative Workflows para Digital Marketing" loading="lazy">
-                </div>
-                <div class="work-body">
-                    <span class="work-num" style="-webkit-text-stroke-color: var(--sun);">08</span>
+                    <p>Quizzes e conteúdos que se ajustam ao desempenho de cada aluno.</p>
+                    <span class="index-arrow" aria-hidden="true">→</span>
+                </a>
+                <a class="lab-row" href="projects/hybrid-creative.html">
+                    <span class="index-num">L03</span>
                     <h3>Hybrid Creative Workflows</h3>
-                    <p style="color: var(--muted-on-ink);">Integração de ferramentas de geração de texto, imagem e vídeo para criar campanhas publicitárias e conteúdos de marketing de alta qualidade, com automação criativa baseada em dados.</p>
-                    <div class="work-tags">
-                        <span style="border-color: var(--line-on-ink); color: var(--muted-on-ink);">Digital Marketing</span>
-                        <span style="border-color: var(--line-on-ink); color: var(--muted-on-ink);">Criação de Conteúdo</span>
-                        <span style="border-color: var(--line-on-ink); color: var(--muted-on-ink);">Automação Criativa</span>
-                    </div>
-                    <a href="projects/hybrid-creative.html" class="arrow-link">Ver Detalhes <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </article>
-
-            <!-- 08 — Interfaces Adaptativas -->
-            <article class="work-row flip" id="interfaces-adaptativas" style="border-top-color: var(--line-on-ink);">
-                <div class="work-media">
-                    <span class="work-tag-corner">Proposta</span>
-                    <img src="images/mobile3.png" alt="Interfaces Adaptativas para Dados" loading="lazy">
-                </div>
-                <div class="work-body">
-                    <span class="work-num" style="-webkit-text-stroke-color: var(--sun);">09</span>
+                    <p>Texto, imagem e vídeo gerados em conjunto para campanhas de marketing.</p>
+                    <span class="index-arrow" aria-hidden="true">→</span>
+                </a>
+                <a class="lab-row" href="projects/interfaces-adaptativas.html">
+                    <span class="index-num">L04</span>
                     <h3>Interfaces Adaptativas para Dados</h3>
-                    <p style="color: var(--muted-on-ink);">Transformação de dados estáticos em experiências interativas com consultas em linguagem natural e visualizações personalizadas — democratizando o acesso a insights baseados em dados.</p>
-                    <div class="work-tags">
-                        <span style="border-color: var(--line-on-ink); color: var(--muted-on-ink);">Inteligência Artificial</span>
-                        <span style="border-color: var(--line-on-ink); color: var(--muted-on-ink);">Visualização de Dados</span>
-                        <span style="border-color: var(--line-on-ink); color: var(--muted-on-ink);">Linguagem Natural</span>
-                    </div>
-                    <a href="projects/interfaces-adaptativas.html" class="arrow-link">Ver Detalhes <i class="fas fa-arrow-right"></i></a>
+                    <p>Perguntas em linguagem natural, respostas em visualizações.</p>
+                    <span class="index-arrow" aria-hidden="true">→</span>
+                </a>
                 </div>
-            </article>
-        </div>
-    </section>
+            </div>
+        </section>
 
-    <!-- CTA -->
-    <section class="cta-band">
-        <div class="container">
-            <h2 data-reveal>Pronto para transformar <em>o seu negócio?</em></h2>
-            <p data-reveal>Vamos discutir como as nossas soluções digitais inovadoras e agentes de IA podem ajudar a alcançar os seus objetivos.</p>
-            <a href="contact.html" class="btn" data-reveal>Entre em Contacto <i class="fas fa-arrow-right"></i></a>
-        </div>
-    </section>
+        <section class="cta-final" aria-labelledby="cta-title">
+            <div class="container">
+                <h2 id="cta-title" data-split>Tem um projeto?<br><em>Vamos falar.</em></h2>
+                <a class="cta-mail" href="mailto:info@digisol.pt" data-cursor="Escrever">info@digisol.pt</a>
+                <div style="display:flex;justify-content:center;margin-top:36px">
+                    <a class="btn btn--sun" href="contact.html">Iniciar um projeto <span class="arr">→</span></a>
+                </div>
+            </div>
+        </section>
 
-    <!-- Footer -->
-    <footer>
+    </main>
+
+    <footer class="site-footer">
         <div class="container">
-            <div class="footer-mark" aria-hidden="true">DIGIS<span class="sun-o"></span>L</div>
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h3>DIGISOL</h3>
-                    <p>Soluções digitais com inteligência artificial, sustentabilidade e impacto social — desde o Porto.</p>
-                    <div class="social-links">
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    </div>
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" aria-label="DIGISOL — Início"><img src="images/logo_dg_t.png" alt="DIGISOL" class="logo-img" width="152" height="53" loading="lazy"></a>
+                    <p>Estúdio digital no Porto. Sites, apps e plataformas — com design, inteligência artificial e impacto.</p>
                 </div>
                 <div class="footer-col">
-                    <h3>Serviços</h3>
+                    <h4>Navegar</h4>
                     <ul>
-                        <li><a href="services.html#ai-mobile-apps">Apps Móveis com IA</a></li>
-                        <li><a href="services.html#ai-web-apps">Aplicações Web com IA</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Empresa</h3>
-                    <ul>
-                        <li><a href="about.html">Sobre Nós</a></li>
-                        <li><a href="portfolio.html">Portfólio</a></li>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="portfolio.html">Trabalho</a></li>
+                        <li><a href="services.html">Serviços</a></li>
+                        <li><a href="about.html">Estúdio</a></li>
                         <li><a href="contact.html">Contacto</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h3>Contacto</h3>
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><a href="mailto:info@digisol.pt">info@digisol.pt</a></li>
+                        <li><a href="tel:+351961084022">+351 961 084 022</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Estúdio</h4>
                     <p>Rua Serpa Pinto, 59<br>4050-585 Porto</p>
-                    <p>info@digisol.pt<br>+351 961 084 022</p>
+                    <p style="margin-top:12px;color:var(--muted)">Seg — Sex, 9:00 — 18:00</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Fundador</h4>
+                    <ul>
+                        <li><a href="https://miguelfguedes.pt" target="_blank" rel="noopener">Miguel Ferraz Guedes ↗</a></li>
+                        <li><a href="https://miguelfguedes.pt/cv" target="_blank" rel="noopener">Curriculum vitae ↗</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="copyright">
-                <p>&copy; 2026 DIGISOL</p>
-                <p>Porto — 41.1496° N, 8.6109° W</p>
+            <div class="footer-bottom">
+                <span>&copy; 2026 DIGISOL — Soluções Digitais</span>
+                <span data-clock>Porto</span>
+                <a class="to-top" href="#top">Voltar ao topo ↑</a>
             </div>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+    <script src="js/main.js" defer></script>
+
 </body>
 </html>
