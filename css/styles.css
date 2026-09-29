@@ -1506,3 +1506,36 @@ html.entering .curtain { animation: curtain-leave 0.8s var(--ease-in-out) 0.05s 
     .marquee-track { animation: none; }
     .curtain { display: none; }
 }
+
+/* ---------- Video windows ---------- */
+/* Home: Porto at dusk plays inside the sun's disc. The disc geometry matches the
+   canvas (radius 27% of the box), and the video is multiplied onto the logo yellow
+   so it reads as sunlight: dark city silhouette, bright yellow sky. */
+.sun-window {
+    position: absolute;
+    left: 23%; top: 23%;
+    width: 54%; height: 54%;
+    border-radius: 50%;
+    overflow: hidden;
+    isolation: isolate;
+    background: radial-gradient(circle at 34% 30%, #FFE85C, var(--sun) 60%, #F6C515);
+}
+
+.sun-window video {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: 62% 68%;
+    mix-blend-mode: multiply;
+    filter: grayscale(1) brightness(2.45) contrast(1.2);
+}
+
+/* Estúdio: a wide film strip of the same scene, in its own colours */
+.film { padding-bottom: clamp(40px, 6vw, 90px); }
+.film-frame { border-radius: var(--r-lg); overflow: hidden; background: var(--ink); }
+.film-frame video { width: 100%; aspect-ratio: 21 / 9; object-fit: cover; object-position: 50% 62%; }
+.film figcaption {
+    display: flex; justify-content: space-between; gap: 16px; padding-top: 14px;
+    font-family: var(--f-mono); font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted);
+}
+
+@media (max-width: 700px) { .film-frame video { aspect-ratio: 4 / 3; } }

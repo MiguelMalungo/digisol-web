@@ -126,6 +126,7 @@
             host.appendChild(this.canvas);
             this.ctx = this.canvas.getContext('2d');
             this.rays = Number(host.dataset.rays || 132);
+            this.window = host.hasAttribute('data-window');
             this.seed = [...Array(this.rays)].map((_, i) => {
                 const s = Math.sin(i * 12.9898) * 43758.5453;
                 return s - Math.floor(s);
@@ -210,13 +211,16 @@
                 ctx.stroke();
             }
 
-            // Disc
-            const g = ctx.createRadialGradient(c - R * 0.35, c - R * 0.4, R * 0.1, c, c, R);
-            g.addColorStop(0, '#FFE85C');
-            g.addColorStop(0.6, '#FEDC27');
-            g.addColorStop(1, '#F6C515');
-            ctx.fillStyle = g;
-            ctx.beginPath(); ctx.arc(c, c, R, 0, Math.PI * 2); ctx.fill();
+            // Disc — left open when a video window sits behind it (data-window)
+            ctx.beginPath(); ctx.arc(c, c, R, 0, Math.PI * 2);
+            if (!this.window) {
+                const g = ctx.createRadialGradient(c - R * 0.35, c - R * 0.4, R * 0.1, c, c, R);
+                g.addColorStop(0, '#FFE85C');
+                g.addColorStop(0.6, '#FEDC27');
+                g.addColorStop(1, '#F6C515');
+                ctx.fillStyle = g;
+                ctx.fill();
+            }
             ctx.lineWidth = 1.5 * dpr;
             ctx.strokeStyle = 'rgba(16,15,13,0.9)';
             ctx.stroke();
@@ -224,6 +228,20 @@
     }
 
     document.querySelectorAll('[data-sun]').forEach((el) => new Sun(el));
+
+    /* ------------------------------------------------------------------ *
+     * Ambient videos: still frame for reduced motion, paused when offscreen
+     * ------------------------------------------------------------------ */
+    const ambient = document.querySelectorAll('video[data-ambient]');
+    if (reduced) {
+        ambient.forEach((v) => { v.removeAttribute('autoplay'); v.pause(); });
+    } else if (ambient.length) {
+        const vio = new IntersectionObserver((entries) => entries.forEach((e) => {
+            if (e.isIntersecting) e.target.play().catch(() => {});
+            else e.target.pause();
+        }));
+        ambient.forEach((v) => vio.observe(v));
+    }
 
     /* ------------------------------------------------------------------ *
      * Scroll-driven effects (one rAF loop)
